@@ -28,18 +28,17 @@
 4. 建立專案，須將專案加入git版控
 5. 須將網站，部屬至本機端IIS上
 
-## DataTable 動態型別，資料量大會爆
+## 重點
 
-## 最好做 DTO (Class/Model)
-
-## Model 驗證標籤
-
-## 將多筆合併為一筆顯示
+* DataTable 動態型別，資料量大會爆
+* 最好做 DTO (Class/Model)
+* Model 驗證標籤
+* 將多筆合併為一筆顯示
 
 <https://dotblogs.com.tw/kevinya/2012/06/01/72553>
 
-## EF CodeFirst
+* EF CodeFirst
+* IIS 發行
+* LINQ Contains = SQL Like 模糊查詢
 
-## IIS 發行
-
-## LINQ Contains = SQL Like 模糊查詢
+## 步驟
