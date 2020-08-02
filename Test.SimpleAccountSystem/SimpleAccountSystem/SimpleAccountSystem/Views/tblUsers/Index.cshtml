@@ -1,4 +1,4 @@
-﻿@model IEnumerable<SimpleAccountSystem.Models.tblUser>
+﻿@model IEnumerable<SimpleAccountSystem.Models.DTO.UserDetails>
 
 @{
     ViewBag.Title = "Index";
@@ -7,8 +7,17 @@
 <h2>Index</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("申請帳號", "Create")
 </p>
+
+<form action="/tblUsers/Search" method="post">
+    <label for="search">
+        查詢姓名或權限
+    </label>
+    <input id="search" name="searchString" />
+    <input type="submit" />
+</form>
+
 <table class="table">
     <tr>
         <th>
@@ -18,34 +27,36 @@
             @Html.DisplayNameFor(model => model.cEmail)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.cCreateDT)
-        </th>
-        <th>
             @Html.DisplayNameFor(model => model.cStatus)
         </th>
+        <th>@Html.DisplayNameFor(model => model.cGroupNames)</th>
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.cName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.cEmail)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.cCreateDT)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.cStatus)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.cAccount }) |
-            @Html.ActionLink("Details", "Details", new { id=item.cAccount }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.cAccount })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.cName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.cEmail)
+            </td>
+            <td>
+                @if (item.cStatus == 1)
+                {
+                    @:已啟用
+                }
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.cGroupNames)
+            </td>
+            <td>
+                @Html.ActionLink("編輯", "Edit", new { id = item.cAccount }) |
+                @Html.ActionLink("Details", "Details", new { id = item.cAccount }) |
+                @Html.ActionLink("刪除", "Delete", new { id = item.cAccount })
+            </td>
+        </tr>
+    }
 
 </table>

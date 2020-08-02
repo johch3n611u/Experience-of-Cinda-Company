@@ -122,9 +122,43 @@
     ![alt](/assets/img/controllerSet.png)
 
 22. 完成第一步驟，更改 App_Start/RouteConfig.cs/將預設改為 tblUsers View 畫面。
-23. 接著先進行一次版控
+23. 接著先進行一次版控，嘗試操作 vscode 的 git 介面，相對於 sourceTree Gui 較不直覺，但看字還是能處理。
+24. 接著回到 tblUsersController.cs 這邊可以發現跟以下 dotNET Core 專案使用的元件是類似的，但 Core 是用注入進來的方式。
 
     <https://ithelp.ithome.com.tw/articles/10196856>
+
+25. 利用伺服器總管先在 Account.mdf 新增一些假資料，方便做 DTO 顯示的測試。
+26. DTO
+
+    <http://dog0416.blogspot.com/2017/11/cvisual-studio-class-and-object.html>
+
+27. Razor
+
+    <https://ithelp.ithome.com.tw/articles/10160185>
+
+28. 26、27很順的做過去主要是改 tblUsersController 與 tblUsersView，做完有空再補 DataTable 版本
+29. 接著先做查詢需求，要研究 LINQ Contains = SQL Like 模糊查詢。
+    * 根據兩個欄位(姓名、權限群組)進行模糊查詢
+
+    <https://www.w3schools.com/tags/tag_label.asp>
+
+30. MVC ActionResult 所有方法。
+
+    <https://melayogu.pixnet.net/blog/post/313873726-%5Basp.net-mvc%5D-actionresult-%E5%9B%9E%E5%82%B3%E5%80%BC%E5%9E%8B%E5%88%A5>
+
+    <https://www.thinbug.com/q/4743741>
+
+31. 回想起以前寫 MVC 時的內容，像是 Controller 內的 Post Get 複寫，這樣才能在查詢後返回同一個 View，並請 View 要指定回傳的 ViewName。
+
+    <https://dotblogs.com.tw/BerryNote/2016/08/26/000310>
+
+    <https://dotblogs.com.tw/am940625/2015/03/31/150899>
+
+32. 接著是如何用 LINQ 寫 SQL LIKE。
+
+    <https://dotblogs.com.tw/terrychuang/2012/04/05/71297>
+
+33. 搜尋這邊遇到一些資料處理的小問題搞了快一個小時... 最後搞好了再 git 一個版本上去，以後要看轉版本看程式碼即可。
 
 User Table 新增，並且同時也必須要將 UserGroup 一併新增
 

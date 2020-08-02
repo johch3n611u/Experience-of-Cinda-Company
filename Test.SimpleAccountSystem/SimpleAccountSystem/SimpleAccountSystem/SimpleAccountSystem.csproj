@@ -134,6 +134,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Account.cs" />
+    <Compile Include="Models\DTO\UserDetails.cs" />
     <Compile Include="Models\tblGroup.cs" />
     <Compile Include="Models\tblUser.cs" />
     <Compile Include="Models\tblUserGroup.cs" />

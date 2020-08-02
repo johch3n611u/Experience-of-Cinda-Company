@@ -4,9 +4,12 @@ using System.Data;
 using System.Data.Entity;
 using System.Linq;
 using System.Net;
+using System.Runtime.InteropServices.ComTypes;
 using System.Web;
 using System.Web.Mvc;
+using Microsoft.Ajax.Utilities;
 using SimpleAccountSystem.Models;
+using SimpleAccountSystem.Models.DTO;
 
 namespace SimpleAccountSystem.Controllers
 {
@@ -14,10 +17,92 @@ namespace SimpleAccountSystem.Controllers
     {
         private Account db = new Account();
 
+        // POST: tblUsers/Search
+        [HttpPost, ActionName("Search")]
+        public ActionResult Index(string searchString)
+        {
+            if (searchString != "")
+            {
+
+                var UserDetailsView = (from t1 in db.tblUser.AsNoTracking()
+                                       join t2 in db.tblUserGroup.AsNoTracking() on t1.cAccount equals t2.cAccount
+                                       join t3 in db.tblGroup.AsNoTracking() on t2.cGroupID equals t3.cGroupID
+                                       where t1.cName.Contains(searchString) || t3.cGroupName.Contains(searchString)
+                                       select new { t1, t2, t3 }
+                                ).ToList();
+
+                // Using DTO
+                List<UserDetails> UserDetailsList = new List<UserDetails>();
+
+                foreach (var User in db.tblUser)
+                {
+                    UserDetails UserDetail = new UserDetails();
+                    UserDetail.cAccount = User.cAccount;
+                    UserDetail.cName = User.cName;
+                    UserDetail.cEmail = User.cEmail;
+                    UserDetail.cStatus = User.cStatus;
+
+                    // Group GroupNames
+                    var ViewList = UserDetailsView.Where(x => x.t1.cAccount == User.cAccount).ToList();
+                    if (ViewList.Any())
+                    {
+                        for (var i = 0; i < ViewList.Count; i++)
+                        {
+                            UserDetail.cGroupNames += ViewList[i].t3.cGroupName;
+                            {
+                                UserDetail.cGroupNames += "、";
+                            }
+                        }
+
+                        UserDetailsList.Add(UserDetail);
+                    }
+                };
+
+
+                return View("Index", UserDetailsList);
+
+            }
+            else {
+
+                return RedirectToAction("Index");
+            }
+        }
+
         // GET: tblUsers
         public ActionResult Index()
         {
-            return View(db.tblUser.ToList());
+            // LINQ
+            var UserDetailsView = (
+                from t1 in db.tblUser.AsNoTracking()
+                join t2 in db.tblUserGroup.AsNoTracking() on t1.cAccount equals t2.cAccount
+                join t3 in db.tblGroup.AsNoTracking() on t2.cGroupID equals t3.cGroupID
+                select new { t1, t2, t3 }).AsQueryable();
+            // Using DTO
+            List<UserDetails> UserDetailsList = new List<UserDetails>();
+
+            foreach (var User in db.tblUser)
+            {
+                UserDetails UserDetail = new UserDetails();
+                UserDetail.cAccount = User.cAccount;
+                UserDetail.cName = User.cName;
+                UserDetail.cEmail = User.cEmail;
+                UserDetail.cStatus = User.cStatus;
+
+                // Group GroupNames
+                var ViewList = UserDetailsView.Where(x => x.t1.cAccount == User.cAccount).ToList();
+                for (var i = 0; i < ViewList.Count; i++)
+                {
+                    UserDetail.cGroupNames += ViewList[i].t3.cGroupName;
+                    if (i != ViewList.Count-1)
+                    {
+                        UserDetail.cGroupNames += "、";
+                    }
+                }
+
+                UserDetailsList.Add(UserDetail);
+            };
+
+            return View(UserDetailsList);
         }
 
         // GET: tblUsers/Details/5
