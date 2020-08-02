@@ -1,4 +1,13 @@
+
 # 簡易帳號管理系統
+
+## 使用技術
+
+* MVC5 / Code first / Razor / JS / SSMS
+
+![alt](../Test.SimpleAccountSystem/assets/img/vuetodolistdemo.gif)
+
+## 功能
 
 1. 開啟一個 Asp.net MVC 專案
 2. 寫一個帳號管理系統(新增、修改、刪除)
