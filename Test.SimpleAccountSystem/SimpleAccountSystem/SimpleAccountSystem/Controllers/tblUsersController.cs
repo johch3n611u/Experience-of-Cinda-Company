@@ -283,20 +283,23 @@ namespace SimpleAccountSystem.Controllers
                         };
                         db.tblUser.Add(tblUser);
 
-                        var cGroupNamesList = UserDetails.cGroupNames.Split(',');
-                        foreach (var cGroupName in cGroupNamesList)
-                        {
+                        if (UserDetails.cGroupNames != null) {
 
-                            if (cGroupName != "")
+                            var cGroupNamesList = UserDetails.cGroupNames.Split(',');
+                            foreach (var cGroupName in cGroupNamesList)
                             {
 
-                                tblUserGroup tblUserGroup = new tblUserGroup
+                                if (cGroupName != "")
                                 {
-                                    cAccount = UserDetails.cAccount,
-                                    cGroupID = Int32.Parse(cGroupName)
-                                };
-                                db.tblUserGroup.Add(tblUserGroup);
+                                    tblUserGroup tblUserGroup = new tblUserGroup
+                                    {
+                                        cAccount = UserDetails.cAccount,
+                                        cGroupID = Int32.Parse(cGroupName)
+                                    };
+                                    db.tblUserGroup.Add(tblUserGroup);
+                                }
                             }
+
                         }
 
                         db.SaveChanges();
