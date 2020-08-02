@@ -1,0 +1,56 @@
+﻿@model SimpleAccountSystem.Models.tblUser
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>tblUser</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.cName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cEmail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cEmail)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cCreateDT)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cCreateDT)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cStatus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cStatus)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

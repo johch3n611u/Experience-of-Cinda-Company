@@ -9,7 +9,7 @@
     * 註冊完成，需提示會員新增完成
     * 新增、編輯、刪除需有確認提示視窗
     * 根據兩個欄位(姓名、權限群組)進行模糊查詢
-    * 查詢出來的列表，需有會 帳號、姓名、email、權限群組(多，可用頓點分隔),狀態  欄位
+    * 查詢出來的列表，需有會 帳號、姓名、email、權限群組(多，可用頓點分隔),狀態 欄位
     * 相關資料表
       * tblUser會員資訊
         * cAccount,varchar(20)，帳號 ,PK
@@ -43,9 +43,105 @@
 
 ## 步驟
 
-![alt](/Cinda.Test.SimpleAccountSystem/assets/img/mvcCSharp.png)
+![alt](/assets/img/mvcCSharp.png)
 
 1. 首先是專案使用的語言，第一次作業時沒看清楚選擇了 VB，雖然大部分元件能共用，但編輯規則與一些細節差異還是蠻大的。(重點：C#是綠色的WWW_ICON，VB是藍色的)
 2. 再來是.NET Core 與 .NET Framework 是不同的庫，用法也不太一樣，此處我們選擇舊.NET Framework Web 應用程式，因為.NET Core Web 是用注入方式起的 Console 專案需要的部分要額外引入，可能要實作的部分較多先不考慮。
-3. 起完專案後首先設定 .gitignore <https://stackoverflow.com/questions/42725864/dotnet-mvc-5-gitignore>
-4. 請你輸入檔名坑 - 只要把檔名輸入成 .gitignore. <https://blog.miniasp.com/post/2017/01/01/Create-gitignore-editorconfig-from-Windows-Explorer>
+3. 起完專案後首先設定 .gitignore。
+
+   <https://stackoverflow.com/questions/42725864/dotnet-mvc-5-gitignore>
+
+   ![alt](/assets/img/gitgnone.png)
+
+4. 請你輸入檔名坑 - 只要把檔名輸入成 .gitignore.。
+
+   <https://blog.miniasp.com/post/2017/01/01/Create-gitignore-editorconfig-from-Windows-Explorer>
+
+5. 新增App_Data內本地 mdf 作為練習用途 db。
+
+   <https://blog.darkthread.net/blog/app-data/>
+
+   <https://dotblogs.com.tw/yc421206/2014/01/21/141824>
+
+   ![alt](/assets/img/SQLService.mdf.png)
+
+6. 看教學要手動在 Web.Config 增加連線字串，但已經是幾年前的使用情境。所以改另一種方式，直接嘗試 Code first 與 Code first form database
+
+   ![alt](/assets/img/connectionStrings.png)
+   ![alt](/assets/img/ADO.EF.png)
+   ![alt](/assets/img/ADO.EF.Setting.png)
+   > 來自資料庫的 Code first ： 根據現有資料庫建立 Code First 模型。您可以選擇要包含在模型中的資料庫連接、模型設定和資料庫物件。
+
+7. Code first from Database 可以讓你先用 SSMS 將資料庫結構搞定後再產第一次，EF Code 可能可以多次更新利用 cmd 但目前不確定。
+8. 新增後 Web.config 會自動增加 configSections entityFramework 與 connectionStrings。
+
+   ![alt](/assets/img/EFCodefirst.webconfig.png)
+
+9. Code first 與 Model first / Database first 最大差別好像就是不會增加 Entity 資料模型檔案 edmx
+
+   ![alt](/assets/img/gitCodefirst.png)
+
+10. 所以此處我們先使用 SSMS 將資料庫用 GUI 處理較快，再進行一次 Code first form database，後續要更改 EF 再用 cmd 更新資料庫。
+
+    <https://kevintsengtw.blogspot.com/2013/10/aspnet-mvc-entity-framework-code-first.html>
+
+11. 遇到奇怪問題，先跳過後續有機會在處理，SSMS 無法抓到 Desk 所以連專案的 App_data 都過不去，權限開了也一樣...
+
+    <https://www.thinbug.com/q/19297097>
+
+12. 直接移動到 D 槽最上層，修改完後再擺回 Desk / App_data => 後續給完 USERS 完全權限 Desk 就出現了。
+13. 建完 DB 後直覺分析一下簡單的結構，首先是藉由 UserGroup 表串接 User 與 Group 兩張表，代表說今天要新增時，必須先新增 User 與 Group 才能去新增 UserGroup，而刪除時則要反著來，先刪除 UserGroup 後才能去刪除 User，而 Group 權限大多數時間應該都是固定的。
+14. 一樣在執行一次剛剛的 Code first from database 但 SSMS 必須先卸離 mdf。這次應該會將 SSMS 設定的設定的 Data Annotations 資料批註 (標籤) 預設出來，後續要更改再參照著改即可。(以下是官方文件關於 Data Annotations)
+
+    <https://docs.microsoft.com/zh-tw/ef/ef6/modeling/code-first/data-annotations>
+
+15. 補充：ADO.NET 與 ADO.NET Entity Framework 差異。
+
+    <http://www.kangting.tw/2019/06/entity-framework_23.html>
+
+16. Code first from database 似乎不是用 Data Annotations 來控制 fk 關聯，可能是用另外一個 Fluent API ...，目前不異動 db 結構就先繼續做下去有時間在解答。
+
+    <https://docs.microsoft.com/zh-tw/ef/core/modeling/>
+
+    <https://dotblogs.com.tw/supershowwei/2016/04/11/000015>
+
+17. 接著把重點放到 Account.cs ，裡面的表都是用 DbSet 類別建置。
+
+    > DbSet：表示可用于创建，读取，更新和删除操作的实体集。
+
+    <https://blog.csdn.net/lnazj/article/details/79066192>
+
+18. 如何使用呢? (大重點) 此處並沒有說不允許直接使用，控制器添加具有檢視、使用 EF 的 MVC5 控制器，所以我們直接 GUI 新增後再更改。
+19. 根據剛剛的分析結構與需求，目前第一步是 顯示 Details，此頁面必須包含以下功能。
+    * 查詢出來的列表，需有會 帳號、姓名、email、權限群組(多，可用頓點分隔),狀態 欄位
+    * 根據兩個欄位(姓名、權限群組)進行模糊查詢
+20. Detail 會用到全部三張表的內容，且權限群組會多值組成一個新 column，此處好像可以用 2 種方式處理，第一種 DataTable 相關組件去組顯示值再丟到 View，第二種則是做 DTO (Class/Model) 數據傳輸物件。第一種聽說是因為動態型別，所以資料量大時會爆但確實處理上會比較快，所以可能會兩種方法都嘗試看看，但先以第二種優先。
+    <https://www.petekcchen.com/2010/12/how-to-use-data-transfer-object.html>
+21. 所以以 User Table 作為控制項主體再去處理第 20 項問題。
+
+    ![alt](/assets/img/controllerSet.png)
+
+22. 完成第一步驟，更改 App_Start/RouteConfig.cs/將預設改為 tblUsers View 畫面。
+23. 接著先進行一次版控
+
+    <https://ithelp.ithome.com.tw/articles/10196856>
+
+User Table 新增，並且同時也必須要將 UserGroup 一併新增
+
+## 參考
+
+<https://dotblogs.com.tw/mileslin/2016/07/28/184421>
+
+<https://kevintsengtw.blogspot.com/2013/10/aspnet-mvc-entity-framework-code-first.html>
+
+<https://dotblogs.com.tw/supershowwei/2016/04/11/000015>
+
+<https://dotblogs.com.tw/mileslin/2016/08/06/232019>
+
+<https://docs.microsoft.com/zh-tw/ef/ef6/modeling/code-first/data-annotations>
+
+<https://dotblogs.com.tw/yc421206/2014/01/21/141824>
+
+<https://blog.darkthread.net/blog/app-data/>
+
+<https://www.thinbug.com/q/19297097>
