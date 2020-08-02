@@ -43,7 +43,7 @@
 
 ## 步驟
 
-![alt](../assets/img/mvcCSharp.png)
+![alt](../Test.SimpleAccountSystem/assets/img/mvcCSharp.png)
 
 1. 首先是專案使用的語言，第一次作業時沒看清楚選擇了 VB，雖然大部分元件能共用，但編輯規則與一些細節差異還是蠻大的。(重點：C#是綠色的WWW_ICON，VB是藍色的)
 2. 再來是.NET Core 與 .NET Framework 是不同的庫，用法也不太一樣，此處我們選擇舊.NET Framework Web 應用程式，因為.NET Core Web 是用注入方式起的 Console 專案需要的部分要額外引入，可能要實作的部分較多先不考慮。
@@ -51,7 +51,7 @@
 
    <https://stackoverflow.com/questions/42725864/dotnet-mvc-5-gitignore>
 
-   ![alt](../assets/img/gitgnone.png)
+   ![alt](../Test.SimpleAccountSystem/assets/img/gitgnone.png)
 
 4. 請你輸入檔名坑 - 只要把檔名輸入成 .gitignore.。
 
@@ -63,23 +63,23 @@
 
    <https://dotblogs.com.tw/yc421206/2014/01/21/141824>
 
-   ![alt](../assets/img/SQLService.mdf.png)
+   ![alt](../Test.SimpleAccountSystem/assets/img/SQLService.mdf.png)
 
 6. 看教學要手動在 Web.Config 增加連線字串，但已經是幾年前的使用情境。所以改另一種方式，直接嘗試 Code first 與 Code first form database
 
-   ![alt](../assets/img/connectionStrings.png)
-   ![alt](../assets/img/ADO.EF.png)
-   ![alt](../assets/img/ADO.EF.Setting.png)
+   ![alt](../Test.SimpleAccountSystem/assets/img/connectionStrings.png)
+   ![alt](../Test.SimpleAccountSystem/assets/img/ADO.EF.png)
+   ![alt](../Test.SimpleAccountSystem/assets/img/ADO.EF.Setting.png)
    > 來自資料庫的 Code first ： 根據現有資料庫建立 Code First 模型。您可以選擇要包含在模型中的資料庫連接、模型設定和資料庫物件。
 
 7. Code first from Database 可以讓你先用 SSMS 將資料庫結構搞定後再產第一次，EF Code 可能可以多次更新利用 cmd 但目前不確定。
 8. 新增後 Web.config 會自動增加 configSections entityFramework 與 connectionStrings。
 
-   ![alt](../assets/img/EFCodefirst.webconfig.png)
+   ![alt](../Test.SimpleAccountSystem/assets/img/EFCodefirst.webconfig.png)
 
 9. Code first 與 Model first / Database first 最大差別好像就是不會增加 Entity 資料模型檔案 edmx
 
-   ![alt](../assets/img/gitCodefirst.png)
+   ![alt](../Test.SimpleAccountSystem/assets/img/gitCodefirst.png)
 
 10. 所以此處我們先使用 SSMS 將資料庫用 GUI 處理較快，再進行一次 Code first form database，後續要更改 EF 再用 cmd 更新資料庫。
 
@@ -119,7 +119,7 @@
     <https://www.petekcchen.com/2010/12/how-to-use-data-transfer-object.html>
 21. 所以以 User Table 作為控制項主體再去處理第 20 項問題。
 
-    ![alt](../assets/img/controllerSet.png)
+    ![alt](../Test.SimpleAccountSystem/assets/img/controllerSet.png)
 
 22. 完成第一步驟，更改 App_Start/RouteConfig.cs/將預設改為 tblUsers View 畫面。
 23. 接著先進行一次版控，嘗試操作 vscode 的 git 介面，相對於 sourceTree Gui 較不直覺，但看字還是能處理。
