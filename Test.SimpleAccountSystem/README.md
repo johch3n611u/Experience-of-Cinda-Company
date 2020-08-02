@@ -3,14 +3,14 @@
 1. 開啟一個 Asp.net MVC 專案
 2. 寫一個帳號管理系統(新增、修改、刪除)
     * 使用者欄位(帳號、姓名、email、權限群組(可多選)(系統管理員、上槁者、稽核…) 、狀態 啟用 1 停用 0 )
-    * 權限群組位值，須從資料庫來
-    * 所有欄位都必填(需檢查)
-    * 相同的帳號，只能註冊一次
-    * 註冊完成，需提示會員新增完成
-    * 新增、編輯、刪除需有確認提示視窗
-    * 根據兩個欄位(姓名、權限群組)進行模糊查詢
-    * 查詢出來的列表，需有會 帳號、姓名、email、權限群組(多，可用頓點分隔),狀態 欄位
-    * 相關資料表
+    * 權限群組位值，須從資料庫來 ˇ
+    * 所有欄位都必填(需檢查) ˇ
+    * 相同的帳號，只能註冊一次 ˇ
+    * 註冊完成，需提示會員新增完成 ˇ
+    * 新增、編輯、刪除需有確認提示視窗 ˇ
+    * 根據兩個欄位(姓名、權限群組)進行模糊查詢 ˇ
+    * 查詢出來的列表，需有會 帳號、姓名、email、權限群組(多，可用頓點分隔),狀態 欄位 ˇ
+    * 相關資料表 ˇ
       * tblUser會員資訊
         * cAccount,varchar(20)，帳號 ,PK
         * cName,nvarchar(20)，姓名
@@ -24,9 +24,9 @@
         * cGroupID,int,pk，興趣項目ID
         * cGroupName,興趣項目名稱
     * 參考畫面 根據上面提示，自行發想
-3. 與資料庫聯繫，需使用EF codefirst
-4. 建立專案，須將專案加入git版控
-5. 須將網站，部屬至本機端IIS上
+3. 與資料庫聯繫，需使用EF codefirst ˇ
+4. 建立專案，須將專案加入git版控 ˇ
+5. 須將網站，部屬至本機端IIS上 ˇ
 
 ## 重點
 
@@ -159,8 +159,41 @@
     <https://dotblogs.com.tw/terrychuang/2012/04/05/71297>
 
 33. 搜尋這邊遇到一些資料處理的小問題搞了快一個小時... 最後搞好了再 git 一個版本上去，以後要看轉版本看程式碼即可。
+34. 接著要搞最後一 part CUD ，打算整理一下把 CU 寫在一起。
+35. 接著首先研究 Html.Dropdownlist / Html.CheckBoxFor
 
-User Table 新增，並且同時也必須要將 UserGroup 一併新增
+    <https://stackoverflow.com/questions/16688170/asp-net-mvc-html-checkboxfor>
+
+    <https://kevintsengtw.blogspot.com/2011/07/aspnet-mvc-htmlhelper-checkboxlist-1.html>
+
+    <https://dotblogs.com.tw/JesperLai/2018/03/20/174018>
+
+    <https://ithelp.ithome.com.tw/articles/10186515>
+
+36. 止血時間，35太花時間了改為 Razor 條件式加上普通的 html，並測試 @Html.ValidationMessageFor 會不會觸發。
+
+    <https://www.w3schools.com/tags/att_input_type_checkbox.asp>
+
+    <https://www.w3schools.com/tags/tag_select.asp>
+
+    <https://www.w3schools.com/tags/att_input_checked.asp>
+
+    <https://blog.miniasp.com/post/2010/10/14/LINQ-to-SQL-Query-Tips-INNER-JOIN-and-LEFT-JOIN>
+
+37. EditView 成功 目前進入尾聲
+
+    <https://stackoverflow.com/questions/43753977/how-to-display-an-alert-message-from-cshtml-view-asp-net-mvc>
+
+    <https://kevintsengtw.blogspot.com/2012/09/aspnet-mvc-javascript-alert.html>
+
+    <https://www.w3schools.com/jsref/jsref_foreach.asp>
+
+    <https://www.w3school.com.cn/htmldom/met_form_submit.asp>
+
+    <https://docs.microsoft.com/zh-tw/dotnet/csharp/how-to/parse-strings-using-split>
+
+38. User Table 新增，並且同時也必須要將 UserGroup 一併新增。
+39. 晚上 11:56 終於完成... 再推一版有空再補紀錄。
 
 ## 參考
 
@@ -179,3 +212,31 @@ User Table 新增，並且同時也必須要將 UserGroup 一併新增
 <https://blog.darkthread.net/blog/app-data/>
 
 <https://www.thinbug.com/q/19297097>
+
+<http://hk.uwenku.com/question/p-vcbynqlp-yr.html>
+
+<https://dotblogs.com.tw/wasichris/2014/11/14/147307>
+
+<https://ithelp.ithome.com.tw/articles/10196856>
+
+<http://dog0416.blogspot.com/2017/11/cvisual-studio-class-and-object.html>
+
+<https://www.itread01.com/content/1535020687.html>
+
+<http://lesliechang-blog.logdown.com/posts/251778>
+
+<https://dotblogs.com.tw/terrychuang/2012/04/05/71297>
+
+<https://dotblogs.com.tw/chentingw/2016/01/01/152432>
+
+<https://dotblogs.com.tw/JesperLai/2018/03/20/174018>
+
+<https://www.coder.work/article/970096>
+
+<https://dotblogs.com.tw/mileslin/2015/11/03/153788>
+
+<https://cloud.tencent.com/developer/ask/65297>
+
+<https://kevintsengtw.blogspot.com/2011/07/aspnet-mvc-htmlhelper-checkboxlist-1.html>
+
+<https://ithelp.ithome.com.tw/articles/10186515>

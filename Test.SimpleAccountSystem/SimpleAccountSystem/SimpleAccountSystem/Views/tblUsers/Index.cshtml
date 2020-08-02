@@ -1,13 +1,18 @@
 ﻿@model IEnumerable<SimpleAccountSystem.Models.DTO.UserDetails>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "帳號管理系統";
 }
 
-<h2>Index</h2>
-
+<h2>帳號管理系統</h2>
+<h4>注意事項：</h4>
 <p>
-    @Html.ActionLink("申請帳號", "Create")
+    * 此帳號管理系統需包含(新增、修改、刪除)<br />
+    * 根據兩個欄位(姓名、權限群組)進行模糊查詢<br />
+    * 查詢出來的列表，需有會 帳號、姓名、email、權限群組(多，可用頓點分隔),狀態 欄位 <br />
+</p>
+<p>
+    @Html.ActionLink("申請帳號", "Edit")
 </p>
 
 <form action="/tblUsers/Search" method="post">
@@ -53,10 +58,11 @@
             </td>
             <td>
                 @Html.ActionLink("編輯", "Edit", new { id = item.cAccount }) |
-                @Html.ActionLink("Details", "Details", new { id = item.cAccount }) |
                 @Html.ActionLink("刪除", "Delete", new { id = item.cAccount })
             </td>
         </tr>
     }
 
 </table>
+
+@Html.Raw(@ViewBag.Message)

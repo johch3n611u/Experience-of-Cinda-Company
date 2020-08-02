@@ -17,9 +17,11 @@ namespace SimpleAccountSystem.Models
 
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        [Required]
         public int cGroupID { get; set; }
 
         [StringLength(300)]
+        [Required]
         public string cGroupName { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
