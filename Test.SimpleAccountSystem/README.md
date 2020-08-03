@@ -1,6 +1,24 @@
 
 # 簡易帳號管理系統
 
+---
+
+2020-0803
+
+Demo 時出現問題 mdf 檔並沒有版控，因為一開始是使用 code first from database，
+
+流水號與預設值不知道為啥並沒有吃進 model code，
+
+且 code first 預設沒吃到 mdf 會依照 model code 自動新增 mdf 檔案出來，
+
+且此時如果用 SSMS 去編輯它 雖然改動了但 VS 會自動判定無此 mdf 繼續依照 model code 新增，造成檔名重複錯誤。
+
+錯誤只在 iis 直接指定 develop 版本的程式碼時出錯， debug 模式與 指 發行版本的程式碼都不會有問題。
+
+後來重新開了個 mdf 設定好放進 App_data 後直接用發行後再用 iis 指到發行版本內部就突然好了...
+
+美中不足 alert 或 轉址 UI/UX 並沒有考量與用的很測體
+
 ## 使用技術
 
 * MVC5 / Code first / Razor / JS / SSMS
