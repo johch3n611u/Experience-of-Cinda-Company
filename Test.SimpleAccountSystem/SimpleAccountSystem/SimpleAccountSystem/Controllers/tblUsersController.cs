@@ -22,7 +22,6 @@ namespace SimpleAccountSystem.Controllers
         [HttpPost, ActionName("Search")]
         public ActionResult Index(string searchString)
         {
-
             if (searchString != "")
             {
 
@@ -33,10 +32,27 @@ namespace SimpleAccountSystem.Controllers
                                        select new { t1, t2, t3 }
                                 ).ToList();
 
-                // Using DTO
+                // Group cAccount
+
+                var GroupAccount = UserDetailsView.GroupBy(x => new
+                {
+                    x.t1.cAccount,
+                    x.t1.cName,
+                    x.t1.cEmail,
+                    x.t1.cStatus
+                }).Select(x => new UserDetails
+                {
+                    cAccount = x.Key.cAccount,
+                    cName = x.Key.cName,
+                    cEmail = x.Key.cEmail,
+                    cStatus = x.Key.cStatus
+
+                }).ToList();
+
+                // Set Response
                 List<UserDetails> UserDetailsList = new List<UserDetails>();
 
-                foreach (var User in db.tblUser)
+                foreach (var User in GroupAccount)
                 {
                     UserDetails UserDetail = new UserDetails();
                     UserDetail.cAccount = User.cAccount;
@@ -45,19 +61,24 @@ namespace SimpleAccountSystem.Controllers
                     UserDetail.cStatus = User.cStatus;
 
                     // Group GroupNames
-                    var ViewList = UserDetailsView.Where(x => x.t1.cAccount == User.cAccount).ToList();
-                    if (ViewList.Any())
+
+                    var ViewList = (from t1 in db.tblUser.AsNoTracking()
+                                    join t2 in db.tblUserGroup.AsNoTracking() on t1.cAccount equals t2.cAccount
+                                    join t3 in db.tblGroup.AsNoTracking() on t2.cGroupID equals t3.cGroupID
+                                    where t1.cAccount == User.cAccount
+                                    select new { t1, t2, t3 }).ToList();
+
+                    for (var i = 0; i < ViewList.Count; i++)
                     {
-                        for (var i = 0; i < ViewList.Count; i++)
+                        UserDetail.cGroupNames += ViewList[i].t3.cGroupName;
+                        if (i != ViewList.Count - 1)
                         {
-                            UserDetail.cGroupNames += ViewList[i].t3.cGroupName;
-                            {
-                                UserDetail.cGroupNames += "、";
-                            }
+                            UserDetail.cGroupNames += "、";
                         }
 
-                        UserDetailsList.Add(UserDetail);
                     }
+
+                    UserDetailsList.Add(UserDetail);
                 };
 
 
