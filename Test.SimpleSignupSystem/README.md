@@ -68,14 +68,16 @@
      * `Update-Database -Verbose` 此指令使用 SQL Service 真的建立資料表
      * `-Verbose` 目的是要把詳細訊息顯示出來。 ( 但為求確保不會另用此方式真的建立而是用以下方式 )
      * `Update-Database -Script -Verbose` 此指令不會直接對資料庫操作而是產生更新資料庫結構的指令碼。
-6. 建立測試資料 [Initializer DropCreateDatabaseIfModelChanges](https://dotblogs.com.tw/wasichris/2014/08/23/146339) 此類別建立後 `Update-Database -Script -Verbos` 指令也會同時產生初始資料所需 SQL
+6. 建立測試資料 [Initializer DropCreateDatabaseIfModelChanges](https://dotblogs.com.tw/wasichris/2014/08/23/146339) 此類別建立後 `Update-Database -Script -Verbose` 指令也會同時產生初始資料所需 SQL
    * DropCreateDatabaseIfModelChanges
    * Web.config entityFramework ( 這裡必須確保新增 configSections 避免報錯 )
 7. 但事實上似乎必須藉由系統建立資料庫才會真的把初始化資料寫入，因為產生的 Script 是不包含這段的。
 8. 連線字串補 `AttachDbFilename=|DataDirectory|\CodeFirstDb.mdf` 資料庫將被建置於App_Data資料夾中。
 9. 使用 SSMS 發現 DB 缺少了一些地方，剛好測試異動後要怎更新資料結構。
     * 更新完 DTO 後，`Enable-Migrations -Force` 如有多個則再加上 `–ContextTypeName DbContext`
-    * `Update-Database` 更新實體即可，`Add-Migration AddAddress` 能夠為此次異動記錄著上下版本的差異。
+    * `Update-Database` 更新實體即可，`Add-Migration AddAddress` 能夠為此次異動記錄著上下版本的差異
+    * Configuration.cs `AutomaticMigrationsEnabled = true;` 即可不用 `Add-Migration AddAddress`
+    * 連線字串這裡很多坑... 而且不知道為什麼有些 死雞馬 並沒有真的增加上去例如遞增值，最後變成要刪除 mdf 在重製才成功。
 
 * Web.config entityFramework
 
@@ -150,3 +152,5 @@
 <https://entityframework.net/zh-CN/knowledge-base/40572912/>
 
 <https://stackoverflow.com/questions/40572912/the-type-initializer-for-system-data-entity-migrations-dbmigrationsconfiguratio>
+
+<https://dotblogs.com.tw/skychang/2013/05/29/105057>

@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace SimpleSignupSystem.Models.Entity
@@ -12,13 +13,11 @@ namespace SimpleSignupSystem.Models.Entity
         [Column(Order = 1)]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ID { get; set; }
-
         [Key]
         [Column(Order = 2, TypeName = "varchar")]
         [ForeignKey("tblSignup")]
         [MaxLength(10)]
         public string cMobile { get; set; }
-
         [Key]
         [Column(Order = 3)]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
