@@ -10,6 +10,7 @@ namespace SimpleSignupSystem.Models.Entity
 
         [Key]
         [Column(Order = 1)]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ID { get; set; }
 
         [Key]

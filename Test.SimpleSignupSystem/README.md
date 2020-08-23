@@ -48,24 +48,54 @@
 
 ## 步驟
 
-1. 首先在專案內想建構 DAL 的地方
-2. 右鍵新增項目 -> 資料 -> ADO.NET 實體資料模型
-3. 選擇空的 Code First 模型
+1. 首先在專案內想建構 DAL 的地方。
+2. 右鍵新增項目 -> 資料 -> ADO.NET 實體資料模型。
+3. 選擇空的 Code First 模型。
    * 此時 IDE 會幫忙添加以下資料
      * packages.config
      * SimplesSignupSystem.csproj
      * Web.config ★★ (連線資訊 connectionStrings) 等確定實體後才來更改連線方式 SQL Service 登入 ★★
      * SignupDB.cs ★★ (DbContext 設定檔) 處理連線資訊與關聯實體 DTO ★★
-4. 編輯 DTO 資料表 Class 此處分為實體用途與其餘用途使用的 DTO
-
+4. 編輯 DTO 資料表 Class 此處分為實體用途與其餘用途使用的 DTO。
    > [EF 中,當某一個屬性視為 primary key 時，如果該屬性類別為 int，則生成資料庫時會自動變成自加序號，那如果不是 int 而是 Guid，那就必須你自己給值，或自己設定為自加序號。](https://charleslin74.pixnet.net/blog/post/458313893-%5Bc%23%5D-entity-framework%E4%B8%AD%E7%9A%84databasegenerated%E5%B1%AC%E6%80%A7)
    * PK 屬性 Guid 自加序號 [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
    * PK 屬性 int 不自加序號 [DatabaseGenerated(DatabaseGeneratedOption.None)]
    * 此標籤代表 參數是透過計算而來 DB 不會實際儲存此值 [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
+5. [建立完 DTO 與 DBContext 後，重點來了 ★★ 執行 db first cmd ★★。](https://dotblogs.com.tw/supershowwei/2016/04/11/000015)
+   * 套件管理器主控台輸入指令
+     * `Enable-Migrations`。 此指令會幫忙驗證模型的結構
+     * `Add-Migration Initial` 此指令產生實際更新資料庫結構的程式碼 ( 記錄著上下版本的差異 )
+     * `Update-Database -Verbose` 此指令使用 SQL Service 真的建立資料表
+     * `-Verbose` 目的是要把詳細訊息顯示出來。 ( 但為求確保不會另用此方式真的建立而是用以下方式 )
+     * `Update-Database -Script -Verbose` 此指令不會直接對資料庫操作而是產生更新資料庫結構的指令碼。
+6. 建立測試資料 [Initializer DropCreateDatabaseIfModelChanges](https://dotblogs.com.tw/wasichris/2014/08/23/146339) 此類別建立後 `Update-Database -Script -Verbos` 指令也會同時產生初始資料所需 SQL
+   * DropCreateDatabaseIfModelChanges
+   * Web.config entityFramework ( 這裡必須確保新增 configSections 避免報錯 )
+7. 但事實上似乎必須藉由系統建立資料庫才會真的把初始化資料寫入，因為產生的 Script 是不包含這段的。
+8. 連線字串補 `AttachDbFilename=|DataDirectory|\CodeFirstDb.mdf` 資料庫將被建置於App_Data資料夾中。
+9. 使用 SSMS 發現 DB 缺少了一些地方，剛好測試異動後要怎更新資料結構。
+    * 更新完 DTO 後，`Enable-Migrations -Force` 如有多個則再加上 `–ContextTypeName DbContext`
+    * `Update-Database` 更新實體即可，`Add-Migration AddAddress` 能夠為此次異動記錄著上下版本的差異。
 
-5. [建立完 DTO 與 DBContext 後，重點來了 ★★ 執行 db first cmd ★★](https://dotblogs.com.tw/supershowwei/2016/04/11/000015)
-   * 套件管理器主控台輸入指令 `Enable-Migrations`。 此指令會幫忙驗證模型的結構
+* Web.config entityFramework
 
+```XML
+<entityFramework>
+    <contexts>
+      <context type="SimpleSignupSystem.DAL.SignupDB, SimpleSignupSystem">
+        <databaseInitializer type="SimpleSignupSystem.DAL.DefaultInitializer, SimpleSignupSystem" />
+      </context>
+    </contexts>
+    <defaultConnectionFactory type="System.Data.Entity.Infrastructure.LocalDbConnectionFactory, EntityFramework">
+      <parameters>
+        <parameter value="v11.0" />
+      </parameters>
+    </defaultConnectionFactory>
+    <providers>
+      <provider invariantName="System.Data.SqlClient" type="System.Data.Entity.SqlServer.SqlProviderServices, EntityFramework.SqlServer" />
+    </providers>
+</entityFramework>
+```
 
 * packages.config
 
@@ -88,6 +118,10 @@
 * Web.config
 
 ```XML
+<configSections>
+    <section name="entityFramework" type="System.Data.Entity.Internal.ConfigFile.EntityFrameworkSection, EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" requirePermission="false" />
+</configSections>
+
 <configuration>
    <connectionStrings>
       <add name="SignupDB" connectionString="data source=(LocalDb)\MSSQLLocalDB;initial catalog=SimpleSignupSystem.DAL.SignupDB;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework" providerName="System.Data.SqlClient" />
@@ -112,3 +146,7 @@
 <https://www.cnblogs.com/firstdream/archive/2012/04/13/2445582.html>
 
 <https://dotblogs.com.tw/wasichris/2014/08/23/146339>
+
+<https://entityframework.net/zh-CN/knowledge-base/40572912/>
+
+<https://stackoverflow.com/questions/40572912/the-type-initializer-for-system-data-entity-migrations-dbmigrationsconfiguratio>

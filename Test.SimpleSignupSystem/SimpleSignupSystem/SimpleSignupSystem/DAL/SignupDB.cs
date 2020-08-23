@@ -1,9 +1,7 @@
 ﻿namespace SimpleSignupSystem.DAL
 {
     using SimpleSignupSystem.Models.Entity;
-    using System;
     using System.Data.Entity;
-    using System.Linq;
 
     public class SignupDB : DbContext
     {

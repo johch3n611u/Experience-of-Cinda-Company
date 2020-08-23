@@ -27,7 +27,8 @@ namespace SimpleSignupSystem.Models.Entity
         [MaxLength(50)]
         public string cEmail { get; set; }
 
-        public DateTime cCreateDT { get; set; }
+        [Column(TypeName = "date")]
+        public DateTime cCreateDT { get; set; } = new DateTime();
 
         public ICollection<tblSignupItem> tblSignupItem { get; set; }
 

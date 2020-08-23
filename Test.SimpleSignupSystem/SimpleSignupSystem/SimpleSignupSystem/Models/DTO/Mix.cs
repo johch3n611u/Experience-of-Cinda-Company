@@ -3,7 +3,7 @@ using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Member.Models.DTO
+namespace SimpleSignupSystem.Models.DTO
 {
     public class Mix
     {
