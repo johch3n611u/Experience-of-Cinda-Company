@@ -27,7 +27,7 @@ Demo 時出現問題 mdf 檔並沒有版控，因為一開始是使用 code firs
 
 ## 使用技術
 
-* MVC5 / Code first / Razor / JS / SSMS
+* MVC5 / Code first by database / Razor / JS / SSMS
 
 ![alt](../Test.SimpleAccountSystem/assets/img/vuetodolistdemo.gif)
 

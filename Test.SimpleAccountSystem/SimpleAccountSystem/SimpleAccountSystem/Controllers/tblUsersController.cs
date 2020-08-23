@@ -304,7 +304,8 @@ namespace SimpleAccountSystem.Controllers
                         };
                         db.tblUser.Add(tblUser);
 
-                        if (UserDetails.cGroupNames != null) {
+                        if (UserDetails.cGroupNames != null)
+                        {
 
                             var cGroupNamesList = UserDetails.cGroupNames.Split(',');
                             foreach (var cGroupName in cGroupNamesList)
@@ -339,21 +340,26 @@ namespace SimpleAccountSystem.Controllers
                     UserList.cStatus = UserDetails.cStatus;
 
 
-                    var DeletetblUserGroup = db.tblUserGroup.Where(x=>x.cAccount == UserDetails.cAccount).ToList();
+                    var DeletetblUserGroup = db.tblUserGroup.Where(x => x.cAccount == UserDetails.cAccount).ToList();
                     db.tblUserGroup.RemoveRange(DeletetblUserGroup);
                     db.SaveChanges();
 
-                    var cGroupNamesList = UserDetails.cGroupNames.Split(',');
-                    foreach (var cGroupName in cGroupNamesList) {
+                    if (UserDetails.cGroupNames != null)
+                    {
+                        var cGroupNamesList = UserDetails.cGroupNames.Split(',');
+                        foreach (var cGroupName in cGroupNamesList)
+                        {
 
-                        if (cGroupName != "") {
-
-                            tblUserGroup tblUserGroup = new tblUserGroup
+                            if (cGroupName != "")
                             {
-                                cAccount = UserDetails.cAccount,
-                                cGroupID = Int32.Parse(cGroupName)
-                            };
-                            db.tblUserGroup.Add(tblUserGroup);
+
+                                tblUserGroup tblUserGroup = new tblUserGroup
+                                {
+                                    cAccount = UserDetails.cAccount,
+                                    cGroupID = Int32.Parse(cGroupName)
+                                };
+                                db.tblUserGroup.Add(tblUserGroup);
+                            }
                         }
                     }
 
