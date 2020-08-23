@@ -78,6 +78,19 @@
     * `Update-Database` 更新實體即可，`Add-Migration AddAddress` 能夠為此次異動記錄著上下版本的差異
     * Configuration.cs `AutomaticMigrationsEnabled = true;` 即可不用 `Add-Migration AddAddress`
     * 連線字串這裡很多坑... 而且不知道為什麼有些 死雞馬 並沒有真的增加上去例如遞增值，最後變成要刪除 mdf 在重製才成功。
+10. 接著就是修改 連線字串 不從 mdf 直接連而是 SQL Server 帳密連線的設定。
+    * 在更改前先記錄 dbfirst 產生第一次 資料庫結構時的連線字串內容 first dbfirst
+    * 設定詳細步驟請參考 大涼奶專案內的 SQL Server 管理.md
+
+---
+
+* first dbfirst
+
+```XML
+  <connectionStrings>
+    <add name="SignupDB" connectionString="data source=(LocalDb)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\CodeFirstDb.mdf;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework" providerName="System.Data.SqlClient" />
+  </connectionStrings>
+```
 
 * Web.config entityFramework
 
