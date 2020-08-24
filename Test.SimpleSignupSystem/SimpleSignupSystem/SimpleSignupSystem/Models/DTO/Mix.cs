@@ -36,7 +36,7 @@ namespace SimpleSignupSystem.Models.DTO
         public string cItemName { get; set; }
         [Column(TypeName = "date")]
         [DisplayName("活動時間")]
-        public DateTime? cActiveDt { get; set; }
+        public string cActiveDt { get; set; }
 
         // 額外欄位
         [DisplayName("報名人數")]
