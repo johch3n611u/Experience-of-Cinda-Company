@@ -12,7 +12,7 @@ namespace SimpleSignupSystem.Migrations
                 c => new
                     {
                         cItemID = c.Int(nullable: false, identity: true),
-                        cItemName = c.String(unicode: false, storeType: "text"),
+                        cItemName = c.String(maxLength: 4000),
                         cActiveDt = c.String(unicode: false, storeType: "text"),
                     })
                 .PrimaryKey(t => t.cItemID);

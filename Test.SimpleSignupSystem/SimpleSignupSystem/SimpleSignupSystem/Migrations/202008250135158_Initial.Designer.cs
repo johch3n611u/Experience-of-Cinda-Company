@@ -13,7 +13,7 @@ namespace SimpleSignupSystem.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "202008231623068_Initial"; }
+            get { return "202008250135158_Initial"; }
         }
         
         string IMigrationMetadata.Source

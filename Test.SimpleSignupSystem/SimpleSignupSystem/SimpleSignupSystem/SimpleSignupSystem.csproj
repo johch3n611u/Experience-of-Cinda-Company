@@ -134,9 +134,9 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="DAL\DefaultInitializer.cs" />
-    <Compile Include="Migrations\202008231623068_Initial.cs" />
-    <Compile Include="Migrations\202008231623068_Initial.Designer.cs">
-      <DependentUpon>202008231623068_Initial.cs</DependentUpon>
+    <Compile Include="Migrations\202008250135158_Initial.cs" />
+    <Compile Include="Migrations\202008250135158_Initial.Designer.cs">
+      <DependentUpon>202008250135158_Initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\DTO\Mix.cs" />
@@ -201,8 +201,8 @@
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202008231623068_Initial.resx">
-      <DependentUpon>202008231623068_Initial.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202008250135158_Initial.resx">
+      <DependentUpon>202008250135158_Initial.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
