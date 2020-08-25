@@ -83,7 +83,7 @@ namespace SimpleSignupSystem.Controllers
 
                 MixList.Add(Mix);
             };
-         
+
 
             ViewBag.cItemID = AllView.FirstOrDefault().t3.cItemID;
 
