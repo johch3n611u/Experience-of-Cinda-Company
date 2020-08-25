@@ -34,7 +34,8 @@
             </td>
             <td>
                 @Html.ActionLink("編輯", "Edit", new { tblSignupItem_ID = item.tblSignupItem_ID, cItemID = item.cItemID }) |
-                @Html.ActionLink("刪除", "Delete", new { tblSignupItem_ID = item.tblSignupItem_ID })
+                @*@Html.ActionLink("刪除", "Delete", new { tblSignupItem_ID = item.tblSignupItem_ID })*@
+                <a onclick="CheckDelete(@item.tblSignupItem_ID,'@item.cName')" style="cursor: pointer">刪除</a>
             </td>
         </tr>
     }
@@ -43,6 +44,17 @@
 
 @Html.Raw(@ViewBag.Message)
 
+<script>
+
+    function CheckDelete(tblSignupItem_ID, cName)
+    {
+        if (confirm('確定要刪除 ' + cName +' 嗎?'))
+        {
+            document.location.href = "/tblSignups/Delete?tblSignupItem_ID=" + tblSignupItem_ID;
+        }
+    }
+
+</script>
 
 @*<div>
         <hr />

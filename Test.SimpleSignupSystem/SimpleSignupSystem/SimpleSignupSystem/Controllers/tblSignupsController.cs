@@ -17,7 +17,7 @@ namespace SimpleSignupSystem.Controllers
         private SignupDB db = new SignupDB();
 
         // GET: tblSignups
-        public ActionResult Index()
+        public ActionResult Index(string Message)
         {
 
             var AllView = (
@@ -44,6 +44,11 @@ namespace SimpleSignupSystem.Controllers
 
                 MixList.Add(Mix);
             };
+
+            if (Message != null)
+            {
+                ViewBag.Message = "<script>alert('" + Message + "');</script>";
+            }
 
             return View(MixList);
         }
@@ -84,8 +89,7 @@ namespace SimpleSignupSystem.Controllers
                 MixList.Add(Mix);
             };
 
-
-            ViewBag.cItemID = AllView.FirstOrDefault().t3.cItemID;
+            ViewBag.cItemID = cItemID;
 
             return View(MixList);
         }
@@ -202,8 +206,8 @@ namespace SimpleSignupSystem.Controllers
                     db.tblSignupItem.Add(new_tblSignupItem);
 
                     db.SaveChanges();
-                    ViewBag.Message = "<script>alert('註冊成功');</script>";
-                    return RedirectToAction("Index");
+
+                    return RedirectToAction("Index",new { Message = "報名成功" });
 
                 }
             }
@@ -220,16 +224,16 @@ namespace SimpleSignupSystem.Controllers
             if (db.tblSignupItem.Any(x => x.ID == tblSignupItem_ID))
             {
 
-                tblSignupItem tblSignupItem = db.tblSignupItem.Find(tblSignupItem_ID);
+                tblSignupItem tblSignupItem = db.tblSignupItem.FirstOrDefault(x => x.ID == tblSignupItem_ID);
                 db.tblSignupItem.Remove(tblSignupItem);
                 db.SaveChanges();
             }
-            else {
+            else
+            {
                 return HttpNotFound();
             }
 
-            ViewBag.Message = "<script>alert('刪除成功');</script>";
-            return RedirectToAction("Index");
+            return RedirectToAction("Index", new { Message = "刪除成功" });
         }
 
         // POST: tblSignups/Delete/5

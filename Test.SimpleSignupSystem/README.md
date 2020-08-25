@@ -15,7 +15,7 @@
 
 ## 功能
 
-1. 開啟一個Asp.net MVC專案
+1. 開啟一個Asp.net MVC專案 :heavy_check_mark:
 2. 寫一個新達2020/9/25活動報名系統(新增、修改、刪除)
   2.1需要欄位(手機、姓名、email 、活動項目(可多選)( AM10:00~AM11:00排球、AM11:00~PM12:00羽球、PM15:00~PM16:00自行車 …)
   2.2活動項目，須從資料庫來
@@ -81,6 +81,8 @@
 10. 接著就是修改 連線字串 不從 mdf 直接連而是 SQL Server 帳密連線的設定。
     * 在更改前先記錄 dbfirst 產生第一次 資料庫結構時的連線字串內容 first dbfirst
     * 設定詳細步驟請參考 大涼奶專案內的 SQL Server 管理.md
+11. 資料必須全砍掉然後重頭下一次指令，並且重啟db，不然會卡。
+12. [補傳遞驗證/提示資料 Code。](https://social.msdn.microsoft.com/Forums/zh-TW/0b84b707-342b-4c9e-b576-399d77d079a5/mvc229142030923559object-3900622411366812556321040routevalues?forum=236)
 
 ---
 
@@ -167,3 +169,5 @@
 <https://stackoverflow.com/questions/40572912/the-type-initializer-for-system-data-entity-migrations-dbmigrationsconfiguratio>
 
 <https://dotblogs.com.tw/skychang/2013/05/29/105057>
+
+<https://social.msdn.microsoft.com/Forums/zh-TW/0b84b707-342b-4c9e-b576-399d77d079a5/mvc229142030923559object-3900622411366812556321040routevalues?forum=236>

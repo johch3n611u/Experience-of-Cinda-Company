@@ -134,9 +134,9 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="DAL\DefaultInitializer.cs" />
-    <Compile Include="Migrations\202008231623068_Initial.cs" />
-    <Compile Include="Migrations\202008231623068_Initial.Designer.cs">
-      <DependentUpon>202008231623068_Initial.cs</DependentUpon>
+    <Compile Include="Migrations\202008251433564_Initial.cs" />
+    <Compile Include="Migrations\202008251433564_Initial.Designer.cs">
+      <DependentUpon>202008251433564_Initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\DTO\Mix.cs" />
@@ -179,7 +179,6 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\tblSignups\Create.cshtml" />
-    <Content Include="Views\tblSignups\Delete.cshtml" />
     <Content Include="Views\tblSignups\Details.cshtml" />
     <Content Include="Views\tblSignups\Edit.cshtml" />
     <Content Include="Views\tblSignups\Index.cshtml" />
@@ -201,8 +200,8 @@
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202008231623068_Initial.resx">
-      <DependentUpon>202008231623068_Initial.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202008251433564_Initial.resx">
+      <DependentUpon>202008251433564_Initial.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
