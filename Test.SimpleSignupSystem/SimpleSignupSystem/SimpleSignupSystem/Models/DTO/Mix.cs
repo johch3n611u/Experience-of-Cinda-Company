@@ -22,7 +22,7 @@ namespace SimpleSignupSystem.Models.DTO
         public string cEmail { get; set; }
         [Column(TypeName = "date")]
         [DisplayName("報名時間")]
-        public DateTime? cCreateDT { get; set; }
+        public DateTime cCreateDT { get; set; }
 
         //tblSignupItem 報名項目
         //cMobile varchar(10), 手機，,PK
@@ -34,9 +34,9 @@ namespace SimpleSignupSystem.Models.DTO
         [Column(TypeName = "text")]
         [DisplayName("活動項目名稱")]
         public string cItemName { get; set; }
-        [Column(TypeName = "date")]
+        [Column(TypeName = "text")]
         [DisplayName("活動時間")]
-        public DateTime? cActiveDt { get; set; }
+        public string cActiveDt { get; set; }
 
         // 額外欄位
         [DisplayName("報名人數")]

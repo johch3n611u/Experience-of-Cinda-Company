@@ -17,7 +17,7 @@ namespace SimpleSignupSystem.Models.Entity
         [Key]
         [Column(Order = 1)]
         public int cItemID { get; set; }
-        [Column(TypeName = "text")]
+        [Column(TypeName = "Nvarchar")]
         public string cItemName { get; set; }
         [Column(TypeName = "text")]
         public string cActiveDt { get; set; }
