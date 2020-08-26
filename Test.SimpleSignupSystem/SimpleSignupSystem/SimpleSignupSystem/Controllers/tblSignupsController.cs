@@ -40,7 +40,7 @@ namespace SimpleSignupSystem.Controllers
                  select new { t1, t2, t3 }).ToList();
 
             // DTO
-            List<Mix> MixList = new List<Mix>();
+            List<Mix> TotalMixList = new List<Mix>();
 
             foreach (var item in db.tblActiveItem)
             {
@@ -55,7 +55,7 @@ namespace SimpleSignupSystem.Controllers
 
                 Mix.cItemID = item.cItemID;
 
-                MixList.Add(Mix);
+                TotalMixList.Add(Mix);
             };
 
             if (Message != null)
@@ -64,30 +64,39 @@ namespace SimpleSignupSystem.Controllers
             }
 
             // Search List
+            if (Search != null)
+            {
+                AllView = AllView.Where(x => x.t1.cName.Contains(Search) || x.t1.cMobile.Contains(Search)).ToList();
+            }
+            // Select List
+            if (SelectId != 0)
+            {
+                AllView = AllView.Where(x => x.t3.cItemID == SelectId).ToList();
+            }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+            List<Mix> FilterMixList = new List<Mix>();
+            foreach (var item in AllView)
+            {
+                Mix FilterMix = new Mix();
+                FilterMix.cMobile = item.t1.cMobile;
+                FilterMix.cName = item.t1.cName;
+                FilterMix.cEmail = item.t1.cEmail;
+                FilterMix.cItemName = item.t3.cItemName;
+                FilterMix.cCreateDT = item.t1.cCreateDT;
+                FilterMixList.Add(FilterMix);
+            }
 
             IndexModel IndexData = new IndexModel();
-            IndexData.TotalMixList = MixList;
-            IndexData.SearchMixList = MixList;
-
+            IndexData.TotalMixList = TotalMixList;
+            IndexData.SearchMixList = FilterMixList;
 
             List<SelectItem> SelectItem_List = new List<SelectItem>();
+            SelectItem PreSelectItem = new SelectItem()
+            {
+                cItemID = 0,
+                cItemName = "全部"
+            };
+            SelectItem_List.Add(PreSelectItem);
             // Pre SelectItem
             if (db.tblActiveItem.Any())
             {
