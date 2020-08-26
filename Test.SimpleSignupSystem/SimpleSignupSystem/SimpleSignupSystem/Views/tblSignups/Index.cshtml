@@ -1,29 +1,30 @@
-﻿@model IEnumerable <SimpleSignupSystem.Models.DTO.Mix>
+﻿@model SimpleSignupSystem.Controllers.tblSignupsController.IndexModel
 
 @{
     ViewBag.Title = "新達2020/9/25活動報名系統";
 }
 
-    <h2>新達2020/9/25活動報名系統</h2>
+<h2>新達2020/9/25活動報名系統</h2>
 
 @*<p>
-    @Html.ActionLink("新增活動", "Create")
-</p>*@
+        @Html.ActionLink("新增活動", "Create")
+    </p>*@
+
+<h3>活動列表</h3>
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.cItemName)
+            @Html.DisplayNameFor(model => model.TotalMixList.FirstOrDefault().cItemName)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.JoinCount)
+            @Html.DisplayNameFor(model => model.TotalMixList.FirstOrDefault().JoinCount)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.cActiveDt)
+            @Html.DisplayNameFor(model => model.TotalMixList.FirstOrDefault().cActiveDt)
         </th>
         <th></th>
     </tr>
-
-    @foreach (var item in Model)
+    @foreach (var item in Model.TotalMixList)
     {
         <tr>
             <td>
@@ -37,8 +38,63 @@
             </td>
             <td>
                 @*@Html.ActionLink("編輯", "Edit", new { id = item.cItemID }) |*@
-                @Html.ActionLink("詳細頁", "Details", new { cItemID = item.cItemID }) |
+                @Html.ActionLink("詳細頁", "Details", new { cItemID = item.cItemID })
                 @*@Html.ActionLink("刪除", "Delete", new { id = item.cItemID })*@
+            </td>
+        </tr>
+    }
+    @Html.Raw(@ViewBag.Message)
+</table>
+
+<h3 style="display:inline-block">人員清單</h3>
+<form style="display:inline-block;" action="/tblSignups/Index">
+    <input placeholder="  姓名 / 手機 ( 模糊查詢 )" name="Search" />
+    <select name="SelectId">
+        @{
+            foreach (var item in ViewBag.SelectItem_List)
+            {
+                @: <option value="@item.cItemID">@item.cItemName</option>
+            }
+        }
+    </select>
+    <button>查詢</button>
+</form>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.SearchMixList.FirstOrDefault().cMobile)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SearchMixList.FirstOrDefault().cName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SearchMixList.FirstOrDefault().cEmail)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SearchMixList.FirstOrDefault().cItemName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SearchMixList.FirstOrDefault().cCreateDT)
+        </th>
+    </tr>
+
+    @foreach (var item in Model.SearchMixList)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.cMobile)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.cName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.cEmail)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.cItemName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.cCreateDT)
             </td>
         </tr>
     }

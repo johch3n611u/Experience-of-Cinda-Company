@@ -16,8 +16,21 @@ namespace SimpleSignupSystem.Controllers
     {
         private SignupDB db = new SignupDB();
 
+
+        public class IndexModel
+        {
+            public List<Mix> TotalMixList { get; set; }
+            public List<Mix> SearchMixList { get; set; }
+        }
+
+        public class SelectItem
+        {
+            public string cItemName { get; set; }
+            public int cItemID { get; set; }
+        }
+
         // GET: tblSignups
-        public ActionResult Index()
+        public ActionResult Index(string Message, string Search, int? SelectId)
         {
 
             var AllView = (
@@ -45,7 +58,50 @@ namespace SimpleSignupSystem.Controllers
                 MixList.Add(Mix);
             };
 
-            return View(MixList);
+            if (Message != null)
+            {
+                ViewBag.Message = "<script>alert('" + Message + "');</script>";
+            }
+
+            // Search List
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            IndexModel IndexData = new IndexModel();
+            IndexData.TotalMixList = MixList;
+            IndexData.SearchMixList = MixList;
+
+
+            List<SelectItem> SelectItem_List = new List<SelectItem>();
+            // Pre SelectItem
+            if (db.tblActiveItem.Any())
+            {
+                foreach (var item in db.tblActiveItem)
+                {
+                    SelectItem SelectItem = new SelectItem();
+                    SelectItem.cItemID = item.cItemID;
+                    SelectItem.cItemName = item.cItemName;
+                    SelectItem_List.Add(SelectItem);
+                }
+                ViewBag.SelectItem_List = SelectItem_List;
+            }
+
+            return View(IndexData);
         }
 
         // GET: tblSignups/Details/5
@@ -84,8 +140,7 @@ namespace SimpleSignupSystem.Controllers
                 MixList.Add(Mix);
             };
 
-
-            ViewBag.cItemID = AllView.FirstOrDefault().t3.cItemID;
+            ViewBag.cItemID = cItemID;
 
             return View(MixList);
         }
@@ -202,8 +257,8 @@ namespace SimpleSignupSystem.Controllers
                     db.tblSignupItem.Add(new_tblSignupItem);
 
                     db.SaveChanges();
-                    ViewBag.Message = "<script>alert('註冊成功');</script>";
-                    return RedirectToAction("Index");
+
+                    return RedirectToAction("Index", new { Message = "報名成功" });
 
                 }
             }
@@ -220,16 +275,16 @@ namespace SimpleSignupSystem.Controllers
             if (db.tblSignupItem.Any(x => x.ID == tblSignupItem_ID))
             {
 
-                tblSignupItem tblSignupItem = db.tblSignupItem.Find(tblSignupItem_ID);
+                tblSignupItem tblSignupItem = db.tblSignupItem.FirstOrDefault(x => x.ID == tblSignupItem_ID);
                 db.tblSignupItem.Remove(tblSignupItem);
                 db.SaveChanges();
             }
-            else {
+            else
+            {
                 return HttpNotFound();
             }
 
-            ViewBag.Message = "<script>alert('刪除成功');</script>";
-            return RedirectToAction("Index");
+            return RedirectToAction("Index", new { Message = "刪除成功" });
         }
 
         // POST: tblSignups/Delete/5
