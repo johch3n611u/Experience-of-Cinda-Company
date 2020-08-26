@@ -16,6 +16,13 @@ namespace SimpleSignupSystem.Controllers
     {
         private SignupDB db = new SignupDB();
 
+
+        public class IndexModel {
+            public List<Mix> TotalMixList { get; set; }
+            public List<Mix> SearchMixList { get; set; }
+        }
+
+
         // GET: tblSignups
         public ActionResult Index(string Message)
         {
@@ -50,7 +57,11 @@ namespace SimpleSignupSystem.Controllers
                 ViewBag.Message = "<script>alert('" + Message + "');</script>";
             }
 
-            return View(MixList);
+            IndexModel IndexData = new IndexModel();
+            IndexData.TotalMixList = MixList;
+            IndexData.SearchMixList = MixList;
+
+            return View(IndexData);
         }
 
         // GET: tblSignups/Details/5
