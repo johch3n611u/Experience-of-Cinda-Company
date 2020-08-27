@@ -83,6 +83,7 @@
     * 設定詳細步驟請參考 大涼奶專案內的 SQL Server 管理.md
 11. 資料必須全砍掉然後重頭下一次指令，並且重啟db，不然會卡。
 12. [補傳遞驗證/提示資料 Code。](https://social.msdn.microsoft.com/Forums/zh-TW/0b84b707-342b-4c9e-b576-399d77d079a5/mvc229142030923559object-3900622411366812556321040routevalues?forum=236)
+13. [理解 LINQ Group & Select。](https://stackoverflow.com/questions/10637760/linq-group-by-and-select-collection)
 
 ---
 

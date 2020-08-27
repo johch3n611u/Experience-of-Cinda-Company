@@ -17,14 +17,20 @@ namespace SimpleSignupSystem.Controllers
         private SignupDB db = new SignupDB();
 
 
-        public class IndexModel {
+        public class IndexModel
+        {
             public List<Mix> TotalMixList { get; set; }
             public List<Mix> SearchMixList { get; set; }
         }
 
+        public class SelectItem
+        {
+            public string cItemName { get; set; }
+            public int cItemID { get; set; }
+        }
 
         // GET: tblSignups
-        public ActionResult Index(string Message)
+        public ActionResult Index(string Message, string Search, int? SelectId)
         {
 
             var AllView = (
@@ -34,7 +40,7 @@ namespace SimpleSignupSystem.Controllers
                  select new { t1, t2, t3 }).ToList();
 
             // DTO
-            List<Mix> MixList = new List<Mix>();
+            List<Mix> TotalMixList = new List<Mix>();
 
             foreach (var item in db.tblActiveItem)
             {
@@ -49,7 +55,7 @@ namespace SimpleSignupSystem.Controllers
 
                 Mix.cItemID = item.cItemID;
 
-                MixList.Add(Mix);
+                TotalMixList.Add(Mix);
             };
 
             if (Message != null)
@@ -57,9 +63,56 @@ namespace SimpleSignupSystem.Controllers
                 ViewBag.Message = "<script>alert('" + Message + "');</script>";
             }
 
+            var SearchView = (from t1 in db.tblSignup.AsNoTracking()
+                             join t2 in db.tblSignupItem.AsNoTracking() on t1.cMobile equals t2.cMobile
+                             select new { t1, t2 }).ToList();
+
+            // Search List
+            if (Search != null)
+            {
+                SearchView = SearchView.Where(x => x.t1.cName.Contains(Search) || x.t1.cMobile.Contains(Search)).ToList();
+            }
+            // Select List
+            if (SelectId != 0 && SelectId != null)
+            {
+                SearchView = SearchView.Where(x => x.t2.cItemID == SelectId).ToList();
+            }
+
+            List<Mix> FilterMixList = new List<Mix>();
+            foreach (var item in )
+            {
+                Mix FilterMix = new Mix();
+                FilterMix.cMobile = item.cMobile;
+                FilterMix.cName = item.cName;
+                FilterMix.cEmail = item.cEmail;
+                FilterMix.cCreateDT = item.cCreateDT;
+                FilterMix.cItemName = item.cItemName;
+                FilterMixList.Add(FilterMix);
+            }
+
             IndexModel IndexData = new IndexModel();
-            IndexData.TotalMixList = MixList;
-            IndexData.SearchMixList = MixList;
+            IndexData.TotalMixList = TotalMixList;
+            IndexData.SearchMixList = FilterMixList;
+
+            List<SelectItem> SelectItem_List = new List<SelectItem>();
+            SelectItem PreSelectItem = new SelectItem()
+            {
+                cItemID = 0,
+                cItemName = "全部"
+            };
+            SelectItem_List.Add(PreSelectItem);
+            // Pre SelectItem
+            if (db.tblActiveItem.Any())
+            {
+                foreach (var item in db.tblActiveItem)
+                {
+                    SelectItem SelectItem = new SelectItem();
+                    SelectItem.cItemID = item.cItemID;
+                    SelectItem.cItemName = item.cItemName;
+                    SelectItem_List.Add(SelectItem);
+                }
+                ViewBag.SelectItem_List = SelectItem_List;
+            }
 
             return View(IndexData);
         }
@@ -103,12 +156,6 @@ namespace SimpleSignupSystem.Controllers
             ViewBag.cItemID = cItemID;
 
             return View(MixList);
-        }
-
-        // GET: tblSignups/Create
-        public ActionResult Create()
-        {
-            return View();
         }
 
         // POST: tblSignups/Create
@@ -193,23 +240,29 @@ namespace SimpleSignupSystem.Controllers
                     }
                 }
 
-                if (db.tblSignup.Any(x => x.cMobile == Mix.cMobile))
+                if (
+                    db.tblSignup.Any(x => x.cMobile == Mix.cMobile)
+                    &&
+                    db.tblSignupItem.Any(x => x.cMobile == Mix.cMobile && x.cItemID == Mix.cItemID)
+                    )
                 {
-                    ViewBag.Message = "<script>alert('手機重複');</script>";
+                    ViewBag.Message = "<script>alert('此手機已報名過此活動');</script>";
                     return View(Mix);
                 }
                 else
                 {
 
                     //新增
-
-                    tblSignup new_tblSignup = new tblSignup();
-                    new_tblSignup.cName = Mix.cName;
-                    new_tblSignup.cMobile = Mix.cMobile;
-                    new_tblSignup.cEmail = Mix.cEmail;
-                    new_tblSignup.cCreateDT = DateTime.Now;
-                    db.tblSignup.Add(new_tblSignup);
-                    db.SaveChanges();
+                    if (!db.tblSignup.Any(x=>x.cMobile == Mix.cMobile))
+                    {
+                        tblSignup new_tblSignup = new tblSignup();
+                        new_tblSignup.cName = Mix.cName;
+                        new_tblSignup.cMobile = Mix.cMobile;
+                        new_tblSignup.cEmail = Mix.cEmail;
+                        new_tblSignup.cCreateDT = DateTime.Now;
+                        db.tblSignup.Add(new_tblSignup);
+                        db.SaveChanges();
+                    }
 
                     tblSignupItem new_tblSignupItem = new tblSignupItem();
                     new_tblSignupItem.cItemID = Mix.cItemID;
@@ -218,7 +271,7 @@ namespace SimpleSignupSystem.Controllers
 
                     db.SaveChanges();
 
-                    return RedirectToAction("Index",new { Message = "報名成功" });
+                    return RedirectToAction("Index", new { Message = "報名成功" });
 
                 }
             }

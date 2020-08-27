@@ -21,7 +21,7 @@ namespace SimpleSignupSystem.Models.DTO
         [Required]
         public string cEmail { get; set; }
         [Column(TypeName = "date")]
-        [DisplayName("報名時間")]
+        [DisplayName("帳號申請時間")]
         public DateTime cCreateDT { get; set; }
 
         //tblSignupItem 報名項目

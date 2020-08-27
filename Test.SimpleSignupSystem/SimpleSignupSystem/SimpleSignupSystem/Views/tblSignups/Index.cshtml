@@ -1,4 +1,4 @@
-﻿@model IEnumerable<SimpleSignupSystem.Controllers.tblSignupsController.IndexModel>
+﻿@model SimpleSignupSystem.Controllers.tblSignupsController.IndexModel
 
 @{
     ViewBag.Title = "新達2020/9/25活動報名系統";
@@ -24,7 +24,7 @@
         </th>
         <th></th>
     </tr>
-    @foreach (var item in Model.FirstOrDefault().TotalMixList)
+    @foreach (var item in Model.TotalMixList)
     {
         <tr>
             <td>
@@ -47,21 +47,15 @@
 </table>
 
 <h3 style="display:inline-block">人員清單</h3>
-<form style="display:inline-block;">
+<form style="display:inline-block;" action="/tblSignups/Index">
     <input placeholder="  姓名 / 手機 ( 模糊查詢 )" name="Search" />
-    <select>
-        <option>
-            全部
-        </option>
-        <option>
-            排球
-        </option>
-        <option>
-            羽球
-        </option>
-        <option>
-            自行車
-        </option>
+    <select name="SelectId">
+        @{
+            foreach (var item in ViewBag.SelectItem_List)
+            {
+                @: <option value="@item.cItemID">@item.cItemName</option>
+            }
+        }
     </select>
     <button>查詢</button>
 </form>
@@ -84,7 +78,7 @@
         </th>
     </tr>
 
-    @foreach (var item in Model.FirstOrDefault().SearchMixList)
+    @foreach (var item in Model.SearchMixList)
     {
         <tr>
             <td>
