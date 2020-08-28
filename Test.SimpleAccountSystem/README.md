@@ -1,5 +1,5 @@
 
-# 簡易帳號管理系統
+# 帳號管理系統
 
 ![alt](../Test.SimpleAccountSystem/assets/img/vuetodolistdemo.gif)
 

@@ -1,5 +1,5 @@
 
-# 簡易活動報名系統
+# 活動報名系統
 
 ![alt](/Test.SimpleSignupSystem/assets/img/tempgif.gif)
 
