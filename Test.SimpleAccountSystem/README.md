@@ -33,17 +33,17 @@ Demo 時出現問題 mdf 檔並沒有版控，因為一開始是使用 code firs
 
 ## 功能
 
-1. 開啟一個 Asp.net MVC 專案
-2. 寫一個帳號管理系統(新增、修改、刪除)
-    * 使用者欄位(帳號、姓名、email、權限群組(可多選)(系統管理員、上槁者、稽核…) 、狀態 啟用 1 停用 0 )
-    * 權限群組位值，須從資料庫來 ˇ
-    * 所有欄位都必填(需檢查) ˇ
-    * 相同的帳號，只能註冊一次 ˇ
-    * 註冊完成，需提示會員新增完成 ˇ
-    * 新增、編輯、刪除需有確認提示視窗 ˇ
-    * 根據兩個欄位(姓名、權限群組)進行模糊查詢 ˇ
-    * 查詢出來的列表，需有會 帳號、姓名、email、權限群組(多，可用頓點分隔),狀態 欄位 ˇ
-    * 相關資料表 ˇ
+1. 開啟一個 Asp.net MVC 專案 :heavy_check_mark:
+2. 寫一個帳號管理系統(新增、修改、刪除) :heavy_check_mark:
+    * 使用者欄位(帳號、姓名、email、權限群組(可多選)(系統管理員、上槁者、稽核…) 、狀態 啟用 1 停用 0 ) :heavy_check_mark:
+    * 權限群組位值，須從資料庫來 :heavy_check_mark:
+    * 所有欄位都必填(需檢查) :heavy_check_mark:
+    * 相同的帳號，只能註冊一次 :heavy_check_mark:
+    * 註冊完成，需提示會員新增完成 :heavy_check_mark:
+    * 新增、編輯、刪除需有確認提示視窗 :heavy_check_mark:
+    * 根據兩個欄位(姓名、權限群組)進行模糊查詢 :heavy_check_mark:
+    * 查詢出來的列表，需有會 帳號、姓名、email、權限群組(多，可用頓點分隔),狀態 欄位 :heavy_check_mark:
+    * 相關資料表 :heavy_check_mark:
       * tblUser會員資訊
         * cAccount,varchar(20)，帳號 ,PK
         * cName,nvarchar(20)，姓名
@@ -57,9 +57,9 @@ Demo 時出現問題 mdf 檔並沒有版控，因為一開始是使用 code firs
         * cGroupID,int,pk，興趣項目ID
         * cGroupName,興趣項目名稱
     * 參考畫面 根據上面提示，自行發想
-3. 與資料庫聯繫，需使用EF codefirst ˇ
-4. 建立專案，須將專案加入git版控 ˇ
-5. 須將網站，部屬至本機端IIS上 ˇ
+3. 與資料庫聯繫，需使用EF codefirst :heavy_check_mark:
+4. 建立專案，須將專案加入git版控 :heavy_check_mark:
+5. 須將網站，部屬至本機端IIS上 :heavy_check_mark:
 
 ## 重點
 

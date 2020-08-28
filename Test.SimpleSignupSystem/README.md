@@ -25,10 +25,10 @@
    * 相同的手機，只能報名一次 :heavy_check_mark:
    * 報名完成，需要顯示 報名詳細資訊 :heavy_check_mark:
    * 列表 所有活動名稱、報名人數 及 詳細頁 報名人員、姓名、手機、報名時間 :heavy_check_mark:
-   * 刪除需有確認提示視窗 :heavy_check_mark: :heavy_check_mark:
+   * 刪除需有確認提示視窗 :heavy_check_mark:
    * 列表根據三個欄位(姓名/手機(模糊查詢)、活動項目(含全部)(下拉) 進行查詢 :heavy_check_mark:
    * 查詢出來的列表，需有會 手機、姓名、email 、活動項目(用逗點區隔),報名時間  欄位 :heavy_check_mark:
-   * 相關資料表
+   * 相關資料表 :heavy_check_mark:
      * tblSignup報名資訊
        * cMobile,varchar(10)，手機 ,PK
        * cName,nvarchar(20)，姓名
@@ -47,6 +47,8 @@
 5. 須將網站，部屬至本機端IIS上 :heavy_check_mark:
 
 ## 重點
+
+如果求快可以把 畫面跟資料處理都寫在同一頁 DTO 也寫在同一頁。
 
 ## 步驟
 
