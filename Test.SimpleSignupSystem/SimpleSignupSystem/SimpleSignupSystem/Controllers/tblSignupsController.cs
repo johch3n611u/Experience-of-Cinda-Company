@@ -60,33 +60,57 @@ namespace SimpleSignupSystem.Controllers
 
             if (Message != null)
             {
-                ViewBag.Message = "<script>alert('" + Message + "');</script>";
+                ViewData["Message"] = "<script>alert('" + Message + "');</script>";
             }
 
-            var SearchView = (from t1 in db.tblSignup.AsNoTracking()
-                             join t2 in db.tblSignupItem.AsNoTracking() on t1.cMobile equals t2.cMobile
-                             select new { t1, t2 }).ToList();
+            var SelectList = AllView;
 
             // Search List
             if (Search != null)
             {
-                SearchView = SearchView.Where(x => x.t1.cName.Contains(Search) || x.t1.cMobile.Contains(Search)).ToList();
+                SelectList = SelectList.Where(x => x.t1.cName.Contains(Search) || x.t1.cMobile.Contains(Search)).ToList();
             }
             // Select List
             if (SelectId != 0 && SelectId != null)
             {
-                SearchView = SearchView.Where(x => x.t2.cItemID == SelectId).ToList();
+                SelectList = SelectList.Where(x => x.t2.cItemID == SelectId).ToList();
             }
 
+            var SearchView = SelectList.GroupBy(x => 
+            new { 
+                cMobile = x.t1.cMobile,
+                cName = x.t1.cName,
+                cEmail = x.t1.cEmail,
+                cCreateDT = x.t1.cCreateDT,
+            }).Select(x=> 
+            new {
+                cMobile = x.Key.cMobile,
+                cName = x.Key.cName,
+                cEmail = x.Key.cEmail,
+                cCreateDT = x.Key.cCreateDT,
+            });
+
             List<Mix> FilterMixList = new List<Mix>();
-            foreach (var item in )
+            foreach (var item in SearchView)
             {
                 Mix FilterMix = new Mix();
                 FilterMix.cMobile = item.cMobile;
                 FilterMix.cName = item.cName;
                 FilterMix.cEmail = item.cEmail;
                 FilterMix.cCreateDT = item.cCreateDT;
-                FilterMix.cItemName = item.cItemName;
+
+                var SelectActivity = AllView.Where(x => x.t2.cMobile == item.cMobile).ToList();
+
+                for (var i = 0; i < SelectActivity.Count; i++)
+                {
+                    FilterMix.cItemName += SelectActivity[i].t3.cItemName;
+                    if (i != SelectActivity.Count - 1)
+                    {
+
+                        FilterMix.cItemName += ",";
+                    }
+                }
+
                 FilterMixList.Add(FilterMix);
             }
 
@@ -236,7 +260,8 @@ namespace SimpleSignupSystem.Controllers
                         db_tblSignup.cName = Mix.cName;
                         db_tblSignup.cEmail = Mix.cEmail;
                         db.SaveChanges();
-                        return RedirectToAction("Index");
+
+                        return RedirectToAction("Index", new { Message = "編輯成功" });
                     }
                 }
 
@@ -246,7 +271,7 @@ namespace SimpleSignupSystem.Controllers
                     db.tblSignupItem.Any(x => x.cMobile == Mix.cMobile && x.cItemID == Mix.cItemID)
                     )
                 {
-                    ViewBag.Message = "<script>alert('此手機已報名過此活動');</script>";
+                    ViewData["Message"] = "<script>alert('此手機已報名過此活動');</script>";
                     return View(Mix);
                 }
                 else

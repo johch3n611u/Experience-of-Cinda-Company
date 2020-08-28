@@ -42,19 +42,18 @@
 
 </table>
 
-@Html.Raw(@ViewBag.Message)
 
 <script>
 
-    function CheckDelete(tblSignupItem_ID, cName)
-    {
-        if (confirm('確定要刪除 ' + cName +' 嗎?'))
-        {
+    function CheckDelete(tblSignupItem_ID, cName) {
+        if (confirm('確定要刪除 ' + cName + ' 嗎?')) {
             document.location.href = "/tblSignups/Delete?tblSignupItem_ID=" + tblSignupItem_ID;
         }
     }
 
 </script>
+
+@Html.Raw(@ViewData["Message"])
 
 @*<div>
         <hr />

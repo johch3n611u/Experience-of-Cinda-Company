@@ -1,6 +1,8 @@
 
 # 簡易活動報名系統
 
+![alt](/Test.SimpleSignupSystem/assets/img/tempgif.gif)
+
 ## really code first
 
 <https://dotblogs.com.tw/supershowwei/2016/04/11/000015>
@@ -21,11 +23,11 @@
   2.2活動項目，須從資料庫來 :heavy_check_mark:
   2.3所有欄位都必填(需檢查) :heavy_check_mark:
   2.4相同的手機，只能報名一次 :heavy_check_mark:
-  2.5報名完成，需要顯示 報名詳細資訊
-  2.6列表 所有活動名稱、報名人數 及 詳細頁 報名人員、姓名、手機、報名時間
-  2.6刪除需有確認提示視窗 :heavy_check_mark:
-  2.7列表根據三個欄位(姓名/手機(模糊查詢)、活動項目(含全部)(下拉) 進行查詢
-  2.8查詢出來的列表，需有會 手機、姓名、email 、活動項目(用逗點區隔),報名時間  欄位
+  2.5報名完成，需要顯示 報名詳細資訊 :heavy_check_mark:
+  2.6列表 所有活動名稱、報名人數 及 詳細頁 報名人員、姓名、手機、報名時間 :heavy_check_mark:
+  2.6刪除需有確認提示視窗 :heavy_check_mark: :heavy_check_mark:
+  2.7列表根據三個欄位(姓名/手機(模糊查詢)、活動項目(含全部)(下拉) 進行查詢 :heavy_check_mark:
+  2.8查詢出來的列表，需有會 手機、姓名、email 、活動項目(用逗點區隔),報名時間  欄位 :heavy_check_mark:
   2.9相關資料表
     * tblSignup報名資訊
       * cMobile,varchar(10)，手機 ,PK
@@ -40,9 +42,9 @@
       * cItemName, 活動項目名稱
       * cActiveDt,活動時間
   2.10參考畫面 根據上面提示，自行發想
-3. 與資料庫聯繫，需使用EF codefirst
-4. 建立專案，須將專案加入git版控
-5. 須將網站，部屬至本機端IIS上
+3. 與資料庫聯繫，需使用EF codefirst :heavy_check_mark:
+4. 建立專案，須將專案加入git版控 :heavy_check_mark:
+5. 須將網站，部屬至本機端IIS上 :heavy_check_mark:
 
 ## 重點
 
@@ -84,6 +86,7 @@
 11. 資料必須全砍掉然後重頭下一次指令，並且重啟db，不然會卡。
 12. [補傳遞驗證/提示資料 Code。](https://social.msdn.microsoft.com/Forums/zh-TW/0b84b707-342b-4c9e-b576-399d77d079a5/mvc229142030923559object-3900622411366812556321040routevalues?forum=236)
 13. [理解 LINQ Group & Select。](https://stackoverflow.com/questions/10637760/linq-group-by-and-select-collection)
+14. [MVC 資料容器  ViewData、ViewBag、ViewModel、TempData。](https://dotblogs.com.tw/jasonyah/2013/04/18/explain-viewbag-viewdata)
 
 ---
 
