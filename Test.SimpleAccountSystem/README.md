@@ -1,6 +1,8 @@
 
 # 簡易帳號管理系統
 
+![alt](../Test.SimpleAccountSystem/assets/img/vuetodolistdemo.gif)
+
 ## code first 補充
 
 重點為二 1. cmd 產生實際去執行更新資料庫結構的程式碼 2. 產出 sql 而不是真的由程式去更新資料庫
@@ -28,8 +30,6 @@ Demo 時出現問題 mdf 檔並沒有版控，因為一開始是使用 code firs
 ## 使用技術
 
 * MVC5 / Code first by database / Razor / JS / SSMS
-
-![alt](../Test.SimpleAccountSystem/assets/img/vuetodolistdemo.gif)
 
 ## 功能
 
