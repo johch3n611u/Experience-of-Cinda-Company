@@ -3,6 +3,14 @@
 
 ![alt](/Test.SimpleSignupSystem/assets/img/tempgif.gif)
 
+## 20200830 錯誤處理補充
+
+<https://dotblogs.com.tw/joysdw12/2013/05/20/104561>
+
+<https://dotblogs.com.tw/b7076476/2012/10/25/78869>
+
+<https://dotblogs.com.tw/jinx/2014/04/10/144683>
+
 ## really code first
 
 <https://dotblogs.com.tw/supershowwei/2016/04/11/000015>

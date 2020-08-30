@@ -27,7 +27,14 @@
         <div class="form-group">
             @Html.LabelFor(model => model.cMobile, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.cMobile, new { htmlAttributes = new { @class = "form-control" } })
+                @if (Model.cMobile == null)
+                {
+                    @Html.EditorFor(model => model.cMobile, new { htmlAttributes = new { @class = "form-control" } })
+                }
+                else 
+                {
+                    <input name="cMobile" value="@Model.cMobile" readonly class="form-control"/>
+                }
                 @Html.ValidationMessageFor(model => model.cMobile, "", new { @class = "text-danger" })
             </div>
         </div>
