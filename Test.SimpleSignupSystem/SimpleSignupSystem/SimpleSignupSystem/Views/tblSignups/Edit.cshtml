@@ -1,9 +1,9 @@
 ﻿@model SimpleSignupSystem.Models.DTO.Mix
 @{
-    ViewBag.Title = "新達2020/9/25活動報名系統";
+    ViewBag.Title = "活動報名系統";
 }
 
-<h2>新達2020/9/25活動報名系統</h2>
+<h2>活動報名系統</h2>
 
 
 @using (Html.BeginForm())
@@ -55,7 +55,7 @@
         </div>
     </div>
 }
-@Html.Raw(@ViewBag.Message)
+
 <div>
     @Html.ActionLink("返回首頁", "Index")
 </div>
@@ -63,3 +63,5 @@
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
 }
+
+@Html.Raw(@ViewData["Message"])
