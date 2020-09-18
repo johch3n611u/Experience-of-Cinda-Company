@@ -53,17 +53,19 @@ Mockup 視覺槁
 
 Prototype 原型
 
+SRS : 軟體需求說明 Software requirements specification
+
 </details>
 
 # 系統整合網站工程師
 
 ### 職責劃分
 
-> **專案較複雜的頁面由設計部門完成頁面切版、 Banner 、 EDM 等 UI，** </br>
-> **協同數據發展部與需求單位與工程師討論 UX 並完成。** </br>
-> **團隊利用 Scrum、OKR、KPI、TRELLO 任務管理、Git / SVN 版本控制。** </br>
-> **工程師團隊工作橫以品牌切割從前端、後端至資料庫與架站、排程。** </br>
-> **縱為各品牌之間維護需求或功能新增相互支援。** </br>
+> **根據專案 SRS 規格，組長與組員討論架構與使用框架與工具庫等其餘工具並完成** </br>
+> **協同小組四人完成從 SRS、USE Case檢討、測試需求、教育訓練等工作** </br>
+> **團隊利用 Google Meet 與其餘 Google 雲端軟體遠端協作、任務管理、Git Sourcetree 版本控制** </br>
+> **工程師團隊從前端、後端至資料庫與架站、排程皆有參與並依照 SRS 與各種工作流程檢討並改進** </br>
+> **依照 Redmine / SharePoint Issue 與客戶溝通並完成維護** </br>
 
 ### 工作技能
 
