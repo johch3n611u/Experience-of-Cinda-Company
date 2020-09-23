@@ -18,7 +18,7 @@ job / trigger / schedule (取代 Timer) - 有支援 .new core
 
 |比較|EF x Dapper 混用|EF|Dapper|
 |-|-|-|-|
-|操作性|-|-|-|
-|效能|-|-|-|
-|查詢精準度|-|-|-|
-|可讀性|-|-|-|
+|操作性|:cupid:|:cupid:|-|
+|效能|:cupid:|-|:cupid:|
+|查詢精準度|:cupid:|-|:cupid:|
+|可讀性|:cupid:|:cupid:|-|
