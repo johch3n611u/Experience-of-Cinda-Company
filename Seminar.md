@@ -6,6 +6,16 @@
 * [Dapper ORM](#2)
 * [CAPTCHA 圖靈測試](#3)
 * [SASS / LESS](#4)
+* [CSharp 非同步程式](#5)
+* [Angular pipe regx](#6)
+* [SSRS SQL Server Reporting Services](#7)
+* [Navicat Premium](#8)
+* [SQL 效能調校](#9)
+* [正規表示式 Regx](#10)
+* [.Net Core ViewComponent](#11)
+* [Flurl C# Library](#12)
+* [Robots.txt 封鎖 / SEO 優化搜尋](#12)
+* [Elasticsearch 搜尋引擎](#12)
 
 ## Topshelf & Quartz.Net <a id="1"></a>
 
@@ -154,7 +164,7 @@ Oauth
 
 Get String Byte Stream ...
 
-## Robots.txt 封鎖 / SEO 優化搜尋 <a id="11"></a>
+## Robots.txt 封鎖 / SEO 優化搜尋 <a id="13"></a>
 
 #### 案例
 
@@ -200,7 +210,7 @@ header meta 相對較保險，只有 MIS 有機會去異動
 
 - 補充 h1 container 容易被 bot 搜到 (HTML結構優化)
 
-## Elasticsearch 搜尋引擎 <a id="12"></a>
+## Elasticsearch 搜尋引擎 <a id="14"></a>
 
 分散式搜尋系統 / Java / 容易擴充 / 反向搜尋(分池計分)
 
