@@ -2,13 +2,10 @@
 
 ## 目錄
 
-[Topshelf & Quartz.Net](#1)
-
-[Dapper ORM](#2)
-
-[CAPTCHA 圖靈測試](#3)
-
-[SASS / LESS](#4)
+* [Topshelf & Quartz.Net](#1)
+* [Dapper ORM](#2)
+* [CAPTCHA 圖靈測試](#3)
+* [SASS / LESS](#4)
 
 ## Topshelf & Quartz.Net <a id="1"></a>
 
@@ -109,19 +106,13 @@ XML
 
 ## SQL 效能調校 <a id="9"></a>
 
-### 查詢成本 執行計畫
-
-### IN < EXISTS
-
-### INSERT INTO (Table存在) < SELECT INTO (Table不存在) (通常直接備份時使用)
-
-### Order by (無 index 時慢)，但叢集索引太多時 inster 會變慢，只是查詢變快 ( key 只是讓值不重複 )
-
-### Count(*) > Count(col)
-
-### < and >= 優於 between
-
-### C# SQLBalkCopy 吃系統轉檔不做過多邏輯判斷，進什麼吃什麼
+* 查詢成本 執行計畫
+* IN < EXISTS
+* INSERT INTO (Table存在) < SELECT INTO (Table不存在) (通常直接備份時使用)
+* Order by (無 index 時慢)，但叢集索引太多時 inster 會變慢，只是查詢變快 ( key 只是讓值不重複 )
+* Count(*) > Count(col)
+* < and >= 優於 between
+* C# SQLBalkCopy 吃系統轉檔不做過多邏輯判斷，進什麼吃什麼
 
 需補使用情境
 
@@ -136,3 +127,108 @@ Ctrl + F 也可吃 / 取代也可吃
 檢查條件 / 限制輸入條件 JS C# 都有 Object Method
 
 需補正則背後原理 & 效能關係
+
+## .Net Core ViewComponent <a id="11"></a>
+
+類似現代前端框架的 Component 概念，但後端渲染 SSR
+
+可以 JS 呼 Controller 再回傳 VC
+
+其實就是 .Net Core 因應沒有 MVC 的 Partial View 所做的升級版
+
+主要應用可以資料來源同一個 Model 但不同套版
+
+## Flurl C# Library <a id="12"></a>
+
+nuget 安裝
+
+應用 URL組裝 參數化系統設計
+
+Get Post Async Task Await
+
+Exception 應用
+
+Header Download
+
+Oauth
+
+Get String Byte Stream ...
+
+## Robots.txt 封鎖 / SEO 優化搜尋 <a id="11"></a>
+
+#### 案例
+
+高鐵還沒釋出被爬蟲爬到，因為測試站沒有 robots.txt
+
+福華旅行社開發完後，SEO 無起色，使用 sitemap.xml 嘗試
+
+---
+
+#### 1 .robots.txt
+
+檔名須小寫 root 目錄要讀的到 e.g. Angular 要放在靜態目錄之下
+
+不允許...，啥檔案 like gitnone (內容寫法)
+
+Google search console / robots tool
+
+#### 2 .http 回應標頭 meta ( IIS 內設定 )
+
+與 robots.txt 相比權重較大
+
+如何看有無成功 ? 瀏覽器 dev tool Network X-Robot-tag
+
+#### 3 .網址 Google Search Console 移除六個月
+
+半天成效
+
+#### 4 sitemap.xml 讓瀏覽器搜入提高 SEO 算分
+
+sitemap 產生器，丟 root 目錄
+
+GSC 丟 siemap
+
+連線偵測，要求 google 搜入
+
+#### 預防與總結
+
+robot.txt 容易改動，多人協作或客戶有機會異動檔案時不建議
+
+header meta 相對較保險，只有 MIS 有機會去異動
+
+或者靠較嚴謹的流程管控，如申請測試站一律掛 header meta
+
+- 補充 h1 container 容易被 bot 搜到 (HTML結構優化)
+
+## Elasticsearch 搜尋引擎 <a id="12"></a>
+
+分散式搜尋系統 / Java / 容易擴充 / 反向搜尋(分池計分)
+
+etg 正向搜尋：計算每個分池 / 精確大小寫
+
+專為英文做的 JAVAHOME ?
+
+內建訪問服務
+
+中（每字）英（空白間隔）
+
+分析器　輔助避免中文過多分池　ＩＫＡ　同義池
+
+自定義分析　／　ＭＡＰＰＩＮＧ　查詢使用
+
+資料類型．．．　超過則跳過ＥＳ直接搜尋
+
+#### 重點
+
+1. 搜尋規則 (類似正則／全文檢索／模糊／精確)
+2. 分池（分析套件）大小寫／繁簡體
+3. 資料源（查詢結果或其他／備份ｓｎａｐｓｈｏｔ快照　？
+4. 結果（分頁／Ｇｒｏｕｐｂｙ）
+
+#### 總結
+
+中鼎（斷池）醫學專有名詞　／　廢話就分池　／　簡單就利用　Ｇｏｏｇｌｅ搜尋ＡＰＩ
+
+ｐａｒｓａｌｅ　主打公司加值應用／ＳＱＬ　Ｌｉｋｅ　人才庫
+
+目前ｂｕｇ　中英代碼搜尋不到　ＴＣ１２３４５
