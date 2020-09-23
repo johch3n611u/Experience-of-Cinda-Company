@@ -14,8 +14,8 @@
 * [正規表示式 Regx](#10)
 * [.Net Core ViewComponent](#11)
 * [Flurl C# Library](#12)
-* [Robots.txt 封鎖 / SEO 優化搜尋](#12)
-* [Elasticsearch 搜尋引擎](#12)
+* [Robots.txt 封鎖 / SEO 優化搜尋](#13)
+* [Elasticsearch 搜尋引擎](#14)
 
 ## Topshelf & Quartz.Net <a id="1"></a>
 
