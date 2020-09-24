@@ -309,6 +309,68 @@ C#中有許多好用的Log工具(如NLog、Log4net、Serilog)，
 
 <https://www.google.com/search?q=Event+Queue&source=lmns&bih=915&biw=1920&rlz=1C1CHBF_zh-TWTW905TW905&hl=zh-TW&sa=X&ved=2ahUKEwi_-KSB0YDsAhVWAqYKHbhYBZQQ_AUoAHoECAEQAA>
 
-## IIS部屬 SQL資料庫
+## IIS & SQL資料庫 部屬
 
 <https://dotblogs.com.tw/mis2000lab/2017/07/12/IIS_WindowsAuth_ASPnet_SQL>
+
+<https://blog.xuite.net/tolarku/blog/536261609-%5BIIS%5D+VS.NET+%E5%B0%88%E6%A1%88%E7%99%BC%E8%A1%8C%E8%B3%87%E6%96%99%E5%BA%AB%E9%8C%AF%E8%AA%A4+-+IIS+APPPOOL%5C.NET+v4.5+%E7%9A%84%E7%99%BB%E5%85%A5%E5%A4%B1%E6%95%97>
+
+<https://dotblogs.com.tw/aken1215/2016/08/24/155102>
+
+<http://lhzyaminabe.blogspot.com/2017/08/mvciis75mvc.html>
+
+<https://dotblogs.com.tw/mis2000lab/2017/07/12/IIS_WindowsAuth_ASPnet_SQL>
+
+## Visual Studio 視窗配置
+
+<https://www.google.com/search?rlz=1C1CHBF_zh-TWTW905TW905&ei=TxVDX6GmEMuImAWNt72oCw&q=visual+studio+%E8%A6%96%E7%AA%97%E9%85%8D%E7%BD%AE+%E8%B7%91%E6%8E%89+&oq=visual+studio+%E8%A6%96%E7%AA%97%E9%85%8D%E7%BD%AE+%E8%B7%91%E6%8E%89+&gs_lcp=CgZwc3ktYWIQAzIFCAAQzQIyBQgAEM0COggIABCwAxDNAjoCCAA6BAgAEB5QhSpYjTdgtzhoAXAAeACAAUKIAa4BkgEBM5gBAKABAaABAqoBB2d3cy13aXrAAQE&sclient=psy-ab&ved=0ahUKEwjhiaPf1bLrAhVLBKYKHY1bD7UQ4dUDCAw&uact=5>
+
+<https://kevintsengtw.blogspot.com/2015/02/visual-studio-part1.html>
+
+## EF Codefirst
+
+<https://dotblogs.com.tw/supershowwei/2016/04/11/000015>
+
+<https://programmium.wordpress.com/2017/07/17/ef-code-first-auto-increment-key/>
+
+## JS Array & List
+
+<https://ithelp.ithome.com.tw/questions/10191125>
+
+## LINQ
+
+<https://stackoverflow.com/questions/21000287/date-difference-logic-in-linq>
+
+<https://dotblogs.com.tw/chhuang/2008/05/01/3772>
+
+<https://blog.xuite.net/f8789/DCLoveEP/23587655-LINQ+-+DISTINCT%E7%9A%84%E4%BD%BF%E7%94%A8>
+
+<https://support.microsoft.com/zh-tw/help/2588635>
+
+<http://coding.anyun.tw/2012/03/05/linq-to-entity-datatime-diff/>
+
+<https://yangxinde.pixnet.net/blog/post/31357272>
+
+<https://dotblogs.com.tw/dc690216/2009/09/13/10601>
+
+<https://stackoverflow.com/questions/1042152/how-can-i-convert-iqueryablestring-to-a-string-array>
+
+<https://dotblogs.com.tw/dc690216/2009/09/13/10601>
+
+<https://stackoverflow.com/questions/7325278/group-by-in-linq>
+
+## SQL Server 設計師模式關閉
+
+<https://mitblog.pixnet.net/blog/post/39977377?m=off/>
+
+## SQL
+
+<https://www.fooish.com/sql/left-outer-join.html>
+
+<https://stackoverflow.com/questions/1748794/is-there-an-arraylist-in-javascript>
+
+<https://www.1keydata.com/tw/sql/sqlorderby.html>
+
+## CSharp Foreach index
+
+<http://jengting.blogspot.com/2014/08/foreach-index.html>
