@@ -269,4 +269,13 @@ RestSharp 是一个轻量的，不依赖任何第三方的组件或者类库的H
 
 <https://www.nuget.org/packages/RestClient/>
 
+## Nuget
+
+NuGet是一個自由開源軟體包管理系統。用於Microsoft開發平台。
+
+藉由類似 cdnjs 的方式，載入線上 packge 所以要確認網址一定要能解析正確，nuget 管理介面不能放錯誤網址否則會影響其他套件載入。
+
+<https://stackoverflow.com/questions/10240029/how-do-i-install-a-nuget-package-nupkg-file-locally>
+
+<https://dotblogs.com.tw/OldNick/2017/03/24/162927>
 
