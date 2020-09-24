@@ -243,7 +243,7 @@ etg 正向搜尋：計算每個分池 / 精確大小寫
 
 目前ｂｕｇ　中英代碼搜尋不到　ＴＣ１２３４５
 
-## Visual Studio Spell Checker 拼字檢查
+## Visual Studio Spell Checker (拼字檢查套件)
 
 * [Visual Studio Vession](https://marketplace.visualstudio.com/items?itemName=EWoodruff.VisualStudioSpellCheckerVS2017andLater)
 
@@ -253,7 +253,7 @@ etg 正向搜尋：計算每個分池 / 精確大小寫
 
 <https://blog.poychang.net/visual-studio-spell-checker/>
 
-## C# RestSharp
+## C# RestSharp (Http的组件)
 
 一般後端調用 API 都是使用 System.net.http => HttpClient
 
@@ -269,7 +269,7 @@ RestSharp 是一个轻量的，不依赖任何第三方的组件或者类库的H
 
 <https://www.nuget.org/packages/RestClient/>
 
-## Nuget
+## Nuget (開源軟體包管理系統)
 
 NuGet是一個自由開源軟體包管理系統。用於Microsoft開發平台。
 
@@ -279,3 +279,10 @@ NuGet是一個自由開源軟體包管理系統。用於Microsoft開發平台。
 
 <https://dotblogs.com.tw/OldNick/2017/03/24/162927>
 
+## NLOG (Log工具)
+
+C#中有許多好用的Log工具(如NLog、Log4net、Serilog)，
+
+<https://ithelp.ithome.com.tw/articles/10207693>
+
+<https://dotblogs.com.tw/stanley14/2017/02/15/nlog>
