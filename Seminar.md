@@ -252,3 +252,21 @@ etg 正向搜尋：計算每個分池 / 精確大小寫
 工具 => Spell Checker => Edit Global Configuration => add => [\u4e00-\u9fa5] => 重開即可排除中文
 
 <https://blog.poychang.net/visual-studio-spell-checker/>
+
+## C# RestSharp
+
+一般後端調用 API 都是使用 System.net.http => HttpClient
+
+<https://dotblogs.com.tw/justforgood/2018/08/24/100629>
+
+但 C# RestSharp 函式庫簡化了使用方式。
+
+RestSharp 是一个轻量的，不依赖任何第三方的组件或者类库的Http的组件。
+
+<https://zhuanlan.zhihu.com/p/29338111>
+
+<https://github.com/restsharp/RestSharp>
+
+<https://www.nuget.org/packages/RestClient/>
+
+
