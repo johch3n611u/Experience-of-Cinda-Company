@@ -1,4 +1,4 @@
-# 研討會
+# 研討會 & 日常
 
 ## 目錄
 
@@ -242,3 +242,13 @@ etg 正向搜尋：計算每個分池 / 精確大小寫
 ｐａｒｓａｌｅ　主打公司加值應用／ＳＱＬ　Ｌｉｋｅ　人才庫
 
 目前ｂｕｇ　中英代碼搜尋不到　ＴＣ１２３４５
+
+## Visual Studio Spell Checker 拼字檢查
+
+* [Visual Studio Vession](https://marketplace.visualstudio.com/items?itemName=EWoodruff.VisualStudioSpellCheckerVS2017andLater)
+
+* [Visual Studio Code Vession](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker)
+
+工具 => Spell Checker => Edit Global Configuration => add => [\u4e00-\u9fa5] => 重開即可排除中文
+
+<https://blog.poychang.net/visual-studio-spell-checker/>
