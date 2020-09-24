@@ -286,3 +286,29 @@ C#中有許多好用的Log工具(如NLog、Log4net、Serilog)，
 <https://ithelp.ithome.com.tw/articles/10207693>
 
 <https://dotblogs.com.tw/stanley14/2017/02/15/nlog>
+
+## 網站規劃 & UIUX & 設計規範
+
+<http://homepage.ntu.edu.tw/~huangsl/dw8/dw8-Pre-procedure.pdf>
+
+<https://ctmaxs.com/%E7%B6%B2%E9%A0%81%E8%A8%AD%E8%A8%88/%E7%B6%B2%E7%AB%99%E8%A8%AD%E8%A8%88%E8%88%87%E9%96%8B%E7%99%BC%E6%B5%81%E7%A8%8B/#i>
+
+<https://www.ctkpro.com/blog/web-design-progress-and-schedule/>
+
+<http://www.tbsa.tw/ezfiles/tbsa/download/attach/5/%BD%B2%A9%FA%AD%F5-%BA%F4%AF%B8%A5%F8%B9%BA%BBP%A4%B6%AD%B1%B3%5D%ADp.pdf>
+
+<https://otoitsuki.info/%E7%B6%B2%E7%AB%99%E4%BC%81%E5%8A%83%E6%B5%81%E7%A8%8B-8e631cce494d>
+
+<https://www.google.com/search?rlz=1C1CHBF_zh-TWTW905TW905&ei=RfhRX9KcKcKTr7wPt9eW-Aw&q=%E9%96%8B%E7%99%BC%E9%9A%8E%E6%AE%B5%E7%B6%B2%E7%AB%99%E4%BC%81%E5%8A%83%E6%B5%81%E7%A8%8B&oq=%E9%96%8B%E7%99%BC%E9%9A%8E%E6%AE%B5%E7%B6%B2%E7%AB%99%E4%BC%81%E5%8A%83%E6%B5%81%E7%A8%8B&gs_lcp=CgZwc3ktYWIQAzoECAAQQzoGCAAQBRAeUOkLWOkLYNsVaABwAHgAgAHXAYgBoQOSAQMyLTKYAQCgAQKgAQGqAQdnd3Mtd2l6wAEB&sclient=psy-ab&ved=0ahUKEwiS09SUiM_rAhXCyYsBHberBc8Q4dUDCA0&uact=5>
+
+<https://ithelp.ithome.com.tw/users/20121038/ironman/3574>
+
+<https://ithelp.ithome.com.tw/articles/10233696>
+
+## JS 事件循環
+
+<https://www.google.com/search?q=Event+Queue&source=lmns&bih=915&biw=1920&rlz=1C1CHBF_zh-TWTW905TW905&hl=zh-TW&sa=X&ved=2ahUKEwi_-KSB0YDsAhVWAqYKHbhYBZQQ_AUoAHoECAEQAA>
+
+## IIS部屬 SQL資料庫
+
+<https://dotblogs.com.tw/mis2000lab/2017/07/12/IIS_WindowsAuth_ASPnet_SQL>
