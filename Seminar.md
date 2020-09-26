@@ -380,3 +380,13 @@ C#中有許多好用的Log工具(如NLog、Log4net、Serilog)，
 預檢請求 就是為甚麼每次看network都會有兩條一樣的 但只有一條有response
 
 <https://developer.mozilla.org/zh-TW/docs/Web/HTTP/CORS>
+
+## Visual Studio 主題
+
+<https://dotblogs.com.tw/junior78469/2013/11/24/131070>
+
+<https://studiostyl.es/>
+
+推薦下載
+
+<>
