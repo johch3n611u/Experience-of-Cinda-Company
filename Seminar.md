@@ -389,4 +389,4 @@ C#中有許多好用的Log工具(如NLog、Log4net、Serilog)，
 
 推薦下載
 
-<>
+<https://drive.google.com/file/d/1fBGLVGSlYKN3WRAkaod5nRGJnrh1VbJ_/view?usp=sharing>
