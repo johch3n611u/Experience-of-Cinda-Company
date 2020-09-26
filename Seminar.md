@@ -374,3 +374,9 @@ C#中有許多好用的Log工具(如NLog、Log4net、Serilog)，
 ## CSharp Foreach index
 
 <http://jengting.blogspot.com/2014/08/foreach-index.html>
+
+## CORS 預檢請求
+
+預檢請求 就是為甚麼每次看network都會有兩條一樣的 但只有一條有response
+
+<https://developer.mozilla.org/zh-TW/docs/Web/HTTP/CORS>
