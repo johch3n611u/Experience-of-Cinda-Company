@@ -400,3 +400,7 @@ Enterprise、Professional 似乎要 企業版與專業版才有 ...
 ## SQL USE DBNAME
 
 <https://stackoverflow.com/questions/10461861/use-database-command-on-sql-plus-oracle-11gr1>
+
+## EF DBFirst 使用 DataAnnotations 屬性 與繼承 EF 實體
+
+<https://dotblogs.com.tw/chentingw/2016/11/28/235523>
