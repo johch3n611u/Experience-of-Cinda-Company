@@ -396,3 +396,7 @@ C#中有許多好用的Log工具(如NLog、Log4net、Serilog)，
 Enterprise、Professional 似乎要 企業版與專業版才有 ...
 
 <https://stackoverflow.com/questions/55610991/is-there-any-codelens-add-on-available-that-shows-the-git-history-of-the-given-m>
+
+## SQL USE DBNAME
+
+<https://stackoverflow.com/questions/10461861/use-database-command-on-sql-plus-oracle-11gr1>
