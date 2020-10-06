@@ -404,3 +404,7 @@ Enterprise、Professional 似乎要 企業版與專業版才有 ...
 ## EF DBFirst 使用 DataAnnotations 屬性 與繼承 EF 實體
 
 <https://dotblogs.com.tw/chentingw/2016/11/28/235523>
+
+## HashSet 內容不重複的 Set
+
+<https://www.google.com/search?q=HashSet&rlz=1C1CHBF_zh-TWTW905TW905&oq=HashSet&aqs=chrome..69i57j0l7.549j0j7&sourceid=chrome&ie=UTF-8>
