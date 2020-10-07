@@ -408,3 +408,26 @@ Enterprise、Professional 似乎要 企業版與專業版才有 ...
 ## HashSet 內容不重複的 Set
 
 <https://www.google.com/search?q=HashSet&rlz=1C1CHBF_zh-TWTW905TW905&oq=HashSet&aqs=chrome..69i57j0l7.549j0j7&sourceid=chrome&ie=UTF-8>
+
+## Angular TypeScript 非同步
+
+```TypeScript
+getDataUsingSubscribe() {	
+	this.httpClient.get<Employee>(this.url).subscribe(data => {
+	this.subscribeResult = data;
+	console.log('Subscribe executed.')
+	});
+	console.log('I will not wait until subscribe is executed..');
+	}
+
+改成下面
+
+async getAsyncData() {	
+	this.asyncResult = await this.httpClient.get<Employee>(this.url).toPromise();
+	console.log('No issues, I will wait until promise is resolved..');
+	}
+```
+
+<https://medium.com/media/5283ff33e9bd30397e3cf21f953daac1> 
+
+<https://medium.com/@balramchavan/using-async-await-feature-in-angular-587dd56fdc77>
