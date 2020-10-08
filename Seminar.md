@@ -431,3 +431,19 @@ async getAsyncData() {
 <https://medium.com/media/5283ff33e9bd30397e3cf21f953daac1> 
 
 <https://medium.com/@balramchavan/using-async-await-feature-in-angular-587dd56fdc77>
+
+## Exception.StackTrace 比較有用最好從最內層丟到最外
+
+```json
+{
+    "PageSize": 0,
+    "PageNum": 0,
+    "TotalPages": 0,
+    "TotalItems": 0,
+    "Entries": [],
+    "HasPreviousPage": false,
+    "HasNextPage": false,
+    "StackTrace": "   於 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)\r\n   於 System.Nullable`1.get_Value()\r\n   於 Mxic.ITC.Portal.Service.BatchService.PAM115() 於 C:\\Users\\rognp\\Desktop\\旺宏_sourcecode\\MxicAppSample\\Mxic.App.Sample\\Mxic.ITC.Portal.Service\\Batch\\BatchService.cs: 行 1305",
+    "StatusCode": 2
+}
+```
