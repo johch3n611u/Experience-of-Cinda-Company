@@ -1,5 +1,9 @@
 # Meeting.SoftwareTesting
 
+<https://www.itread01.com/content/1548807503.html>
+
+UAT SIT
+
 ## 大綱
 
 1. 理論概念簡介
