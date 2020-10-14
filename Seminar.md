@@ -454,3 +454,8 @@ async getAsyncData() {
 ## LINQ GroupBy
 
 <https://dotblogs.com.tw/noncoder/2019/03/25/Lambda-GroupBy-Sum>
+
+## Nuget Case Converter 套件 快速重構命名方法
+
+<https://marketplace.visualstudio.com/items?itemName=munyabe.CaseConverter>
+
