@@ -459,3 +459,50 @@ async getAsyncData() {
 
 <https://marketplace.visualstudio.com/items?itemName=munyabe.CaseConverter>
 
+## AWS IPV6 應用
+
+USECASE 高鐵 登入驗證 IP 需前後相同否則前端登入踢出
+
+Azure 不提供
+
+VPC 虛擬網路
+
+安全性群組 (防火牆)
+
+VM(很多設定)
+
+站台架設 DNS IIS 防火牆設定
+
+IPV6 > 4 預設
+
+網卡同時包含 4 & 6
+
+Client 只能選一個用
+
+Site 吃 2 種 但要設定
+
+---
+
+jsonp - cors
+
+json - cors 標頭
+
+xmlhttp... / fetch 都有同源政策
+
+src att 無視 cors ?
+
+cdn 跨網域
+
+## Csharp Docx 套件
+
+Word 套印
+
+修改內容 / 表格化
+
+Templt 套版
+
+pdf 通常 html 轉
+
+## elasticsearch 進階應用 (感覺還是要實際遇到問題解決才懂) java 開源搜尋引擎
+
+聚合 / 分池 / 關聯 / reindex / 分群搜尋 / kinana 管理頁面套件 要錢 可以驗證登入 / 全文檢索 / 雙引號會爆
