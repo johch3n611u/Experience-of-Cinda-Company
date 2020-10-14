@@ -447,3 +447,7 @@ async getAsyncData() {
     "StatusCode": 2
 }
 ```
+
+## LINQ GroupBy
+
+<https://dotblogs.com.tw/noncoder/2019/03/25/Lambda-GroupBy-Sum>
