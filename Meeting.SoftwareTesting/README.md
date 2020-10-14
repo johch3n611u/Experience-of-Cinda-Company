@@ -1,5 +1,7 @@
 # Meeting.SoftwareTesting
 
+<https://www.google.com/search?sxsrf=ALeKk02q7Z6HFIfP8SbvtRlLexhwJM_McA%3A1602689099601&ei=SxiHX9SXJLSWr7wP9_GL0A8&q=%E5%96%AE%E5%85%83%E6%B8%AC%E8%A9%A6+c%23+%E7%AF%84%E4%BE%8B&oq=%E5%96%AE%E5%85%83%E6%B8%AC%E8%A9%A6+c%23&gs_lcp=CgZwc3ktYWIQAxgBMgIIADIECAAQHjIECAAQHjIICAAQCBAHEB4yBggAEAgQHjIGCAAQCBAeMgYIABAIEB4yBggAEAgQHjIGCAAQCBAeOgYIABAHEB46BAgAEENQp1dY2G5glnhoAHAAeACAAcsBiAHXBpIBBjEyLjAuMZgBAKABAaoBB2d3cy13aXrAAQE&sclient=psy-ab>
+
 19:16 請問一下，我確定看看我理解的對不對，
 
 我們目前 unit test 實際應用就是，我們單子會進到 PAMAI 關卡 ， 這時 透過 PAMAI Console 程式 調用測試 目的是要通過，第三方 IDM 系統 ， 當這個測試是成功的時候，才會調用 PAM 去跑這張單子的 Approve 與 Close
