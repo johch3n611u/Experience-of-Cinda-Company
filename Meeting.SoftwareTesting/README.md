@@ -1,3 +1,9 @@
+<https://docs.google.com/presentation/d/1IEZ3Ow6EekNYDxqzI9toHEgPiagYbZTiffCKjdfXha0/edit#slide=id.ga4518fb1b2_2_7>
+
+<https://blog.turn.tw/?p=2821>
+
+---
+
 # Meeting.SoftwareTesting
 
 <https://www.google.com/search?sxsrf=ALeKk02q7Z6HFIfP8SbvtRlLexhwJM_McA%3A1602689099601&ei=SxiHX9SXJLSWr7wP9_GL0A8&q=%E5%96%AE%E5%85%83%E6%B8%AC%E8%A9%A6+c%23+%E7%AF%84%E4%BE%8B&oq=%E5%96%AE%E5%85%83%E6%B8%AC%E8%A9%A6+c%23&gs_lcp=CgZwc3ktYWIQAxgBMgIIADIECAAQHjIECAAQHjIICAAQCBAHEB4yBggAEAgQHjIGCAAQCBAeMgYIABAIEB4yBggAEAgQHjIGCAAQCBAeOgYIABAHEB46BAgAEENQp1dY2G5glnhoAHAAeACAAcsBiAHXBpIBBjEyLjAuMZgBAKABAaoBB2d3cy13aXrAAQE&sclient=psy-ab>
