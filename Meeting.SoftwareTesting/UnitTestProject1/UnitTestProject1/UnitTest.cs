@@ -40,6 +40,9 @@ namespace UnitTestProject.UnitTest
 
                 #region Assert - 斷言 (判斷真假) 表示確認期望值和實際值應該相同
                 Assert.IsFalse(result, "1 should not be prime");
+                Assert.IsTrue(result, "");
+                Assert.AreEqual(result, Test);
+                Assert.Fail();
                 #endregion
             }
             public class PrimeService
@@ -79,7 +82,7 @@ namespace UnitTestProject.UnitTest
                 #endregion
 
                 #region Assert - 斷言 (判斷真假) 表示確認期望值和實際值應該相同
-                Assert.IsFalse(ResultEmail == Email);
+                Assert.IsTrue(ResultEmail == Email);
                 #endregion
             }
 
@@ -110,7 +113,7 @@ namespace UnitTestProject.UnitTest
                 #endregion
 
                 #region Assert - 斷言 (判斷真假) 表示確認期望值和實際值應該相同
-                Assert.IsFalse(MailMessage != ResultMailMessage);
+                Assert.IsTrue(MailMessage != ResultMailMessage);
                 #endregion
             }
 
@@ -147,20 +150,27 @@ namespace UnitTestProject.UnitTest
                 #endregion
 
                 #region Assert - 斷言 (判斷真假) 表示確認期望值和實際值應該相同
-                Assert.IsFalse(result);
+                Assert.IsTrue(result);
                 #endregion
             }
 
             public static bool SendEmail(MailMessage MailMessage)
             {
-                using (var SmtpClient = new SmtpClient("smtp.gmail.com", 587))
+                try
                 {
-                    SmtpClient.Credentials = new NetworkCredential(Account, PassWord);
-                    SmtpClient.EnableSsl = true;
-                    SmtpClient.Send(MailMessage);
-                    MailMessage.Dispose();
+                    using (var SmtpClient = new SmtpClient("smtp.gmail.com", 587))
+                    {
+                        SmtpClient.Credentials = new NetworkCredential(Account, PassWord);
+                        SmtpClient.EnableSsl = true;
+                        SmtpClient.Send(MailMessage);
+                        MailMessage.Dispose();
+                    }
+                    return true;
                 }
-                return true;
+                catch (Exception ex)
+                {
+                    return false;
+                }
             }
 
             [TestMethod]
@@ -181,7 +191,7 @@ namespace UnitTestProject.UnitTest
                 #endregion
 
                 #region Assert - 斷言 (判斷真假) 表示確認期望值和實際值應該相同
-                Assert.IsFalse(result);
+                Assert.IsTrue(result);
                 #endregion
             }
         }
@@ -268,7 +278,8 @@ namespace UnitTestProject.UnitTest
         //    }
         //}
 
-        public static string Account { get; set; }
-        public static string PassWord = "xxx12345688";
+        public static string Account = "allen.liu@shinda.com.tw";
+        public static string PassWord = "";
     }
 }
+
