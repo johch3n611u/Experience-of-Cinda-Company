@@ -1,0 +1,17 @@
+D:\Desk\Cases\No$OpenSource\Experience-of-Cinda-Company\Meeting.SoftwareTesting\UnitTestProject1\UnitTestProject1\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+D:\Desk\Cases\No$OpenSource\Experience-of-Cinda-Company\Meeting.SoftwareTesting\UnitTestProject1\UnitTestProject1\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+D:\Desk\Cases\No$OpenSource\Experience-of-Cinda-Company\Meeting.SoftwareTesting\UnitTestProject1\UnitTestProject1\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+D:\Desk\Cases\No$OpenSource\Experience-of-Cinda-Company\Meeting.SoftwareTesting\UnitTestProject1\UnitTestProject1\bin\Debug\zh-Hant\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.resources.dll
+D:\Desk\Cases\No$OpenSource\Experience-of-Cinda-Company\Meeting.SoftwareTesting\UnitTestProject1\UnitTestProject1\bin\Debug\zh-Hant\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.resources.dll
+D:\Desk\Cases\No$OpenSource\Experience-of-Cinda-Company\Meeting.SoftwareTesting\UnitTestProject1\UnitTestProject1\bin\Debug\zh-Hant\Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll
+D:\Desk\Cases\No$OpenSource\Experience-of-Cinda-Company\Meeting.SoftwareTesting\UnitTestProject1\UnitTestProject1\bin\Debug\UnitTestProject1.dll
+D:\Desk\Cases\No$OpenSource\Experience-of-Cinda-Company\Meeting.SoftwareTesting\UnitTestProject1\UnitTestProject1\bin\Debug\UnitTestProject1.pdb
+D:\Desk\Cases\No$OpenSource\Experience-of-Cinda-Company\Meeting.SoftwareTesting\UnitTestProject1\UnitTestProject1\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+D:\Desk\Cases\No$OpenSource\Experience-of-Cinda-Company\Meeting.SoftwareTesting\UnitTestProject1\UnitTestProject1\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+D:\Desk\Cases\No$OpenSource\Experience-of-Cinda-Company\Meeting.SoftwareTesting\UnitTestProject1\UnitTestProject1\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+D:\Desk\Cases\No$OpenSource\Experience-of-Cinda-Company\Meeting.SoftwareTesting\UnitTestProject1\UnitTestProject1\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+D:\Desk\Cases\No$OpenSource\Experience-of-Cinda-Company\Meeting.SoftwareTesting\UnitTestProject1\UnitTestProject1\obj\Debug\UnitTestProject.csprojAssemblyReference.cache
+D:\Desk\Cases\No$OpenSource\Experience-of-Cinda-Company\Meeting.SoftwareTesting\UnitTestProject1\UnitTestProject1\obj\Debug\UnitTestProject.csproj.CoreCompileInputs.cache
+D:\Desk\Cases\No$OpenSource\Experience-of-Cinda-Company\Meeting.SoftwareTesting\UnitTestProject1\UnitTestProject1\obj\Debug\UnitTestProject.csproj.CopyComplete
+D:\Desk\Cases\No$OpenSource\Experience-of-Cinda-Company\Meeting.SoftwareTesting\UnitTestProject1\UnitTestProject1\obj\Debug\UnitTestProject1.dll
+D:\Desk\Cases\No$OpenSource\Experience-of-Cinda-Company\Meeting.SoftwareTesting\UnitTestProject1\UnitTestProject1\obj\Debug\UnitTestProject1.pdb

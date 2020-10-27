@@ -1,3 +1,11 @@
+---
+
+<https://stackoverflow.com/questions/1365407/c-sharp-code-to-validate-email-address>
+
+<https://rileycoder.wordpress.com/2020/01/20/net-gmail%E7%99%BC%E9%80%81%E4%BF%A1%E4%BB%B6%E5%A4%B1%E6%95%97%E3%80%8Csmtp-%E4%BC%BA%E6%9C%8D%E5%99%A8%E9%9C%80%E8%A6%81%E5%AE%89%E5%85%A8%E9%80%A3%E6%8E%A5%EF%BC%8C%E6%88%96%E7%94%A8%E6%88%B6/>
+
+<https://yukaii.tw/blog/2018/04/13/use-gmail-smtp-without-your-own-smtp-server/>
+
 <https://docs.google.com/presentation/d/1IEZ3Ow6EekNYDxqzI9toHEgPiagYbZTiffCKjdfXha0/edit#slide=id.ga4518fb1b2_2_7>
 
 <https://blog.turn.tw/?p=2821>
@@ -34,7 +42,7 @@
 20:37  Pamai那邊按執行那個consile不是測試專案喔
 20:37  那是應用程式
 
-20:37 像 PAMAI 是 Console ? 測試專案好像要用別種方式啟動，好像還是要打開 Visual Studio 
+20:37 像 PAMAI 是 Console ? 測試專案好像要用別種方式啟動，好像還是要打開 Visual Studio
 
 20:38 測試專案就是要用vs跑
 20:38 你先找別人的測試專案怎麼做的
