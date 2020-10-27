@@ -4,7 +4,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace TestProject1
 {
     [TestClass]
-    public class IntegrationTest1
+    public class UnitTest1
     {
         // https://docs.microsoft.com/en-us/dotnet/core/testing/unit-testing-with-mstest
 
