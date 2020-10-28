@@ -42,6 +42,28 @@ job / trigger / schedule (取代 Timer) - 有支援 .new core
 
 <https://github.com/shps951023/Trace-Dapper.NET-Source-Code>
 
+---
+
+### 20201028 補充
+
+主要用於查詢
+
+跟一般使用一樣需要連線
+
+指定型別或動態接值
+
+跟 EF 搭配可以直接用實體接值
+
+支援參數化 / 自動對應
+
+Muti data read
+
+沒有延遲查詢功能
+
+slapper automapper 套件可以解決聯集表 join 問題
+
+
+
 ## CAPTCHA 圖靈測試 <a id="3"></a>
 
 Google reCAPTCHA v2 , v3 費用 0
@@ -242,6 +264,10 @@ etg 正向搜尋：計算每個分池 / 精確大小寫
 ｐａｒｓａｌｅ　主打公司加值應用／ＳＱＬ　Ｌｉｋｅ　人才庫
 
 目前ｂｕｇ　中英代碼搜尋不到　ＴＣ１２３４５
+
+### 20201014 補充 elasticsearch 進階應用 (感覺還是要實際遇到問題解決才懂) java 開源搜尋引擎
+
+聚合 / 分池 / 關聯 / reindex / 分群搜尋 / kinana 管理頁面套件 要錢 可以驗證登入 / 全文檢索 / 雙引號會爆
 
 ## Visual Studio Spell Checker (拼字檢查套件)
 
@@ -503,6 +529,52 @@ Templt 套版
 
 pdf 通常 html 轉
 
-## elasticsearch 進階應用 (感覺還是要實際遇到問題解決才懂) java 開源搜尋引擎
+## Line API (Bot / Notify / Login)
 
-聚合 / 分池 / 關聯 / reindex / 分群搜尋 / kinana 管理頁面套件 要錢 可以驗證登入 / 全文檢索 / 雙引號會爆
+註冊通知取得使用者資料選群組
+
+類似一個人要把那個人的帳號加入，必須要把這個機器人的 token 存入 db 已再次使用
+
+驗證 code 取客戶資料，透過 httpclient 由後端與 line api 溝通
+
+平台已經有一些原本要寫 code 的功能但是要是官方付費帳戶
+
+限制 ? bot 要錢 發送量 ?
+
+收費 ?
+
+應用情境 ?
+
+line 註冊 平台上的帳號與賴綁定，做一些別的應用
+
+bot 一問一答互動 多個框或特定字串
+
+---
+
+登入 另一個套件 類似 google 驗證 api
+
+可以組 flex 發送
+
+推波 push 要錢
+
+其他有免費或使用扣打要去官網查
+
+---
+
+notify 與 push 差別在於 notify 是群發 ， Push 是私聊
+
+使用情竟 客戶申請官方帳號有養人要讓特定的人進平台
+
+官方帳號才有管理 crm 客戶管理其實有 line gui 管理後台
+
+其餘要用 line develop
+
+同個 providers 才會通，可以有管理員幫設定不用直接給權限 可以設定管理員
+
+人工回應或機器人
+
+要注意是綁定對話框
+
+## UnitTest
+
+<https://github.com/johch3n611u/Experience-of-Cinda-Company/tree/master/Meeting.SoftwareTesting>
