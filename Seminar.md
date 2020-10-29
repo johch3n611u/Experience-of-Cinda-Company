@@ -580,3 +580,7 @@ notify 與 push 差別在於 notify 是群發 ， Push 是私聊
 <https://docs.google.com/presentation/d/1IEZ3Ow6EekNYDxqzI9toHEgPiagYbZTiffCKjdfXha0/edit#slide=id.ga4518fb1b2_2_7>
 
 <https://github.com/johch3n611u/Experience-of-Cinda-Company/tree/master/Meeting.SoftwareTesting>
+
+## oracle 臨時表應用
+
+<https://freetoad.pixnet.net/blog/post/25444612>
