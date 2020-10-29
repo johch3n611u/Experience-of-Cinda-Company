@@ -586,3 +586,5 @@ notify 與 push 差別在於 notify 是群發 ， Push 是私聊
 <https://freetoad.pixnet.net/blog/post/25444612>
 
 <http://www.aspphp.online/shujuku/oraclesjk/Oraclejc/201701/93025.html>
+
+<https://www.itread01.com/content/1549304681.html>
