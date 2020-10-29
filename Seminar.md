@@ -590,3 +590,8 @@ notify 與 push 差別在於 notify 是群發 ， Push 是私聊
 <https://www.itread01.com/content/1549304681.html>
 
 <https://byron0920.pixnet.net/blog/post/85759990>
+
+## String.TrimEnd 方法 去除尾數的 char
+
+<https://docs.microsoft.com/zh-tw/dotnet/api/system.string.trimend?view=netcore-3.1>
+
