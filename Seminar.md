@@ -595,3 +595,5 @@ notify 與 push 差別在於 notify 是群發 ， Push 是私聊
 
 <https://docs.microsoft.com/zh-tw/dotnet/api/system.string.trimend?view=netcore-3.1>
 
+取得尾數 <https://blog.xuite.net/i20254/Work/111369008>
+
