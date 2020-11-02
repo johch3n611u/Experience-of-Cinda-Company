@@ -599,3 +599,20 @@ notify 與 push 差別在於 notify 是群發 ， Push 是私聊
 
 <https://blog.csdn.net/xushaozhang/article/details/77146091>
 
+## Angular 元件改 style
+
+```css
+::ng-deep .closeDateDropdown .ui-dropdown-label {
+    color: blue;
+    font-weight:bold;
+ }
+```
+
+```html
+<p-dropdown
+styleClass="closeDateDropdown"
+[disabled]="this.items.Status == 'ThreeOfOneWork' || this.items.Status === 'Closed' || this.items.Status === 'Invalid'"
+appendTo="body" [options]="this.DetailCloseDate" required [(ngModel)]="items.CloseDate"
+[disabled]="item.Disabled==false">
+</p-dropdown>
+```
