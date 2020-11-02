@@ -616,3 +616,8 @@ appendTo="body" [options]="this.DetailCloseDate" required [(ngModel)]="items.Clo
 [disabled]="item.Disabled==false">
 </p-dropdown>
 ```
+
+## linq order by
+
+<https://ithelp.ithome.com.tw/articles/10104089>
+
