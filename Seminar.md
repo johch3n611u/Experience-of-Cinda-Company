@@ -29,12 +29,12 @@ job / trigger / schedule (取代 Timer) - 有支援 .new core
 
 ## Dapper ORM <a id="2"></a>
 
-|比較|EF x Dapper 混用|EF|Dapper|
-|-|-|-|-|
-|操作性|:cupid:|:cupid:|-|
-|效能|:cupid:|-|:cupid:|
-|查詢精準度|:cupid:|-|:cupid:|
-|可讀性|:cupid:|:cupid:|-|
+| 比較       | EF x Dapper 混用 | EF      | Dapper  |
+| ---------- | ---------------- | ------- | ------- |
+| 操作性     | :cupid:          | :cupid: | -       |
+| 效能       | :cupid:          | -       | :cupid: |
+| 查詢精準度 | :cupid:          | -       | :cupid: |
+| 可讀性     | :cupid:          | :cupid: | -       |
 
 > Dapper 用於查詢
 
@@ -441,7 +441,7 @@ Enterprise、Professional 似乎要 企業版與專業版才有 ...
 ## Angular TypeScript 非同步
 
 ```TypeScript
-getDataUsingSubscribe() {	
+getDataUsingSubscribe() {
 	this.httpClient.get<Employee>(this.url).subscribe(data => {
 	this.subscribeResult = data;
 	console.log('Subscribe executed.')
@@ -451,13 +451,13 @@ getDataUsingSubscribe() {
 
 改成下面
 
-async getAsyncData() {	
+async getAsyncData() {
 	this.asyncResult = await this.httpClient.get<Employee>(this.url).toPromise();
 	console.log('No issues, I will wait until promise is resolved..');
 	}
 ```
 
-<https://medium.com/media/5283ff33e9bd30397e3cf21f953daac1> 
+<https://medium.com/media/5283ff33e9bd30397e3cf21f953daac1>
 
 <https://medium.com/@balramchavan/using-async-await-feature-in-angular-587dd56fdc77>
 
@@ -621,3 +621,6 @@ appendTo="body" [options]="this.DetailCloseDate" required [(ngModel)]="items.Clo
 
 <https://ithelp.ithome.com.tw/articles/10104089>
 
+## oracle 坑
+
+搭配 Ef 如果有新增 ef， db也要新增不然 會錯，如果同時也在 transation 會 lock db 直接卡死
