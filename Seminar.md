@@ -623,4 +623,4 @@ appendTo="body" [options]="this.DetailCloseDate" required [(ngModel)]="items.Clo
 
 ## oracle 坑
 
-搭配 Ef 如果有新增 ef， db也要新增不然 會錯，如果同時也在 transation 會 lock db 直接卡死
+搭配 Ef 如果有新增 ef， db也要新增不然 會錯，如果同時也在 transation 會 lock db 直接卡死，此時如無 session 或相關權限 直接等於放棄急救...
