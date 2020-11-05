@@ -69,9 +69,9 @@ SRS : 軟體需求說明 Software requirements specification
 
 ### 工作技能
 
-> **主 C# / VB / MPA / SSR / ASP.NET 4.7 / MVC 5 / WebForm / WebAPI / Winform ...**
+> **主 C# / SPA / SSR / ASP.NET 4.7 / WebAPI / Angular / Prime ...**
 >
-> **次 .NET Core 2.1 / Razor / SPA / CSR / HTML5 / Vue.js ...**
+> **次 .NET Core 2.1 ...**
 
 **註 :** .Net Core 架構，因從 ASP.NET MVC 轉上去的，所以沒有使用到 DI Container 撰寫 Service 、 Component ，使用公司自製的 Module 類別核心，使用少量的 ADO.NET Entity Framework ， 大部分使用 Dapper ORM 套件，操作 Transact-SQL 查詢語言。
 
