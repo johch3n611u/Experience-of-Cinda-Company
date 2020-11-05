@@ -632,3 +632,8 @@ ORA-00054
 ## EF 版本更新錯誤
 
 <https://www.coder.work/article/2615671>
+
+## C# 字串處理
+
+string.IsNullOrEmpty(ele.AccountDisableFormPortalNo)
+
