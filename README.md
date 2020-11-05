@@ -84,8 +84,8 @@ SRS : 軟體需求說明 Software requirements specification
 
 #### 專案開發
 
-<details>
-<summary>MPA SSR CRM 平台 部分專案</summary>
+
+##### MPA SSR CRM 平台 部分專案
 
 * 使用技術 : C# / .NET MVC 5 / SendGrid / Tableau / Power BI / Analytics.js / Embed.js / Chart.js / Google Chat API / Datatables.js / Sourcetree...
   * 需求: 根據數據分析部需求提供應用。
@@ -101,4 +101,4 @@ SRS : 軟體需求說明 Software requirements specification
     * `架設 Tableau Server`
     * `串接 Tableau API 並嵌入應用`
 
-</details>
+
