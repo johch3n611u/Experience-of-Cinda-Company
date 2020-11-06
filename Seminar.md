@@ -640,3 +640,7 @@ string.IsNullOrEmpty(ele.AccountDisableFormPortalNo)
 string.empty <https://jasper-it.blogspot.com/2014/08/c-string-stringempty-is-more-efficient.html>
 
 split <https://codertw.com/%E7%A8%8B%E5%BC%8F%E8%AA%9E%E8%A8%80/641792/>
+
+## Swiper 輪播套件
+
+<https://hackmd.io/@chupai/BkohH4KzL>
