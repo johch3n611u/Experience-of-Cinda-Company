@@ -7,6 +7,17 @@ poc 系統
 
 eip 系統
 
+ICMS 內容管理平台系統
+
+MSA量測系統
+
+SAM 
+軟體資產管理
+
+PAM
+
+PORTAL
+
 INSIDE 硬塞的網路趨勢觀察: 開店能有多複雜？談零售業的八大系統.
 https://www.inside.com.tw/article/21346-8-info-systems-of-retail
 
