@@ -648,3 +648,54 @@ split <https://codertw.com/%E7%A8%8B%E5%BC%8F%E8%AA%9E%E8%A8%80/641792/>
 ## css-background-patterns 背景產生器
 
 <https://free.com.tw/css-background-patterns/>
+
+## Google obfuscator Tool 混淆
+
+tool.css-js.com
+
+UglifyJS
+
+WebWoker js ? 線呈
+
+web api (pwa)
+
+## HAP (HTML Agility Pack) 爬蟲 解析器 nuget 套件
+
+Node Select XML 結構
+
+Xpath 瀏覽器右鍵 COYP 可以取
+
+或 CSS Selector nuget 套件
+
+## XX.AA ?? Empty 安全措施
+
+string.isNullorEmpty and Withespase
+
+## Transtain 交易
+
+ACID, 樂觀悲觀 Lock
+
+鎖定模式 不當鎖定影響 隔離層級
+
+鎖定粒度 鎖定範例
+
+nolock(共用鎖定) tablelock ... 撈的到 補SQL
+
+### 情境
+
+開始
+
+一堆邏輯
+
+儲存時鎖死
+
+存完釋放
+
+不是一開始鎖
+
+
+新隔離層級 SNAPSHOT TEMP 暫存模式
+
+## og.title
+
+
