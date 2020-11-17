@@ -698,4 +698,13 @@ nolock(共用鎖定) tablelock ... 撈的到 補SQL
 
 ## og.title
 
+## Linq Queryable
 
+才能用如以下語法
+
+```C#
+data.Where(x => 
+EntityFunctions.DiffMonths(x.SIGN_FORM_MAIN.CREATE_DATE, DateTime.Now) <= 3 
+&&
+EntityFunctions.DiffMonths(x.SIGN_FORM_MAIN.CREATE_DATE, DateTime.Now) >= -3);
+```
