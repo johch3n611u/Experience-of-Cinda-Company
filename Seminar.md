@@ -714,3 +714,9 @@ EntityFunctions.DiffMonths(x.SIGN_FORM_MAIN.CREATE_DATE, DateTime.Now) >= -3);
 EnabledAnonymous
 
 <https://www.google.com/search?q=.NET+API+Attributes&rlz=1C1CHBF_zh-TWTW905TW905&oq=.NET+API+Attributes&aqs=chrome..69i57.1436j0j1&sourceid=chrome&ie=UTF-8>
+
+## Oracle Update Date
+
+> UPDATE PAMV2.PAM_IF_RESIGN SET ACCOUNT_CLOSE_DATE = DATE '2020-12-13'; 
+
+<https://stackoverflow.com/questions/13497130/updating-a-date-in-oracle-sql-table/13497380>
