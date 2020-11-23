@@ -720,3 +720,36 @@ EnabledAnonymous
 > UPDATE PAMV2.PAM_IF_RESIGN SET ACCOUNT_CLOSE_DATE = DATE '2020-12-13'; 
 
 <https://stackoverflow.com/questions/13497130/updating-a-date-in-oracle-sql-table/13497380>
+
+## CSharp new 用法
+
+```c#
+public string Approved(HighPermissionForm Data, SignFormMain Sign)
+        {
+            foreach (var data in Data.Details)
+            {
+                var account = new Account();
+                account.RefType = (byte)EnumAccountRefType.PAMHighPermission;
+                account.FunctionType = (byte)EnumAccountFunctionType.HighPermission;
+
+                if (Data.ActionType == (byte)EnumAccountActionType.New)
+                {
+                    account.Group = data.Group;
+                    account.EmpNo = data.EmpNo;
+                    account.EmpName = data.EmpName;
+                    account.DeptNo = data.DeptNo;
+                    account.ManageType = data.ManageType;
+                    account.UpdaterEmpNo = Sign.ApplicanterEmpNO;
+                    account.Attachment = Data.UploadFile;
+                    new HighPermissionRepository().Add(account);
+                }
+                else
+                {
+                    account.Id = (decimal)data.DelRefId;
+                    account.LastRefSignFormId = Sign.SignFromID;
+                    new HighPermissionRepository().Remove(account);
+                }
+            }
+            return "";
+        }
+```
