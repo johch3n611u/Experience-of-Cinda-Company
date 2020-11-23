@@ -955,3 +955,7 @@ public class AccountShift : Profile
                     AutofacResolverHelper.Current.Container.ResolveNamed<IAccessRepository>(
                          ((EnumAccountFunctionType)Account.FunctionType).ToString()).Remove(Account);
 ```
+
+## CSharp Debug 時不執行 [Conditional("DEBUG")]
+
+<https://dotblogs.com.tw/joysdw12/2014/03/14/asp-net-debug-release-if-else-conditional>
