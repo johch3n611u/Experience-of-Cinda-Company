@@ -959,3 +959,5 @@ public class AccountShift : Profile
 ## CSharp Debug 時不執行 [Conditional("DEBUG")]
 
 <https://dotblogs.com.tw/joysdw12/2014/03/14/asp-net-debug-release-if-else-conditional>
+
+<https://stackoverflow.com/questions/6927263/enable-code-on-release-compilation>
