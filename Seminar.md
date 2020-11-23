@@ -757,6 +757,27 @@ public string Approved(HighPermissionForm Data, SignFormMain Sign)
 ## CSharp AutofacResolverHelper.Current.Container.ResolveNamed
 
 ```C#
+public class PageQuery<T>
+    {
+        public OrderBy OrderBy { get; set; }
+        public int PageSize { get; set; } = 9999999;
+        public int PageNum { get; set; } = 1;
+        public T QueryObject { get; set; }
+        public string Sort { get; set; } = "ID";
+        public SortDirection SortDirection { get; set; } = SortDirection.Desc;
+        public LazyLoadEvent LoadEvent { get; set; }
+    }
+    public class OrderBy
+    {
+        public string Field { get; set; }
+        public int Type { get; set; }
+    }
+    public enum SortDirection
+    {
+        Asc = 1,
+        Desc = 2
+    }
+
 var request = new Mxic.ITC.PAM.Model.Business.PageQuery<AccountRequest>();
                 var PageQuery = new AccountRepository().GetAccountsBySignFormMain(request);
                 var Account = PageQuery.Entries.FirstOrDefault();
