@@ -753,3 +753,13 @@ public string Approved(HighPermissionForm Data, SignFormMain Sign)
             return "";
         }
 ```
+
+## CSharp AutofacResolverHelper.Current.Container.ResolveNamed
+
+```C#
+var request = new Mxic.ITC.PAM.Model.Business.PageQuery<AccountRequest>();
+                var PageQuery = new AccountRepository().GetAccountsBySignFormMain(request);
+                var Account = PageQuery.Entries.FirstOrDefault();
+                AutofacResolverHelper.Current.Container.ResolveNamed<IAccessRepository>(
+                         ((EnumAccountFunctionType)Account.FunctionType).ToString()).Remove(Account);
+```
