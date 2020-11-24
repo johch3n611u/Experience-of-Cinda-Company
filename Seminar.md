@@ -961,3 +961,7 @@ public class AccountShift : Profile
 <https://dotblogs.com.tw/joysdw12/2014/03/14/asp-net-debug-release-if-else-conditional>
 
 <https://stackoverflow.com/questions/6927263/enable-code-on-release-compilation>
+
+## Oracle CSharp 抓最大 Id
+
+var autoincrementId = Entities.ACCOUNT.Select(x => x.ID).DefaultIfEmpty(0).Max() + 1;
