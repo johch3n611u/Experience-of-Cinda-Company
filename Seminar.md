@@ -964,4 +964,6 @@ public class AccountShift : Profile
 
 ## Oracle CSharp 抓最大 Id
 
-var autoincrementId = Entities.ACCOUNT.Select(x => x.ID).DefaultIfEmpty(0).Max() + 1;
+> var autoincrementId = Entities.ACCOUNT.Select(x => x.ID).DefaultIfEmpty(0).Max() + 1;
+
+排除 table 是空的撈不到東西的狀況
