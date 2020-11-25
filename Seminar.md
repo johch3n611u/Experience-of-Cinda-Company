@@ -967,3 +967,7 @@ public class AccountShift : Profile
 > var autoincrementId = Entities.ACCOUNT.Select(x => x.ID).DefaultIfEmpty(0).Max() + 1;
 
 排除 table 是空的撈不到東西的狀況
+
+## LINQ Not in
+
+<https://dotblogs.com.tw/dc690216/2009/09/13/10601>
