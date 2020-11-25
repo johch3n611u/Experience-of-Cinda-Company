@@ -971,3 +971,57 @@ public class AccountShift : Profile
 ## LINQ Not in
 
 <https://dotblogs.com.tw/dc690216/2009/09/13/10601>
+
+## .NET 快取
+
+<https://www.google.com/search?q=.net+%E5%BF%AB%E5%8F%96&oq=.net+%E5%BF%AB%E5%8F%96&aqs=chrome..69i57j69i65.8615j0j1&sourceid=chrome&ie=UTF-8>
+
+前端 / 後端 快取
+
+.NET Core 2 以上 內建 ResponseCache
+
+<https://ithelp.ithome.com.tw/articles/10203293>
+
+使用方式 Attr 掛在接口上 有參數可以調整
+
+ConfigureService 要設置
+
+有限制 e.g. get/put no post
+
+舊的 outputCatch
+
+## TypeScript
+
+型別 / 包 ES5,6
+
+Tools - CSharp2TS / Eslint / TSlint
+
+## 驗證模式
+
+### SSO - 單一登入 Single sign-on
+
+一種設計方式/平台，能夠整合各平台帳號，類似單一入口
+
+### AD系統 - Active Directory
+
+LDAP / 是微軟Windows Server中，負責架構中大型網路環境的集中式目錄管理服務（Directory Services）
+
+### Windows 驗證 / IIS 開啟 WINDOWS 驗證
+
+不用再打一次帳號密碼，默認吃 WINDOWS OS 開啟時輸入的帳密且如果都設定好，可以間接串 AD
+
+BOWERS 網域 要綁 間接串 AD
+
+### OAuth - 委任授權
+
+資料 token 丟來丟去
+
+### OIDC - OpenID連線
+
+類似上述只是多丟了一些東西
+
+### JWT - JSON Web Token
+
+<https://yami.io/jwt/>
+
+JSON Web Token (JWT) 是由 Auth0 所提構出的一個新 Token 想法，這並不是一套軟體、也不是一個技術
