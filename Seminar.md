@@ -1025,3 +1025,7 @@ BOWERS 網域 要綁 間接串 AD
 <https://yami.io/jwt/>
 
 JSON Web Token (JWT) 是由 Auth0 所提構出的一個新 Token 想法，這並不是一套軟體、也不是一個技術
+
+### SQL 查詢技巧 UNION
+
+<https://www.itread01.com/content/1546941990.html>
