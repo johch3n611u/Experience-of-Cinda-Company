@@ -1029,3 +1029,23 @@ JSON Web Token (JWT) 是由 Auth0 所提構出的一個新 Token 想法，這並
 ### SQL 查詢技巧 UNION
 
 <https://www.itread01.com/content/1546941990.html>
+
+### SYSTEM 系統
+
+ERP：Enterprise resource planning
+
+POS：Point of Sale
+
+CRM：Customer Relationship Management
+
+BI：Business Intelligence
+
+eCOM：支援購物車、整合線上金流，可成立訂單，服務消費者做線上銷售的品牌官網。
+
+app：
+
+OMS：Order Management System
+
+CDP：Customer Data Platform
+
+<https://www.inside.com.tw/article/21346-8-info-systems-of-retail>
