@@ -100,4 +100,4 @@ https://tw.news.yahoo.com/%E4%BB%80%E9%BA%BC%E6%98%AF%E8%A1%8C%E9%8A%B7%E8%87%AA
 * 使用技術 : C# / .NET API ( Autofac / AutoMap / Dapper ) / Angular8+ ( i18n / PrimeNG ) ...
   * 需求: 根據上市櫃大公司 SRS 規格書提供應用並配合 DEV、UAT、QAS、PRD 開發階段進行測試與調試。
     * [實作包含]
-    * ``
+    * `疫情關係遠端協作 Google雲端應用 ( Meet / Sheet / Word ...)、Citrix 遠端測試與調試...`
