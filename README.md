@@ -1,22 +1,31 @@
 <details>
-<summary>縮寫全名</summary>
+<summary>關鍵字縮寫全名</summary>
 
-SRS : 軟體需求說明 Software requirements specification
+SRS:軟體需求說明 Software requirements specification
 
-poc 系統
+poc：系統
 
-eip 系統
+eip：系統
 
-ICMS 內容管理平台系統
+ICMS：內容管理平台系統
 
-MSA量測系統
+MSA：量測系統
 
-SAM 
-軟體資產管理
+SAM：軟體資產管理
 
-PAM
+PAM：
 
-PORTAL
+PORTAL：
+
+IDES：Internet Demonstration and Evaluation System 交互式演示与评估系统
+
+DEV：Development System，开发系统
+
+QAS：Quality Assurance System，质量保证系统
+
+UAT：User Acceptance Test 用户验收测试
+
+PRD：Production System，生产系统
 
 INSIDE 硬塞的網路趨勢觀察: 開店能有多複雜？談零售業的八大系統.
 https://www.inside.com.tw/article/21346-8-info-systems-of-retail
@@ -52,6 +61,7 @@ IM下的点对点传输，多用户下的关系指数增长。。。。。。
 书到用时方恨少，你觉得没啥是因为你没用到。。。
 
 Yahoo奇摩新聞: 什麼是行銷自動化漏斗？所有企業都需要行銷自動化嗎？.
+
 https://tw.news.yahoo.com/%E4%BB%80%E9%BA%BC%E6%98%AF%E8%A1%8C%E9%8A%B7%E8%87%AA%E5%8B%95%E5%8C%96%E6%BC%8F%E6%96%97-%E6%89%80%E6%9C%89%E4%BC%81%E6%A5%AD%E9%83%BD%E9%9C%80%E8%A6%81%E8%A1%8C%E9%8A%B7%E8%87%AA%E5%8B%95%E5%8C%96%E5%97%8E-080922115.html
 
 </details>
@@ -86,18 +96,7 @@ https://tw.news.yahoo.com/%E4%BB%80%E9%BA%BC%E6%98%AF%E8%A1%8C%E9%8A%B7%E8%87%AA
 
 ##### MPA SSR CRM 平台 部分專案
 
-* 使用技術 : C# / .NET MVC 5 / SendGrid / Tableau / Power BI / Analytics.js / Embed.js / Chart.js / Google Chat API / Datatables.js / Sourcetree...
-  * 需求: 根據數據分析部需求提供應用。
+* 使用技術 : C# / .NET API ( Autofac / AutoMap / Dapper ) / Angular8+ ( i18n / PrimeNG ) ...
+  * 需求: 根據上市櫃大公司 SRS 規格書提供應用並配合 DEV、UAT、QAS、PRD 開發階段進行測試與調試。
     * [實作包含]
-    * `會員 RFM 歸戶 ( B2B 、 B2C ...) 流程優化`
-    * `分類會員 EDM 寄送等相關行銷自動化`
-    * `Datatables 商品 & 會員標籤系統`
-    * `DB 同步、資料清洗、欄位設計、排程預存整理、資料庫備份`
-    * `IIS 架設 DB 建置 Tableau Token 設定`
-    * `報表圖形化與產出`
-    * `串接 SendGrid 電子報系統`
-    * `嵌入 Power BI、Tableau、Google Analytics API 報表顯示與應用`
-    * `架設 Tableau Server`
-    * `串接 Tableau API 並嵌入應用`
-
-
+    * ``
