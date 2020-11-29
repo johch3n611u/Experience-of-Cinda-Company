@@ -27,8 +27,23 @@ UAT：User Acceptance Test 用户验收测试
 
 PRD：Production System，生产系统
 
-INSIDE 硬塞的網路趨勢觀察: 開店能有多複雜？談零售業的八大系統.
-https://www.inside.com.tw/article/21346-8-info-systems-of-retail
+ERP：Enterprise resource planning
+
+POS：Point of Sale
+
+CRM：Customer Relationship Management
+
+BI：Business Intelligence
+
+eCOM：支援購物車、整合線上金流，可成立訂單，服務消費者做線上銷售的品牌官網。
+
+app：
+
+OMS：Order Management System
+
+CDP：Customer Data Platform
+
+<https://www.inside.com.tw/article/21346-8-info-systems-of-retail>
 
 一开始是增删改查。。。。
 
