@@ -62,8 +62,6 @@ Muti data read
 
 slapper automapper 套件可以解決聯集表 join 問題
 
-
-
 ## CAPTCHA 圖靈測試 <a id="3"></a>
 
 Google reCAPTCHA v2 , v3 費用 0
@@ -269,7 +267,7 @@ etg 正向搜尋：計算每個分池 / 精確大小寫
 
 聚合 / 分池 / 關聯 / reindex / 分群搜尋 / kinana 管理頁面套件 要錢 可以驗證登入 / 全文檢索 / 雙引號會爆
 
-## Visual Studio Spell Checker (拼字檢查套件)
+## Visual Studio Spell Checker (拼字檢查套件) <a id="15"></a>
 
 * [Visual Studio Vession](https://marketplace.visualstudio.com/items?itemName=EWoodruff.VisualStudioSpellCheckerVS2017andLater)
 
@@ -279,7 +277,7 @@ etg 正向搜尋：計算每個分池 / 精確大小寫
 
 <https://blog.poychang.net/visual-studio-spell-checker/>
 
-## C# RestSharp (Http的组件)
+## C# RestSharp (Http的组件) <a id="16"></a>
 
 一般後端調用 API 都是使用 System.net.http => HttpClient
 
@@ -295,7 +293,7 @@ RestSharp 是一个轻量的，不依赖任何第三方的组件或者类库的H
 
 <https://www.nuget.org/packages/RestClient/>
 
-## Nuget (開源軟體包管理系統)
+## Nuget (開源軟體包管理系統) <a id="17"></a>
 
 NuGet是一個自由開源軟體包管理系統。用於Microsoft開發平台。
 
@@ -305,7 +303,7 @@ NuGet是一個自由開源軟體包管理系統。用於Microsoft開發平台。
 
 <https://dotblogs.com.tw/OldNick/2017/03/24/162927>
 
-## NLOG (Log工具)
+## NLOG (Log工具) <a id="18"></a>
 
 C#中有許多好用的Log工具(如NLog、Log4net、Serilog)，
 
@@ -313,7 +311,7 @@ C#中有許多好用的Log工具(如NLog、Log4net、Serilog)，
 
 <https://dotblogs.com.tw/stanley14/2017/02/15/nlog>
 
-## 網站規劃 & UIUX & 設計規範
+## 網站規劃 & UIUX & 設計規範 <<a id="19"></a>>
 
 <http://homepage.ntu.edu.tw/~huangsl/dw8/dw8-Pre-procedure.pdf>
 
@@ -331,11 +329,11 @@ C#中有許多好用的Log工具(如NLog、Log4net、Serilog)，
 
 <https://ithelp.ithome.com.tw/articles/10233696>
 
-## JS 事件循環
+## JS 事件循環 <a id="20"></a>
 
 <https://www.google.com/search?q=Event+Queue&source=lmns&bih=915&biw=1920&rlz=1C1CHBF_zh-TWTW905TW905&hl=zh-TW&sa=X&ved=2ahUKEwi_-KSB0YDsAhVWAqYKHbhYBZQQ_AUoAHoECAEQAA>
 
-## IIS & SQL資料庫 部屬
+## IIS & SQL資料庫 部屬 <a id="21"></a>
 
 <https://dotblogs.com.tw/mis2000lab/2017/07/12/IIS_WindowsAuth_ASPnet_SQL>
 
@@ -347,26 +345,27 @@ C#中有許多好用的Log工具(如NLog、Log4net、Serilog)，
 
 <https://dotblogs.com.tw/mis2000lab/2017/07/12/IIS_WindowsAuth_ASPnet_SQL>
 
-## Nuget Case Converter 快速轉換命名方式
+## Nuget Case Converter 快速轉換命名方式 <a id="22"></a>
 
 <https://marketplace.visualstudio.com/items?itemName=munyabe.CaseConverter>
-## Visual Studio 視窗配置
+
+## Visual Studio 視窗配置 <a id="23"></a>
 
 <https://www.google.com/search?rlz=1C1CHBF_zh-TWTW905TW905&ei=TxVDX6GmEMuImAWNt72oCw&q=visual+studio+%E8%A6%96%E7%AA%97%E9%85%8D%E7%BD%AE+%E8%B7%91%E6%8E%89+&oq=visual+studio+%E8%A6%96%E7%AA%97%E9%85%8D%E7%BD%AE+%E8%B7%91%E6%8E%89+&gs_lcp=CgZwc3ktYWIQAzIFCAAQzQIyBQgAEM0COggIABCwAxDNAjoCCAA6BAgAEB5QhSpYjTdgtzhoAXAAeACAAUKIAa4BkgEBM5gBAKABAaABAqoBB2d3cy13aXrAAQE&sclient=psy-ab&ved=0ahUKEwjhiaPf1bLrAhVLBKYKHY1bD7UQ4dUDCAw&uact=5>
 
 <https://kevintsengtw.blogspot.com/2015/02/visual-studio-part1.html>
 
-## EF Codefirst
+## EF Codefirst <a id="24"></a>
 
 <https://dotblogs.com.tw/supershowwei/2016/04/11/000015>
 
 <https://programmium.wordpress.com/2017/07/17/ef-code-first-auto-increment-key/>
 
-## JS Array & List
+## JS Array & List <a id="25"></a>
 
 <https://ithelp.ithome.com.tw/questions/10191125>
 
-## LINQ
+## LINQ <a id="26"></a>
 
 <https://stackoverflow.com/questions/21000287/date-difference-logic-in-linq>
 
@@ -388,11 +387,11 @@ C#中有許多好用的Log工具(如NLog、Log4net、Serilog)，
 
 <https://stackoverflow.com/questions/7325278/group-by-in-linq>
 
-## SQL Server 設計師模式關閉
+## SQL Server 設計師模式關閉 <a id="27"></a>
 
 <https://mitblog.pixnet.net/blog/post/39977377?m=off/>
 
-## SQL
+## SQL <a id="28"></a>
 
 <https://www.fooish.com/sql/left-outer-join.html>
 
@@ -400,17 +399,17 @@ C#中有許多好用的Log工具(如NLog、Log4net、Serilog)，
 
 <https://www.1keydata.com/tw/sql/sqlorderby.html>
 
-## CSharp Foreach index
+## CSharp Foreach index <a id="29"></a>
 
 <http://jengting.blogspot.com/2014/08/foreach-index.html>
 
-## CORS 預檢請求
+## CORS 預檢請求 <a id="30"></a>
 
 預檢請求 就是為甚麼每次看network都會有兩條一樣的 但只有一條有response
 
 <https://developer.mozilla.org/zh-TW/docs/Web/HTTP/CORS>
 
-## Visual Studio 主題
+## Visual Studio 主題 <a id="31"></a>
 
 <https://dotblogs.com.tw/junior78469/2013/11/24/131070>
 
@@ -420,25 +419,25 @@ C#中有許多好用的Log工具(如NLog、Log4net、Serilog)，
 
 <https://drive.google.com/file/d/1fBGLVGSlYKN3WRAkaod5nRGJnrh1VbJ_/view?usp=sharing>
 
-## Visual Studio Code Lens display Git info
+## Visual Studio Code Lens display Git info <a id="32"></a>
 
 Enterprise、Professional 似乎要 企業版與專業版才有 ...
 
 <https://stackoverflow.com/questions/55610991/is-there-any-codelens-add-on-available-that-shows-the-git-history-of-the-given-m>
 
-## SQL USE DBNAME
+## SQL USE DBNAME <a id="33"></a>
 
 <https://stackoverflow.com/questions/10461861/use-database-command-on-sql-plus-oracle-11gr1>
 
-## EF DBFirst 使用 DataAnnotations 屬性 與繼承 EF 實體
+## EF DBFirst 使用 DataAnnotations 屬性 與繼承 EF 實體 <a id="34"></a>
 
 <https://dotblogs.com.tw/chentingw/2016/11/28/235523>
 
-## HashSet 內容不重複的 Set
+## HashSet 內容不重複的 Set <a id="35"></a>
 
 <https://www.google.com/search?q=HashSet&rlz=1C1CHBF_zh-TWTW905TW905&oq=HashSet&aqs=chrome..69i57j0l7.549j0j7&sourceid=chrome&ie=UTF-8>
 
-## Angular TypeScript 非同步
+## Angular TypeScript 非同步 <a id="36"></a>
 
 ```TypeScript
 getDataUsingSubscribe() {
@@ -461,7 +460,7 @@ async getAsyncData() {
 
 <https://medium.com/@balramchavan/using-async-await-feature-in-angular-587dd56fdc77>
 
-## Exception.StackTrace 比較有用最好從最內層丟到最外
+## Exception.StackTrace 比較有用最好從最內層丟到最外 <a id="37"></a>
 
 ```json
 {
@@ -477,15 +476,15 @@ async getAsyncData() {
 }
 ```
 
-## LINQ GroupBy
+## LINQ GroupBy <a id="38"></a>
 
 <https://dotblogs.com.tw/noncoder/2019/03/25/Lambda-GroupBy-Sum>
 
-## Nuget Case Converter 套件 快速重構命名方法
+## Nuget Case Converter 套件 快速重構命名方法 <a id="39"></a>
 
 <https://marketplace.visualstudio.com/items?itemName=munyabe.CaseConverter>
 
-## AWS IPV6 應用
+## AWS IPV6 應用 <a id="40"></a>
 
 USECASE 高鐵 登入驗證 IP 需前後相同否則前端登入踢出
 
@@ -519,7 +518,7 @@ src att 無視 cors ?
 
 cdn 跨網域
 
-## Csharp Docx 套件
+## Csharp Docx 套件 <a id="41"></a>
 
 Word 套印
 
@@ -529,7 +528,7 @@ Templt 套版
 
 pdf 通常 html 轉
 
-## Line API (Bot / Notify / Login)
+## Line API (Bot / Notify / Login) <a id="42"></a>
 
 註冊通知取得使用者資料選群組
 
@@ -575,13 +574,13 @@ notify 與 push 差別在於 notify 是群發 ， Push 是私聊
 
 要注意是綁定對話框
 
-## UnitTest
+## UnitTest <a id="42"></a>
 
 <https://docs.google.com/presentation/d/1IEZ3Ow6EekNYDxqzI9toHEgPiagYbZTiffCKjdfXha0/edit#slide=id.ga4518fb1b2_2_7>
 
 <https://github.com/johch3n611u/Experience-of-Cinda-Company/tree/master/Meeting.SoftwareTesting>
 
-## oracle 臨時表應用
+## oracle 臨時表應用 <a id="43"></a>
 
 <https://freetoad.pixnet.net/blog/post/25444612>
 
@@ -591,7 +590,7 @@ notify 與 push 差別在於 notify 是群發 ， Push 是私聊
 
 <https://byron0920.pixnet.net/blog/post/85759990>
 
-## String.TrimEnd 方法 去除尾數的 char
+## String.TrimEnd 方法 去除尾數的 char <a id="44"></a>
 
 <https://docs.microsoft.com/zh-tw/dotnet/api/system.string.trimend?view=netcore-3.1>
 
@@ -599,7 +598,7 @@ notify 與 push 差別在於 notify 是群發 ， Push 是私聊
 
 <https://blog.csdn.net/xushaozhang/article/details/77146091>
 
-## Angular 元件改 style
+## Angular 元件改 style <a id="45"></a>
 
 ```css
 ::ng-deep .closeDateDropdown .ui-dropdown-label {
@@ -617,11 +616,11 @@ appendTo="body" [options]="this.DetailCloseDate" required [(ngModel)]="items.Clo
 </p-dropdown>
 ```
 
-## linq order by
+## linq order by <a id="46"></a>
 
 <https://ithelp.ithome.com.tw/articles/10104089>
 
-## oracle 坑
+## oracle 坑 <a id="47"></a>
 
 搭配 Ef 如果有新增 ef， db也要新增不然 會錯，如果同時也在 transation 會 lock db 直接卡死，此時如無 session 或相關權限 直接等於放棄急救...
 
@@ -629,11 +628,11 @@ appendTo="body" [options]="this.DetailCloseDate" required [(ngModel)]="items.Clo
 
 ORA-00054
 
-## EF 版本更新錯誤
+## EF 版本更新錯誤 <a id="48"></a>
 
 <https://www.coder.work/article/2615671>
 
-## C# 字串處理
+## C# 字串處理 <a id="49"></a>
 
 string.IsNullOrEmpty(ele.AccountDisableFormPortalNo)
 
@@ -641,15 +640,15 @@ string.empty <https://jasper-it.blogspot.com/2014/08/c-string-stringempty-is-mor
 
 split <https://codertw.com/%E7%A8%8B%E5%BC%8F%E8%AA%9E%E8%A8%80/641792/>
 
-## Swiper 輪播套件
+## Swiper 輪播套件 <a id="50"></a>
 
 <https://hackmd.io/@chupai/BkohH4KzL>
 
-## css-background-patterns 背景產生器
+## css-background-patterns 背景產生器 <a id="51"></a>
 
 <https://free.com.tw/css-background-patterns/>
 
-## Google obfuscator Tool 混淆
+## Google obfuscator Tool 混淆 <a id="52"></a>
 
 tool.css-js.com
 
@@ -659,7 +658,7 @@ WebWoker js ? 線呈
 
 web api (pwa)
 
-## HAP (HTML Agility Pack) 爬蟲 解析器 nuget 套件
+## HAP (HTML Agility Pack) 爬蟲 解析器 nuget 套件 <a id="53"></a>
 
 Node Select XML 結構
 
@@ -667,11 +666,11 @@ Xpath 瀏覽器右鍵 COYP 可以取
 
 或 CSS Selector nuget 套件
 
-## XX.AA ?? Empty 安全措施
+## XX.AA ?? Empty 安全措施 <a id="54"></a>
 
 string.isNullorEmpty and Withespase
 
-## Transtain 交易
+## Transtain 交易 <a id="55"></a>
 
 ACID, 樂觀悲觀 Lock
 
@@ -696,9 +695,9 @@ nolock(共用鎖定) tablelock ... 撈的到 補SQL
 
 新隔離層級 SNAPSHOT TEMP 暫存模式
 
-## og.title
+## og.title <a id="56"></a>
 
-## Linq Queryable
+## Linq Queryable <a id="57"></a>
 
 才能用如以下語法
 
@@ -709,19 +708,19 @@ EntityFunctions.DiffMonths(x.SIGN_FORM_MAIN.CREATE_DATE, DateTime.Now) <= 3
 EntityFunctions.DiffMonths(x.SIGN_FORM_MAIN.CREATE_DATE, DateTime.Now) >= -3);
 ```
 
-## .NET API 屬性路由
+## .NET API 屬性路由 <a id="58"></a>
 
 EnabledAnonymous
 
 <https://www.google.com/search?q=.NET+API+Attributes&rlz=1C1CHBF_zh-TWTW905TW905&oq=.NET+API+Attributes&aqs=chrome..69i57.1436j0j1&sourceid=chrome&ie=UTF-8>
 
-## Oracle Update Date
+## Oracle Update Date <a id="59"></a>
 
 > UPDATE PAMV2.PAM_IF_RESIGN SET ACCOUNT_CLOSE_DATE = DATE '2020-12-13'; 
 
 <https://stackoverflow.com/questions/13497130/updating-a-date-in-oracle-sql-table/13497380>
 
-## CSharp new 用法
+## CSharp new 用法 <a id="60"></a>
 
 ```c#
 public string Approved(HighPermissionForm Data, SignFormMain Sign)
@@ -754,7 +753,7 @@ public string Approved(HighPermissionForm Data, SignFormMain Sign)
         }
 ```
 
-## CSharp AutofacResolverHelper.Current.Container.ResolveNamed
+## CSharp AutofacResolverHelper.Current.Container.ResolveNamed <a id="61"></a>
 
 ```C#
 public class PageQuery<T>
@@ -956,23 +955,23 @@ public class AccountShift : Profile
                          ((EnumAccountFunctionType)Account.FunctionType).ToString()).Remove(Account);
 ```
 
-## CSharp Debug 時不執行 [Conditional("DEBUG")]
+## CSharp Debug 時不執行 [Conditional("DEBUG")] <a id="62"></a>
 
 <https://dotblogs.com.tw/joysdw12/2014/03/14/asp-net-debug-release-if-else-conditional>
 
 <https://stackoverflow.com/questions/6927263/enable-code-on-release-compilation>
 
-## Oracle CSharp 抓最大 Id
+## Oracle CSharp 抓最大 Id <a id="63"></a>
 
 > var autoincrementId = Entities.ACCOUNT.Select(x => x.ID).DefaultIfEmpty(0).Max() + 1;
 
 排除 table 是空的撈不到東西的狀況
 
-## LINQ Not in
+## LINQ Not in <a id="64"></a>
 
 <https://dotblogs.com.tw/dc690216/2009/09/13/10601>
 
-## .NET 快取
+## .NET 快取 <a id="65"></a>
 
 <https://www.google.com/search?q=.net+%E5%BF%AB%E5%8F%96&oq=.net+%E5%BF%AB%E5%8F%96&aqs=chrome..69i57j69i65.8615j0j1&sourceid=chrome&ie=UTF-8>
 
@@ -990,13 +989,13 @@ ConfigureService 要設置
 
 舊的 outputCatch
 
-## TypeScript
+## TypeScript <a id="66"></a>
 
 型別 / 包 ES5,6
 
 Tools - CSharp2TS / Eslint / TSlint
 
-## 驗證模式
+## 驗證模式 <a id="67"></a>
 
 ### SSO - 單一登入 Single sign-on
 
@@ -1020,17 +1019,17 @@ BOWERS 網域 要綁 間接串 AD
 
 類似上述只是多丟了一些東西
 
-### JWT - JSON Web Token
+## JWT - JSON Web Token <a id="68"></a>
 
 <https://yami.io/jwt/>
 
 JSON Web Token (JWT) 是由 Auth0 所提構出的一個新 Token 想法，這並不是一套軟體、也不是一個技術
 
-### SQL 查詢技巧 UNION
+## SQL 查詢技巧 UNION <a id="69"></a>
 
 <https://www.itread01.com/content/1546941990.html>
 
-### SYSTEM 系統
+## SYSTEM 系統 <a id="70"></a>
 
 ERP：Enterprise resource planning
 
@@ -1050,7 +1049,7 @@ CDP：Customer Data Platform
 
 <https://www.inside.com.tw/article/21346-8-info-systems-of-retail>
 
-### 學習歷程
+## IT學習歷程 <a id="71"></a>
 
 一开始是增删改查。。。。
 
@@ -1082,6 +1081,6 @@ IM下的点对点传输，多用户下的关系指数增长。。。。。。
 
 书到用时方恨少，你觉得没啥是因为你没用到。。。
 
-### Yahoo奇摩新聞: 什麼是行銷自動化漏斗？所有企業都需要行銷自動化嗎？.
+## Yahoo奇摩新聞: 什麼是行銷自動化漏斗？所有企業都需要行銷自動化嗎？. <a id="72"></a>
 
 <https://tw.news.yahoo.com/%E4%BB%80%E9%BA%BC%E6%98%AF%E8%A1%8C%E9%8A%B7%E8%87%AA%E5%8B%95%E5%8C%96%E6%BC%8F%E6%96%97-%E6%89%80%E6%9C%89%E4%BC%81%E6%A5%AD%E9%83%BD%E9%9C%80%E8%A6%81%E8%A1%8C%E9%8A%B7%E8%87%AA%E5%8B%95%E5%8C%96%E5%97%8E-080922115.html>
