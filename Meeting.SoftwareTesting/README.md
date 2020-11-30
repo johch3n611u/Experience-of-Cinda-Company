@@ -1,6 +1,6 @@
 ---
 
-<https://docs.google.com/presentation/d/1IEZ3Ow6EekNYDxqzI9toHEgPiagYbZTiffCKjdfXha0/edit?usp=sharing>
+<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vRnl-hlXmR_3SW928Il9WuKBYRVJIyFcKbswdCohITfJUDavNNur35DEAb7u7i1opspL6GnboPRPSZc/embed?start=true&loop=true&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 
 <https://stackoverflow.com/questions/1365407/c-sharp-code-to-validate-email-address>
 
