@@ -1000,6 +1000,12 @@ IM下的点对点传输，多用户下的关系指数增长。。。。。。
 
 ## [C#] 目前沒有執行ID 為{0} 的處理序。BUG
 
-刪除 .vs 重啟即可
+<https://social.technet.microsoft.com/wiki/contents/articles/5392.active-directory-ldap-syntax-filters.aspx>
 
-<https://dotblogs.com.tw/onebin/2017/11/21/150815>
+## Active Directory: LDAP Syntax Filters
+
+<https://stackoverflow.com/questions/34494873/why-is-my-jquery-selector-returning-a-n-fn-init0-and-what-is-it>
+
+## JQ 選擇器返回物件 n.fn.init [0]
+
+<https://stackoverflow.com/questions/34494873/why-is-my-jquery-selector-returning-a-n-fn-init0-and-what-is-it>
