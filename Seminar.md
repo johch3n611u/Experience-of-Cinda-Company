@@ -1014,6 +1014,25 @@ IM下的点对点传输，多用户下的关系指数增长。。。。。。
 
 <https://blog.techbridge.cc/2018/10/13/pwa-in-action/>
 
-## AG 能吃 html Attributes innerHTML 不知道為啥 <div [innerHTML]="'MailOut.Content'|translate"> </div>
+## i18n 土法練功
+
+### AG 能吃 html Attributes innerHTML 不知道為啥 <div [innerHTML]="'MailOut.Content'|translate"> </div>
 
 <https://stackoverflow.com/questions/44073674/why-innerhtml-property-from-javascript-cant-be-an-html-attribute>
+
+##
+
+```c#
+// pStrServiceCode => {"pStrServiceCode":"AA01_001","pStrLang":"zh-TW"}
+public string GetSignFooter(string pStrServiceCode)
+        {
+            Entities = new Entities(ConnectionString.DefaultConnectionName);
+
+            clsFooterDESC objDESC = JsonConvert.DeserializeObject<clsFooterDESC>(pStrServiceCode);
+            PORTAL_SYSTEM_SERVICES objService = Entities.PORTAL_SYSTEM_SERVICES.FirstOrDefault(x => x.SERVICE_CODE == objDESC.pStrServiceCode);
+            if (objDESC.pStrLang == "zh-TW")
+                return objService.APPLICATION_DESCRIPTION?.Replace("\n","<br>") + "@" + objService.INFO_SECURITY_DESCRIPTION?.Replace("\n", "<br>");
+            else
+                return objService.APPLICATION_DESCRIPTION_EN?.Replace("\n", "<br>") + "@" + objService.INFO_SECURITY_DESCRIPTION_EN?.Replace("\n", "<br>");
+        }
+```
