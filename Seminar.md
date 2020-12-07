@@ -1020,7 +1020,13 @@ IM下的点对点传输，多用户下的关系指数增长。。。。。。
 
 <https://stackoverflow.com/questions/44073674/why-innerhtml-property-from-javascript-cant-be-an-html-attribute>
 
-##
+## 由前端控顯示版本
+
+```JAVASCRIPT
+this.signFooterService.GetSignFooter(pProject, localStorage.getItem('l')).subscribe(res => {
+            this.footerDESC = res;
+        });
+```
 
 ```c#
 // pStrServiceCode => {"pStrServiceCode":"AA01_001","pStrLang":"zh-TW"}
