@@ -1013,3 +1013,7 @@ IM下的点对点传输，多用户下的关系指数增长。。。。。。
 ## PWA
 
 <https://blog.techbridge.cc/2018/10/13/pwa-in-action/>
+
+## AG 能吃 html Attributes innerHTML 不知道為啥 <div [innerHTML]="'MailOut.Content'|translate"> </div>
+
+<https://stackoverflow.com/questions/44073674/why-innerhtml-property-from-javascript-cant-be-an-html-attribute>
