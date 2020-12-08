@@ -45,7 +45,7 @@ namespace AutofacDemo.Controllers
     {
         public void Write(string message)
         {
-            System.IO.File.AppendAllText(@"C:\logFile.txt", message);
+            System.IO.File.AppendAllText(@"C:\log\logFile.txt", message, Encoding.UTF8);
         }
     }
 
