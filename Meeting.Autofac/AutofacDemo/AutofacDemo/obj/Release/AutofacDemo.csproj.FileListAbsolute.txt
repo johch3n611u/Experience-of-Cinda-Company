@@ -106,3 +106,4 @@ C:\Users\rognp\Desktop\delete\Experience-of-Cinda-Company\Meeting.Autofac\Autofa
 C:\Users\rognp\Desktop\delete\Experience-of-Cinda-Company\Meeting.Autofac\AutofacDemo\AutofacDemo\obj\Release\AutofacDemo.dll
 C:\Users\rognp\Desktop\delete\Experience-of-Cinda-Company\Meeting.Autofac\AutofacDemo\AutofacDemo\obj\Release\AutofacDemo.pdb
 C:\Users\rognp\Desktop\delete\Experience-of-Cinda-Company\Meeting.Autofac\AutofacDemo\AutofacDemo\obj\Release\AutofacDemo.csprojAssemblyReference.cache
+C:\Users\rognp\Desktop\delete\Experience-of-Cinda-Company\Meeting.Autofac\AutofacDemo\AutofacDemo\bin\NLog.config
