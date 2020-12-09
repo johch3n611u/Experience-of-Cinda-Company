@@ -1042,3 +1042,17 @@ public string GetSignFooter(string pStrServiceCode)
                 return objService.APPLICATION_DESCRIPTION_EN?.Replace("\n", "<br>") + "@" + objService.INFO_SECURITY_DESCRIPTION_EN?.Replace("\n", "<br>");
         }
 ```
+
+##
+
+/// <summary>
+/// 複製物件
+/// </summary>
+/// <typeparam name="T"></typeparam>
+/// <param name="obj"></param>
+/// <returns></returns>
+public static T Clone<T>(this T obj)
+{
+    var inst = obj.GetType().GetMethod("MemberwiseClone", System.Reflection.BindingFlags.Instance | System.Reflection.BindingFlags.NonPublic);
+    return (T)inst?.Invoke(obj, null);
+}
