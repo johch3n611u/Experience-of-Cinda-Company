@@ -1063,6 +1063,8 @@ public static T Clone<T>(this T obj)
 
 <https://primefaces.org/primeng/showcase/#/fileupload>
 
+<https://ithelp.ithome.com.tw/articles/10218430>
+
 ```c#
 using Autofac;
 using Mxic.Framework.ServerComponent;
