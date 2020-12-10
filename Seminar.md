@@ -1059,6 +1059,10 @@ public static T Clone<T>(this T obj)
 	
 ## CSharp Excel 匯入
 
+<https://stackoverflow.com/questions/11832930/html-input-file-accept-attribute-file-type-csv>
+
+<https://primefaces.org/primeng/showcase/#/fileupload>
+
 ```c#
 using Autofac;
 using Mxic.Framework.ServerComponent;
