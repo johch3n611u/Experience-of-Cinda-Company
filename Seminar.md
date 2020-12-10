@@ -1891,3 +1891,7 @@ namespace Mxic.ITC.SAM.Service
 }
 
 ```
+
+## .NET Mail
+
+<https://docs.microsoft.com/zh-tw/dotnet/api/system.web.mail.mailmessage.priority?view=netframework-4.8>
