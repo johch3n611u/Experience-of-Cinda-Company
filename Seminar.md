@@ -1085,9 +1085,9 @@ public static T Clone<T>(this T obj)
 
 <https://identity.getpostman.com/>
 
-用 PostMan 做 SPA 測試報告
+用 PostMan 做 SPA 測試報告 Test
 
-Interceptor Chrome 側錄 重複執行 排程 搶票
+Interceptor Chrome 側錄 filter 重複執行 排程 搶票
 
 Team Upgrade
 
