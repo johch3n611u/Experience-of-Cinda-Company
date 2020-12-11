@@ -1080,3 +1080,15 @@ public static T Clone<T>(this T obj)
 <https://matthung0807.blogspot.com/2019/07/angular-7-can-not-determine-module.html>
 
 ![alt](/assets/agbug.png)
+
+## PostMan
+
+<https://identity.getpostman.com/>
+
+用 PostMan 做 SPA 測試報告
+
+Interceptor Chrome 側錄 重複執行 排程 搶票
+
+Team Upgrade
+
+
