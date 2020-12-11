@@ -1900,4 +1900,6 @@ namespace Mxic.ITC.SAM.Service
 
 ## AG AOT BUG
 
+不能用 import 來取名組件，資料夾會變成跟 src 類似的權重的感覺，網路上查不到資料
+
 <https://matthung0807.blogspot.com/2019/07/angular-7-can-not-determine-module.html>
