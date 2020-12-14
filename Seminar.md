@@ -1091,4 +1091,6 @@ Interceptor Chrome 側錄 filter 重複執行 排程 搶票
 
 Team Upgrade
 
+## 直接 console call api
 
+隨意一支 api 右鍵 copy fetch 即可再調用
