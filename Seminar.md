@@ -1094,3 +1094,7 @@ Team Upgrade
 ## 直接 console call api
 
 隨意一支 api 右鍵 copy fetch 即可再調用
+
+## Visual Studio
+
+Alt Shift 可以達到類似 VSCode 連續選的功能
