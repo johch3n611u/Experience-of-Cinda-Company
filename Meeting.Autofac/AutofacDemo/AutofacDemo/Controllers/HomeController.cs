@@ -35,11 +35,12 @@ namespace AutofacDemo.Controllers
         
     }
 
-    #region Basic LOG
     public interface ILog
     {
         void Write(string message);
     }
+
+    #region Basic LOG
 
     public class TextWriterLog : ILog
     {
