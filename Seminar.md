@@ -1098,3 +1098,28 @@ Team Upgrade
 ## Visual Studio
 
 Alt Shift 可以達到類似 VSCode 連續選的功能
+
+## .NET Catch
+
+```csharp
+public PageQueryResult<Model.PORTAL_SYSTEM_SERVICES> GetPortalSystemServices(string serviceCode)
+        {
+            var apiUri = base.ITCPORTALAPIUri + "GetPortalSystemServices";
+            var response = new PageQueryResult<Model.PORTAL_SYSTEM_SERVICES>();
+            try
+            {
+                if (_cache.Contains("GetPortalSystemServices"))
+                    return _cache.Get("GetPortalSystemServices") as PageQueryResult<Model.PORTAL_SYSTEM_SERVICES>;
+
+                var jsonResult = RestSharpHelper.PostJson(apiUri, null, JsonConvert.SerializeObject(serviceCode));
+                response = JsonConvert.DeserializeObject<PageQueryResult<Model.PORTAL_SYSTEM_SERVICES>>(jsonResult);
+                _cache.Add("GetPortalSystemServices", response, DateTimeOffset.Now.AddMinutes(10));
+            }
+            catch (Exception ex)
+            {
+                _logger.Error(ex.StackTrace);
+                throw ex;
+            }
+            return response;
+        }
+```
