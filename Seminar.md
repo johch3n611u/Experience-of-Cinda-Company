@@ -1123,3 +1123,5 @@ public PageQueryResult<Model.PORTAL_SYSTEM_SERVICES> GetPortalSystemServices(str
             return response;
         }
 ```
+
+## Csharp CopyPropertiesTo
