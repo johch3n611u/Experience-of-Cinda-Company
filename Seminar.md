@@ -1125,3 +1125,5 @@ public PageQueryResult<Model.PORTAL_SYSTEM_SERVICES> GetPortalSystemServices(str
 ```
 
 ## Csharp CopyPropertiesTo
+
+<https://dev-felix72.blogspot.com/2017/12/be-caution-about-modified-entity-state-after-automapping-when-doing-ef-updating.html>
