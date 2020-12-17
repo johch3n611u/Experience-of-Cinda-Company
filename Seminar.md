@@ -1127,3 +1127,33 @@ public PageQueryResult<Model.PORTAL_SYSTEM_SERVICES> GetPortalSystemServices(str
 ## Csharp CopyPropertiesTo
 
 <https://dev-felix72.blogspot.com/2017/12/be-caution-about-modified-entity-state-after-automapping-when-doing-ef-updating.html>
+
+## Q: AutoMap 後異動 EF 寫不進 DB
+
+參考: <https://dev-felix72.blogspot.com/2017/12/be-caution-about-modified-entity-state-after-automapping-when-doing-ef-updating.html>
+
+A: 經過 AutoMapper 異動後，EntityState 已被移除追蹤， EF 再怎麼儲存異動都沒有任何作用，所以需要重新比對資料
+
+```Csharp
+// _user Mapper 完的 ORM
+var entry = context.Entry(_user);
+if (entry.State == EntityState.Detached)
+{
+  var set = context.Set<User>();
+  User attachedEntity = set.Find(_user.UserId);
+
+  if (attachedEntity != null)
+  {
+    var attachedEntry = context.Entry(attachedEntity);
+    attachedEntry.CurrentValues.SetValues(_user);
+  }
+  else
+  {
+    entry.State = EntityState.Modified;
+  }
+}
+// 經過以上判斷與調整實體狀態後就可以使用 Mapper 後的 ORM
+var User = Entities.USER.FirstOrDefault();
+User = _user
+Entities.SaveChange();
+```
