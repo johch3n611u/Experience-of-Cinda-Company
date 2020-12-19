@@ -515,6 +515,95 @@ ASP.NET Core 5.0 新功能演繹
 
 ASP.NET Core 5.0是基於.NET 5的新一代網頁開發框架，除新功能演進，在執行效能上亦增進不少，同時亦能結合C# 9最新語法，讓程式變得更簡約洗鍊。在此探討日常開發可應用到的新功能，讓您訊速地掌握重點精華。
 
+dot net 5: 統一平台
+
+命名
+
+ASP.Net Core 5 有 core 是避免跟MVC5混淆
+
+新功能
+
+model binding 支援C#9 record型別
+
+DateTime以UTC時區binding
+
+WebApi 內建整合 swagger
+
+預設有 可以關掉 dotnet new webapi --no-openapi true
+
+demo
+
+先以3.1版web api project示範
+
+targetframework:netcoreapp3.1
+升級到5:targetframework改net5.0
+預設沒有swagger
+
+再以5.0版直接建立core web api
+
+內建有swagger
+localhost:{port}/swagger/index.html
+要移除就是在startup把跟swagger相關的移除
+
+C# 9.0 可以立即應用在asp net core的語法
+
+record
+
+asp.net core 5 + C# 9 軟體需求
+
+要升級vs2019
+core sdk 5.0.101
+沒升級的話scafolding可能會被record type不支援而弄壞
+
+如果想這樣做…
+
+init setter
+{get;init;}
+初始後即唯獨
+可用在class & record
+
+record type
+
+參考型別
+Immutable 不可改變
+可以當成DataModel / Viewmodel
+可用在EF DBSET
+
+四種宣告方式
+get;set;
+get;init;
+只有get & 建構子
+在controller內宣告:Product p = new(1,"PC")
+
+with 複製資料
+Product p = pc with {name="abc"}
+
+model binding validation
+record Person = new([Required] int id)
+
+target type new expression
+
+已知型別不需指定建構函式型別
+List<Person> list = new(){}
+  
+pattern matching
+  
+例子：json lib 有四五種 各家優點不同
+一起混用code會有點亂
+可以用pattern matching 寫helper來簡化程式
+  
+dot net 5效能的進步
+  
+gc 效能增強
+double sorting
+int32 sorting
+string sorting
+  
+LINQ 效能增強
+blazor webassembly 效能增強
+grpc效能增強
+總結
+
 ---
 
 Ethan Huang
