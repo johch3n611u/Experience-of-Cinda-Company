@@ -506,6 +506,110 @@ Maizie Ku
 Databricks 是一個 Spark 為基礎的 Big Data Analysis Platform，Azure Databricks 是一個針對 Azure 雲端服務進行最佳化的資料分析平台。隨著資料量越來越多，大數據生態系統 HDFS、Hadoop、Hive 和 Spark 等詞越來越多人耳熟能詳，但真正使用 Hadoop 生態系都會讓人難以下手卻步，往往都會遇到許多瓶頸，遇到安裝問題或記憶體效能問題。隨著雲端蓬勃發展，Azure Databricks 是一個一鍵佈署的雲端服務，裡面包含 Spark 引擎、Cluster 計算、Notebook 介面、整合 mlfow 開源套件等優點。
 我們都知道在做資料分析最多時間花費在資料探索。這個課程中，你可以學習到如何在 Databricks 做資料整合 (ETL)，並會實機案例分享，學習到用有效率的方式做資料整理，打通資料分析的任督二脈。
 
+* Azure Databricks
+  * workflow & concept
+
+Logs => AZ Data Factory => Azure Data Lake Storage ( HDFS )
+=> Azure Databricks => Power BI / Data Center / Other Storage
+
+AWS 和 Azure 都有在使用Databricks。
+
+Azure Databricks包含三項技術 ( 進階版Apache Spark引擎 )
+
+* Spark
+* DELTA LAKE
+* Ml Flow
+
+Spark 自建引擎 : 要好多機器，分散式
+
+Databricks managed platform for running Apache Spark。
+
+In-memory 運算 ， 不用擔心Memory不夠問題。
+
+提供Spark SQL、Spark ML、Spark Streaming 等…
+
+* Core Artifacts
+
+Notebooks
+
+Workspaces
+
+Clusters
+
+Libraries
+
+Jobs
+
+* Clusters
+Auto Scaling & Auto Termination Benefits
+
+* 根據工作附載量來運作。
+* 可依據使用量計費，有Idle時間設定限制。
+  * Driver 1 node / Workers 2-8 nodes
+  * 可安裝需要的Open Library
+* Notebooks
+
+編輯器，撰寫程式可以有不同語言 EX.Python,Spark SQL, …
+
+Notebook with Azure Data Factory
+
+整合Pipeline : Availability flag -> file to blob -> Transformation
+
+* DBFS
+
+Databricks File System - Cluster共用的檔案目錄
+
+Distributed file system that is on all Databricks Runtime Clusters
+
+* /dbfs/databricks-datasets/
+* /dbfs/filestore
+* /dbfs/mnt
+* /temp
+
+Dbfs:/mnt/adls_gen2 => 不用匯入就可以進HDFS拉資料。
+
+可以做ETL工具，可以處理大量資料。
+
+上Datalake做data preparing . 可以分Staging、Production …
+
+建議使用Spark功能，善用Worker Nodes。
+
+如果用Runtime Conda ，會只用到Driver 的資源，可能會有Memory不足的問題，效能不好的狀況。
+
+Delta Lake
+
+Delta Table 不等於 Datalake.
+
+Delta Lake 是開放原始碼儲存層，可為資料湖提供可靠性
+
+提供以下功能:
+
+* ACID Transaction
+* Schema管理
+* Data Skipping , Z-Ordering, Compaction
+* 資料更新/刪除
+* 彈性的中性資料處理
+* 資料版控 和 時間旅行
+* 串流與批次統一
+
+寫入語法:
+
+df.write.format(“delta”).mode(“append”).save(“/delta/events”)
+
+Delta Cache 改善查詢效率
+
+Optimize Performance with file manager
+
+Compaction (bin-packing)
+
+%sql
+
+OPTIMIZE events;
+
+Azure Databricks 也包括 Delta Engine，其提供最佳化的配置和索引以進行快速的互動式查詢。
+
+也可用Spark UI 檢視 Visualization。
+
 ---
 
 胡百敬
