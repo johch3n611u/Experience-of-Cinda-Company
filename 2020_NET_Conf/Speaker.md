@@ -1023,6 +1023,30 @@ Andrew Wu
 在這麼龐大的 task 背後，我們該如何兼顧每種任務的可靠度與服務水準？舉例來說，光是發送簡訊這件事，我們就面對「行銷簡訊」的發送與「註冊簡訊」的發送。「註冊簡訊」期望在五秒內就送達，而「行銷簡訊」則有比較寬裕的發送延遲時間。如何兼顧系統複雜度、維運成本與服務水準，就是我們要面對的課題。
 Ruddy 老師在闡述 DevOps 的精神時，都會耳提面命的告訴我們：「要先能夠量測，才能夠改善。」我們架構團隊在面對這挑戰的第一件事，就是先定義如何將服務水準量化，同時替這指標訂好目標，也就是所謂的 SLO ( Service Level Objective )。這個 Session 我會來介紹我們架構團隊如何用系統化的方式來面對這個難題。
 
+* 維運管理重點
+  * 系統監控
+    * 能被量測的系統才能被控制
+* 預防行為為運管理
+
+
+SLA(Service Level Agreement): 對客戶承諾的合約
+
+SLO(Service Level Objective): 依據SLA所定義出的各項明確目標
+
+SLI(Service Level Indicator): 依據SLO所實際監控的數值(trackable metrics)
+
+定義
+
+拆解
+
+盤點
+
+監控？
+
+改善
+
+* 如何運用限制理論 (Theory of Constraints) 於軟體開發
+
 ---
 
 Steven Tsai
