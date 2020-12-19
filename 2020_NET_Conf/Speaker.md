@@ -1391,73 +1391,108 @@ Fion Yu
 session 參考資訊:
 
 source code: https://github.com/andrew0928/Andrew.GameOfLifeDemo/wiki
+
 文章: 架構面試題 #4 - 抽象化設計；折扣規則的設計機制 https://columns.chicken-house.net/2020/03/10/interview-abstraction/
+
 文章: 微服務基礎建設: Process Pool 的設計與應用 https://columns.chicken-house.net/2020/02/09/process-pool/
+
 文章: 後端工程師必備: 排程任務的處理機制練習 https://columns.chicken-house.net/2019/08/30/scheduling-practices/
+
 文章: 後端工程師必備: 平行任務處理的思考練習 https://columns.chicken-house.net/2019/07/06/pipeline-practices/
-從這裡開始寫 :pencil:
 
 越困難的問題需要越多時間準備
+
 所以自己的觀念要先事前練習
+
 你的好點子有沒有辦法用程式實作出來
-刻意練習
+
+* 刻意練習
 專案進行到最後知識才累積起來 但一開始知識不足時就需要做規劃
+
 敏捷的方式用快速迭代來交付 應對變化
-好的modeling
+* 好的modeling
 好懂的modeling就好debug 好維護
+
 當你有選擇時才能挑出更適合的架構
-面對問題時的選擇
+* 面對問題時的選擇
 先有選擇，好壞才有義意
+
 能想出多少選擇
+
 能執行多少選擇
-刻意練習
+* 刻意練習
 化繁為簡的能力
+
 最佳化的能力
-抽象化
+* 抽象化
 https://columns.chicken-house.net/2020/03/10/interview-abstraction/
+
 用code描述一個折價規則的邏輯
+
 對於前台抽象化的結果=>前台介面
+
 對於後台抽象化的結果=>後台介面
+
 解析出class diagram
+
 練習用interface溝通 團隊就可以top down去開發系統
-想法實作成code
+* 想法實作成code
 先想出interface
+
 想的同時會遇到很多挑戰,持續修正
+
 最後保留重要的功能
-刷題是個好練習方式嗎
+* 刷題是個好練習方式嗎
 leetcode沒辦法練到像購物車折價這種思考
+
 可以設計能夠練習到的題目來讓團隊練習
+
 例題:大量任務處理
+
 例題:排程任務處理
+
 例題：生命遊戲
-做完練習的苦主心得
+* 做完練習的苦主心得
 發想與解題
-…
-OOP
-找出class:MAP,CELL
-細胞座標要放在MAP or CELL?
-生命週期
-thread? -> 無法精準
-剪影片時間軸？
--> snapshot概念
--> 增加了clock class
-學到了什麼
+  * …
+  * OOP
+    * 找出class:MAP,CELL
+    * 細胞座標要放在MAP or CELL?
+  * 生命週期
+    * thread? -> 無法精準
+    * 剪影片時間軸？
+      * -> snapshot概念
+      * -> 增加了clock class
+* 學到了什麼
 細胞的視野
+
 限制視野避免細胞知道不該知道的資訊
+
 上帝視角
+
 知道太多不該知道的細節而且基於此來設計功能 可能日後會造成問題
+
 思考方式
+
 線性思考
+
 跳躍思考
+
 刻意練習產生了不同的思考與解法
-收穫
+
+* 收穫
 C# yield return
-總結
+* 總結
 為何刻意練習
+
 思考如何做對的事
+
 練習需要時間仔細思考
+
 練習需要排除不必要的細節
+
 問題越簡單才會思考越透徹（降低互相切磋的門檻）
+
 越簡單的設計越困難 簡單!=容易
 
 ---
