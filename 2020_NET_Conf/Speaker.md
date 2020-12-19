@@ -397,6 +397,109 @@ Kevin Yang
 
 阻止人類進步的 Safari 終於在年底支援 webauthn 驗證機制，讓我們重新複習一下什麼是 webauthn，這一驗證機制能帶給我們什麼好處。
 
+* 密碼的問題
+
+複雜度
+
+定期更換
+
+每個服務都要密碼
+
+密碼重複
+
+網站洩漏
+
+釣魚
+…
+* 登入方式
+
+帳密
+
+連結登入
+
+多因素驗證
+
+第三方登入
+
+無密碼登入
+
+* 多因素驗證
+
+  * 問題：
+    * 簡訊有可能收不到
+    * 這種訊息太多
+* 替代方案
+  * 生物辨識
+    * 指紋
+    * faceID
+    * Windows Hello
+* 安全模組
+  * 主機板內建(TPM)
+  * 實體金鑰裝置
+* 歷史
+FIDO
+
+FIDO2
+
+W3C
+
+safari是現代的IE
+
+* WebAuthn
+  * 只有帳號 沒有密碼 密碼是指紋或實體key等驗證
+流程
+
+註冊：建立公鑰私鑰 公鑰提供出去
+
+驗證：收到伺服器給的加密公鑰 用私鑰加密回傳給伺服
+
+* 運作流程
+  * demo : github加入實體key
+  
+開啟2fa (two factory authentication)
+
+edit security keey
+
+register security key
+
+add key name
+
+跳出系統框說請掃描指紋（OS的 非網頁的功能）
+
+再詢問有沒有其他key
+
+插入實體key註冊
+
+登入還是要帳密
+
+然後使用指紋/pin/實體key登入
+
+* 程式碼實作
+webauthn.io 提供很多實作的demo
+
+前端註冊有兩個API:呼叫註冊option的 makeCrendentialOption 問要哪種方式 再註冊 makeCrendential
+
+前端登入也是兩個API: assestionOptions makeAssertion
+
+後端：FIDO2套件
+
+設定server domain & origin
+
+>講者之後會公佈範例程式到github & 簡報
+
+  * https://github.com/chgc/dotnetconf2020-webauthn
+  * 部落格 https://blog.kevinyang.net/
+  * FB粉絲頁 https://www.facebook.com/CKNotepad
+  * 簡報連結 https://www2.slideshare.net/ChiehKaiYang/webauthn-240312708
+  * sign counter:如果不幸被擷取 伺服端有這個數字可以驗證 多一次防盜
+
+* 如果都沒有那些設備？
+chrome 87 版（或新版edge）後有個web authn功能可以模擬設備
+
+無法搬移到其他設備
+* Q&A
+需要思考備援方案避免如金鑰不見時的情況
+
 ---
 
 尹相志
