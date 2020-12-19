@@ -1119,6 +1119,32 @@ HoloLens 2的 MR（Mixed Reality）開發入門
 
 HoloLens 2 是微軟的 AR（Augment Reality）運算平台裝置的第二代機種，已跟第一代 HoloLens 在呈現效能、易用性上有顯著的突破，在本課程將介紹 HoloLens 2 操作上的方方面面，如何開始應用程式開發，以及和微軟在 MR 領域相關的雲端服務產品 Azure Kinect, Azure Spatial Anchors 進行協動。
 
+HoloLens 2 軟硬體介紹
+* 硬體
+目前市面上買得到的 HoloLens 2 硬體機型規格分為兩種：
+
+* Normal version (Microsoft HoloLens 2):
+硬體規格介紹 https://docs.microsoft.com/en-us/hololens/hololens2-hardware
+
+Briefing Video https://www.youtube.com/watch?t=167&v=jrRNSv26_ec&feature=youtu.be&ab_channel=UponTop
+
+適合在室內使用，平均可連續使用時間約為2~4小時。
+
+* Industrial version (Trimble XR10 with HoloLens 2):
+官方網址 https://mixedreality.trimble.com/
+
+Intro video https://www.youtube.com/watch?v=7DvXh-p76wA&feature=youtu.be&ab_channel=VisserAssenYouTube
+
+工業規格設計，提供於建築工地/工廠/油井等工業場所使用。
+
+* 軟體
+  * 官方網路資源
+Windows Mixed Reality Technology Community Hub https://techcommunity.microsoft.com/t5/mixed-reality/ct-p/MicrosoftMixedReality
+
+Windows Mixed Reality Technology Blog https://techcommunity.microsoft.com/t5/mixed-reality-blog/bg-p/TheMixedRealityBlog
+
+Microsoft HoloLens YouTube Channel https://www.youtube.com/channel/UCT2rZIAL-zNqeK1OmLLUa6g
+
 ---
 
 Chris Liu
