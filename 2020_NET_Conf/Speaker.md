@@ -227,6 +227,47 @@ C# Pattern Matching 演進史
 
 模式比對在 C# 的近年發展中佔有一個重要的席位，讓我們來聊聊這些演進的故事。
 
+* C#7.0 Type Matching 加強
+  * Switch 的改變
+  * 解除 switch 只能使用實質型別的限制 (現在什麼都可以擺進去)
+  * 新增 when 關鍵字
+  
+```c#
+ // Example
+ public class MyClass { public string Name { get; set; } }
+ 
+ static string Show(MyClass instance)
+ {
+     switch (instance)
+     {
+         case null:
+             throw new NullReferenceException();
+         case MyClass c1 when c1.Name != null:
+             return $"MyClass 's Name is {c1.Name}";
+         case MyClass _:
+             return "MyClass 's Name is Empty";
+         default:
+             throw new InvalidOperationException("Unrecognized type");
+     }
+ }
+```
+
+* C# 8.0 Switch expression
+  * 精簡switch語法
+  * 變數移動到 switch 關鍵字之前
+  * 使用 => 取代 case
+  * 使用 _ 取代 default
+  * 使用運算式取代承述式
+* C# 開始走向 functional programming
+  * tuple pattern
+  * position pattern
+    * 搭配解構子 , 使用解構後的元素進行比對
+* C#9.0
+Relational pattern
+Logic Pattern
+not Pattern
+
+
 ---
 
 Ben Lu
