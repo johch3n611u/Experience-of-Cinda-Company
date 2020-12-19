@@ -227,6 +227,47 @@ C# Pattern Matching 演進史
 
 模式比對在 C# 的近年發展中佔有一個重要的席位，讓我們來聊聊這些演進的故事。
 
+* C#7.0 Type Matching 加強
+  * Switch 的改變
+  * 解除 switch 只能使用實質型別的限制 (現在什麼都可以擺進去)
+  * 新增 when 關鍵字
+  
+```c#
+ // Example
+ public class MyClass { public string Name { get; set; } }
+ 
+ static string Show(MyClass instance)
+ {
+     switch (instance)
+     {
+         case null:
+             throw new NullReferenceException();
+         case MyClass c1 when c1.Name != null:
+             return $"MyClass 's Name is {c1.Name}";
+         case MyClass _:
+             return "MyClass 's Name is Empty";
+         default:
+             throw new InvalidOperationException("Unrecognized type");
+     }
+ }
+```
+
+* C# 8.0 Switch expression
+  * 精簡switch語法
+  * 變數移動到 switch 關鍵字之前
+  * 使用 => 取代 case
+  * 使用 _ 取代 default
+  * 使用運算式取代承述式
+* C# 開始走向 functional programming
+  * tuple pattern
+  * position pattern
+    * 搭配解構子 , 使用解構後的元素進行比對
+* C#9.0
+Relational pattern
+Logic Pattern
+not Pattern
+
+
 ---
 
 Ben Lu
@@ -465,6 +506,110 @@ Maizie Ku
 Databricks 是一個 Spark 為基礎的 Big Data Analysis Platform，Azure Databricks 是一個針對 Azure 雲端服務進行最佳化的資料分析平台。隨著資料量越來越多，大數據生態系統 HDFS、Hadoop、Hive 和 Spark 等詞越來越多人耳熟能詳，但真正使用 Hadoop 生態系都會讓人難以下手卻步，往往都會遇到許多瓶頸，遇到安裝問題或記憶體效能問題。隨著雲端蓬勃發展，Azure Databricks 是一個一鍵佈署的雲端服務，裡面包含 Spark 引擎、Cluster 計算、Notebook 介面、整合 mlfow 開源套件等優點。
 我們都知道在做資料分析最多時間花費在資料探索。這個課程中，你可以學習到如何在 Databricks 做資料整合 (ETL)，並會實機案例分享，學習到用有效率的方式做資料整理，打通資料分析的任督二脈。
 
+* Azure Databricks
+  * workflow & concept
+
+Logs => AZ Data Factory => Azure Data Lake Storage ( HDFS )
+=> Azure Databricks => Power BI / Data Center / Other Storage
+
+AWS 和 Azure 都有在使用Databricks。
+
+Azure Databricks包含三項技術 ( 進階版Apache Spark引擎 )
+
+* Spark
+* DELTA LAKE
+* Ml Flow
+
+Spark 自建引擎 : 要好多機器，分散式
+
+Databricks managed platform for running Apache Spark。
+
+In-memory 運算 ， 不用擔心Memory不夠問題。
+
+提供Spark SQL、Spark ML、Spark Streaming 等…
+
+* Core Artifacts
+
+Notebooks
+
+Workspaces
+
+Clusters
+
+Libraries
+
+Jobs
+
+* Clusters
+Auto Scaling & Auto Termination Benefits
+
+* 根據工作附載量來運作。
+* 可依據使用量計費，有Idle時間設定限制。
+  * Driver 1 node / Workers 2-8 nodes
+  * 可安裝需要的Open Library
+* Notebooks
+
+編輯器，撰寫程式可以有不同語言 EX.Python,Spark SQL, …
+
+Notebook with Azure Data Factory
+
+整合Pipeline : Availability flag -> file to blob -> Transformation
+
+* DBFS
+
+Databricks File System - Cluster共用的檔案目錄
+
+Distributed file system that is on all Databricks Runtime Clusters
+
+* /dbfs/databricks-datasets/
+* /dbfs/filestore
+* /dbfs/mnt
+* /temp
+
+Dbfs:/mnt/adls_gen2 => 不用匯入就可以進HDFS拉資料。
+
+可以做ETL工具，可以處理大量資料。
+
+上Datalake做data preparing . 可以分Staging、Production …
+
+建議使用Spark功能，善用Worker Nodes。
+
+如果用Runtime Conda ，會只用到Driver 的資源，可能會有Memory不足的問題，效能不好的狀況。
+
+Delta Lake
+
+Delta Table 不等於 Datalake.
+
+Delta Lake 是開放原始碼儲存層，可為資料湖提供可靠性
+
+提供以下功能:
+
+* ACID Transaction
+* Schema管理
+* Data Skipping , Z-Ordering, Compaction
+* 資料更新/刪除
+* 彈性的中性資料處理
+* 資料版控 和 時間旅行
+* 串流與批次統一
+
+寫入語法:
+
+df.write.format(“delta”).mode(“append”).save(“/delta/events”)
+
+Delta Cache 改善查詢效率
+
+Optimize Performance with file manager
+
+Compaction (bin-packing)
+
+%sql
+
+OPTIMIZE events;
+
+Azure Databricks 也包括 Delta Engine，其提供最佳化的配置和索引以進行快速的互動式查詢。
+
+也可用Spark UI 檢視 Visualization。
+
 ---
 
 胡百敬
@@ -515,6 +660,98 @@ ASP.NET Core 5.0 新功能演繹
 
 ASP.NET Core 5.0是基於.NET 5的新一代網頁開發框架，除新功能演進，在執行效能上亦增進不少，同時亦能結合C# 9最新語法，讓程式變得更簡約洗鍊。在此探討日常開發可應用到的新功能，讓您訊速地掌握重點精華。
 
+* dot net 5: 統一平台
+
+* 命名
+
+ASP.Net Core 5 有 core 是避免跟MVC5混淆
+
+* 新功能
+
+  * model binding 支援C#9 record型別
+  * DateTime以UTC時區binding
+
+* WebApi 內建整合 swagger
+
+預設有 可以關掉 dotnet new webapi --no-openapi true
+
+* demo
+
+  * 先以3.1版web api project示範
+    * targetframework:netcoreapp3.1
+    * 升級到5:targetframework改net5.0
+    * 預設沒有swagger
+
+  * 再以5.0版直接建立core web api
+    * 內建有swagger
+    * localhost:{port}/swagger/index.html
+    * 要移除就是在startup把跟swagger相關的移除
+
+* C# 9.0 可以立即應用在asp net core的語法
+
+record
+
+* asp.net core 5 + C# 9 軟體需求
+
+要升級vs2019
+
+core sdk 5.0.101
+
+沒升級的話scafolding可能會被record type不支援而弄壞
+
+* 如果想這樣做…
+
+* init setter
+
+{get;init;}
+
+初始後即唯獨
+
+可用在class & record
+
+* record type
+
+  * 參考型別
+  * Immutable 不可改變
+  * 可以當成DataModel / Viewmodel
+  * 可用在EF DBSET
+  * 四種宣告方式
+    * get;set;
+    * get;init;
+    * 只有get & 建構子
+    * 在controller內宣告:Product p = new(1,"PC")
+  * with 複製資料
+    * Product p = pc with {name="abc"}
+  * model binding validation
+    * record Person = new([Required] int id)
+
+* target type new expression
+
+已知型別不需指定建構函式型別
+
+List<Person> list = new(){}
+  
+* pattern matching
+  
+例子：json lib 有四五種 各家優點不同
+
+一起混用code會有點亂
+
+可以用pattern matching 寫helper來簡化程式
+  
+* dot net 5效能的進步
+  
+  * gc 效能增強
+    * double sorting
+    * int32 sorting
+    * string sorting
+  
+  * LINQ 效能增強
+  * blazor webassembly 效能增強
+  * grpc效能增強
+
+* 總結
+
 ---
 
 Ethan Huang
@@ -564,6 +801,78 @@ Kuro
 
 前端開發從早期的百家爭鳴到近年的三強鼎立，已經是個相當成熟的領域了，當前主流滿滿的 npm、webpack 起手式是否讓你對前端開發心生畏懼呢？
 在本場議程中，除了介紹 Vue 3.0 帶來了什麼嶄新特性外，也以「輕前端」視角來帶領各位入門，讓對前端開發生態不甚熟悉的朋友們也能輕鬆認識 Vue 3.0 這套現代的漸進式前端框架。(「輕前端」 一詞係由黑暗執行緒大大發起，為降低技能門檻，都避免提及 npm 等安裝編譯機制，單純靠 <script> 引用相關程式。)
+
+* 輕前端： html + .js 寫一些code就可以work
+  * vue.js 可以做到
+* vue.js 簡介
+
+輕量的漸進式框架
+
+以操作物件模型為基礎的開發模式
+
+改變資料而不是DOM
+
+* 漸進式框架
+
+核心：宣明式的渲染 ＆ 組件系統
+
+往外：客戶端路由 build system…等
+
+* 安裝與起步
+
+一行code引入就好
+
+* MVVM
+
+* 以物件屬性控制畫面
+* 同樣功能用jquery寫會跟用vue寫差很多code
+  * demo : input連動h1 text
+* 修改資料內容影響DOM
+* 建立實體 createApp()
+* 掛到根節點
+  * <div id="app"></div>
+  * mount('#app')
+* vue directive 指令
+  * 在html屬性上面寫vue的語法
+  * v-model 資料綁定
+  * v-bind 屬性綁定
+  * v-on 事件綁定
+  * v-if / v-else 條件渲染（節點不存在
+  * v-show : 條件成立才顯示
+  * v-for 迭代渲染
+* 生命週期
+
+實體建立階段
+
+實體更新階段
+
+實體銷毀階段
+
+* 組件系統
+
+html上寫自訂的tag <my-compoment></my-compoment>
+
+js上設定自訂的組件 app.compoment()
+
+* 父子元件資料傳遞
+
+子組件設定觸發時用emit('event name')發送事件給父組件
+
+父組件用slot設定模板給子組件
+
+* 3.0的新功能
+
+  * <suspense> : 可用於非同步取資料時顯示loading畫面 取到了在顯示真正的內容
+  * v-model可以父子雙向綁定
+  * 改善節點渲染優化效能
+  * 改善狀態變更偵測 使用proxy api
+    * demo v2 & v3 上千點點飄動的效能
+* 結語
+ 
+直接學vue 3
+
+除非你要支援ie …
+
 
 ---
 
@@ -713,6 +1022,30 @@ Andrew Wu
 91APP 的系統，在支撐所有客戶每年累計上百億的訂單背後，有一套負責管理與維運全公司非同步任務的系統，叫做 NMQ (NineYi Message Queue)。它乘載了我們每日超過百萬個 task，共有數百個不同類型的任務 (job) 處理。
 在這麼龐大的 task 背後，我們該如何兼顧每種任務的可靠度與服務水準？舉例來說，光是發送簡訊這件事，我們就面對「行銷簡訊」的發送與「註冊簡訊」的發送。「註冊簡訊」期望在五秒內就送達，而「行銷簡訊」則有比較寬裕的發送延遲時間。如何兼顧系統複雜度、維運成本與服務水準，就是我們要面對的課題。
 Ruddy 老師在闡述 DevOps 的精神時，都會耳提面命的告訴我們：「要先能夠量測，才能夠改善。」我們架構團隊在面對這挑戰的第一件事，就是先定義如何將服務水準量化，同時替這指標訂好目標，也就是所謂的 SLO ( Service Level Objective )。這個 Session 我會來介紹我們架構團隊如何用系統化的方式來面對這個難題。
+
+* 維運管理重點
+  * 系統監控
+    * 能被量測的系統才能被控制
+* 預防行為為運管理
+
+
+SLA(Service Level Agreement): 對客戶承諾的合約
+
+SLO(Service Level Objective): 依據SLA所定義出的各項明確目標
+
+SLI(Service Level Indicator): 依據SLO所實際監控的數值(trackable metrics)
+
+定義
+
+拆解
+
+盤點
+
+監控？
+
+改善
+
+* 如何運用限制理論 (Theory of Constraints) 於軟體開發
 
 ---
 
