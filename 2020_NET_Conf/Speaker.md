@@ -213,6 +213,37 @@ gRPC - 打造輕量、高效能的後端服務
 
 gRPC 是 Google 推出的 RPC 架構，其輕量、高效能以及全雙工等特性，非常適合用來開發需要即時傳遞資訊的服務；本次分享將介紹 gRPC 的特色，以及使用 ASP.NET Core 建立一個 gRPC 服務，幫助大家快速上手並進入 gRPC 的世界。
 
+HTTP/2
+
+* 更快，更安全的傳輸方式
+Single TCP connection
+
+Header 壓縮
+
+以binary 格式傳輸
+
+連線多工處理
+
+支援Server Push
+
+允許雙向溝通
+
+相容HTTP 1.1
+
+* 關於 Protocol Buffers
+
+簡稱 protobuff .proto
+
+用來定義資料結構的一種語言
+
+語言更簡單、更好理解
+
+語言本身即可代表文件
+
+使用 Protocol Buffer Compiler 將其轉換成各種語言的實作
+
+完整的 Protocol Buffer 語法說明
+
 ---
 
 Bill Chung
