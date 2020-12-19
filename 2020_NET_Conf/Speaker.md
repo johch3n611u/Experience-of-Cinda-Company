@@ -1,6 +1,6 @@
 # Speaker
 
-## Hackmd[https://hackmd.io/@Study4/dotnetconf-2020/https%3A%2F%2Fdotnetconf2020.study4.tw%2F]
+## Hackmd(https://hackmd.io/@Study4/dotnetconf-2020/https%3A%2F%2Fdotnetconf2020.study4.tw%2F)
 
 潘正磊 Julia Liuson
 
