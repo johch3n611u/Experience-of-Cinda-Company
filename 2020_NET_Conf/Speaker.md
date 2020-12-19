@@ -231,11 +231,11 @@ C# Pattern Matching 演進史
   * Switch 的改變
   * 解除 switch 只能使用實質型別的限制 (現在什麼都可以擺進去)
   * 新增 when 關鍵字
-  
+
 ```c#
  // Example
  public class MyClass { public string Name { get; set; } }
- 
+
  static string Show(MyClass instance)
  {
      switch (instance)
@@ -730,22 +730,22 @@ core sdk 5.0.101
 已知型別不需指定建構函式型別
 
 List<Person> list = new(){}
-  
+
 * pattern matching
-  
+
 例子：json lib 有四五種 各家優點不同
 
 一起混用code會有點亂
 
 可以用pattern matching 寫helper來簡化程式
-  
+
 * dot net 5效能的進步
-  
+
   * gc 效能增強
     * double sorting
     * int32 sorting
     * string sorting
-  
+
   * LINQ 效能增強
   * blazor webassembly 效能增強
   * grpc效能增強
@@ -868,7 +868,7 @@ js上設定自訂的組件 app.compoment()
   * 改善狀態變更偵測 使用proxy api
     * demo v2 & v3 上千點點飄動的效能
 * 結語
- 
+
 直接學vue 3
 
 除非你要支援ie …
@@ -1028,6 +1028,7 @@ Ruddy 老師在闡述 DevOps 的精神時，都會耳提面命的告訴我們：
     * 能被量測的系統才能被控制
 * 預防行為為運管理
 
+![alt](/assets/Wwo22gc.png)
 
 SLA(Service Level Agreement): 對客戶承諾的合約
 
@@ -1046,6 +1047,8 @@ SLI(Service Level Indicator): 依據SLO所實際監控的數值(trackable metric
 改善
 
 * 如何運用限制理論 (Theory of Constraints) 於軟體開發
+
+![alt](/assets/UbKlCPg.png)
 
 ---
 
