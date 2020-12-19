@@ -77,6 +77,42 @@ Hands-on-Lab：Continuous delivery in Azure DevOps & GitHub
 
 Hands-on-Lab：以機器學習與 AI 推動新世代數位轉型
 
+Hands-on-Lab：以機器學習與 AI 推動新世代數位轉型 - 詹欣諭 (台北文創)
+歡迎來到 .NET Conf 2020 Taiwan 共筆 :mega:
+共筆入口：https://hackmd.io/@Study4/dotnetconf-2020
+手機版請點選上方  按鈕展開議程列表。
+
+從這裡開始寫 :pencil:
+
+Survey
+www.menti.com
+(1) : 19 67 28 9
+(2) : 25 27 87 6
+Azure Databricks
+Spark config
+spark.hadoop.fs.azure.account.key.<STORAGE_ACCOUNT_NAME>.blob.core.windows.net <ACCESS_KEY>
+Data
+Sample Data
+url : http://bit.ly/2wGAqrl
+rename
+flight_delays_with_airport_codes
+flight_weather_with_airport_code
+airport_code_location_lookup_clean
+Historical
+url : http://bit.ly/2zi4Sqa
+Install ML
+azureml-sdk[databricks]
+Notebook
+https://github.com/microsoft/MCW-Big-data-and-visualization/blob/master/BigDataVis.dbc?raw=true
+Azure Data Factory Integration Runtime
+https://www.microsoft.com/en-us/download/details.aspx?id=39717
+OpenWeather account
+https://openweathermap.org/home/sign_up
+(testing) https://api.openweathermap.org/data/2.5/onecall?lat=37.8267&lon=-122.4233&appid={YOUR API KEY}
+Deploy web app
+https://github.com/Microsoft/MCW-Big-data-and-visualization/blob/master/Hands-on lab/lab-files/BigDataTravel/README.md
+tags: dotnetconf2020
+
 ---
 
 王鈞平
