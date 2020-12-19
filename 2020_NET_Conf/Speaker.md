@@ -946,6 +946,112 @@ Amos
 
 CSS選取器，一個簡單卻又不簡單的東西，一個眾多人以為是切版會用到的技術，但其實不管是自動測試還是 JavaScript 框架都會用到，如果你對CSS選取器苦手，歡迎一起來領略CSS選取器的有趣之處。
 
+CSS 選取器到底要怎麼寫
+選取器優先權
+!important > animation > inline-style > ID > class > tag > * > 繼承
+div {
+    color: red;
+}
+* {
+    color: blue;
+}
+
+<div>
+  Lorem, ipsum dolor.
+  <span>
+    text //藍色，因為 * > 繼承
+  </span>
+</div>
+div > span{
+  color: red; // ">" 符號沒有加分 
+}
+div span{
+  color: red;
+}
+
+<div>
+  Lorem, ipsum dolor.
+  <span>
+    text // 最後紅色
+  </span>
+</div>
+
+li + li {
+  border-top: 1px solid #0f0;
+}
+li ~ li {
+  border-top: 1px solid #0f0;
+}
+li:not(:first-child) {
+  border-top: 1px solid #0f0;
+}
+li:nth-child(n+2){
+ border-top: 1px solid #0f0;
+}
+li:nth-last-child(n+2){
+ border-bttom: 1px solid pink;
+}
+
+// 上述五種方式結果都相同
+
+<ul>
+ <li> Lorem, ipsum dolor.</li>
+ <li> Lorem, ipsum dolor.</li>
+ <li> Lorem, ipsum dolor.</li>
+ <li> Lorem, ipsum dolor.</li>
+</ul>
+ul {
+  display: flex;
+  list-style: none;
+}
+li {
+  padding: 0px 20px;
+}
+li + li a {
+  border-left: 1px solid #000;
+}
+<ul>
+  <li><a>link</a></li>
+  <li><a>link</a></li>
+  <li><a>link</a></li>
+  <li><a>link</a></li>
+</ul>
+first-of-child
+就是第一個
+first-of-type
+想像成一個 p 陣列內的第一個
+.box :first-of-type { // 第一個 div 與 span 都會被選到
+  background-color: #f00; 
+}
+
+
+<div class="box">
+    <div>div</div>
+    <span>span</span>
+    <div>div</div>
+    <span>span</span>
+    <div>div</div>
+    <span>span</span>
+    <div>div</div>
+    <span>span</span>a    
+</div>
+如果你想要兩欄置中
+.amos .col-4:nth-child(even) {
+    margin-right: 16.666666%;
+}
+
+<div class="container">
+    <div class="row amos">
+        <div class="col-4"></div>
+        <div class="col-4"></div>
+        <div class="col-4"></div>
+        <div class="col-4"></div>
+        <div class="col-4"></div>
+        <div class="col-4"></div>
+        <div class="col-4"></div>
+    </div>
+</div>
+
 ---
 
 12/19 - 20 企業實戰議程
