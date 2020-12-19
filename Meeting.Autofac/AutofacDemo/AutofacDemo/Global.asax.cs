@@ -25,7 +25,7 @@ namespace AutofacDemo
             #endif
             // 建立 DI Container
             var container = builder.Build();
-            // 用DI Container 作為建立 Controller 時候的 DI Resolver。
+            // 用 DI Container 作為建立 Controller 時候的 DI Resolver。
             DependencyResolver.SetResolver(new AutofacDependencyResolver(container));
 
             // 其他 Mvc 設定

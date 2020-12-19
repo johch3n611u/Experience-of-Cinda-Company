@@ -215,3 +215,4 @@ D:\Desk\Cases\No$OpenSource\Experience-of-Cinda-Company\Meeting.Autofac\AutofacD
 D:\Desk\Cases\No$OpenSource\Experience-of-Cinda-Company\Meeting.Autofac\AutofacDemo\AutofacDemo\obj\Debug\AutofacDemo.csproj.CopyComplete
 D:\Desk\Cases\No$OpenSource\Experience-of-Cinda-Company\Meeting.Autofac\AutofacDemo\AutofacDemo\obj\Debug\AutofacDemo.dll
 D:\Desk\Cases\No$OpenSource\Experience-of-Cinda-Company\Meeting.Autofac\AutofacDemo\AutofacDemo\obj\Debug\AutofacDemo.pdb
+C:\Users\rognp\Desktop\delete\Experience-of-Cinda-Company\Meeting.Autofac\AutofacDemo\AutofacDemo\bin\NLog.config

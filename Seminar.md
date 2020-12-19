@@ -759,8 +759,8 @@ nolock(共用鎖定) tablelock ... 撈的到 補SQL
 才能用如以下語法
 
 ```C#
-data.Where(x => 
-EntityFunctions.DiffMonths(x.SIGN_FORM_MAIN.CREATE_DATE, DateTime.Now) <= 3 
+data.Where(x =>
+EntityFunctions.DiffMonths(x.SIGN_FORM_MAIN.CREATE_DATE, DateTime.Now) <= 3
 &&
 EntityFunctions.DiffMonths(x.SIGN_FORM_MAIN.CREATE_DATE, DateTime.Now) >= -3);
 ```
@@ -773,7 +773,7 @@ EnabledAnonymous
 
 ## Oracle Update Date <a id="59"></a>
 
-> UPDATE PAMV2.PAM_IF_RESIGN SET ACCOUNT_CLOSE_DATE = DATE '2020-12-13'; 
+> UPDATE PAMV2.PAM_IF_RESIGN SET ACCOUNT_CLOSE_DATE = DATE '2020-12-13';
 
 <https://stackoverflow.com/questions/13497130/updating-a-date-in-oracle-sql-table/13497380>
 
@@ -1041,4 +1041,119 @@ public string GetSignFooter(string pStrServiceCode)
             else
                 return objService.APPLICATION_DESCRIPTION_EN?.Replace("\n", "<br>") + "@" + objService.INFO_SECURITY_DESCRIPTION_EN?.Replace("\n", "<br>");
         }
+```
+
+##
+
+/// <summary>
+/// 複製物件
+/// </summary>
+/// <typeparam name="T"></typeparam>
+/// <param name="obj"></param>
+/// <returns></returns>
+public static T Clone<T>(this T obj)
+{
+    var inst = obj.GetType().GetMethod("MemberwiseClone", System.Reflection.BindingFlags.Instance | System.Reflection.BindingFlags.NonPublic);
+    return (T)inst?.Invoke(obj, null);
+}
+
+## CSharp Excel 匯入
+
+<https://stackoverflow.com/questions/11832930/html-input-file-accept-attribute-file-type-csv>
+
+<https://primefaces.org/primeng/showcase/#/fileupload>
+
+<https://ithelp.ithome.com.tw/articles/10218430>
+
+[CSharp Excel 匯入範例 方式為先上傳到某個資料夾，再藉由名字去那個資料夾取 stream](/assets/csharpexcel.md)
+
+下載則是特定資料夾才開放路徑去下載
+
+## .NET Mail
+
+<https://docs.microsoft.com/zh-tw/dotnet/api/system.web.mail.mailmessage.priority?view=netframework-4.8>
+
+## AG AOT BUG
+
+不能用 import 來取名組件，資料夾會變成跟 src 類似的權重的感覺，網路上查不到資料
+
+<https://matthung0807.blogspot.com/2019/07/angular-7-can-not-determine-module.html>
+
+![alt](/assets/agbug.png)
+
+## PostMan
+
+<https://identity.getpostman.com/>
+
+用 PostMan 做 SPA 測試報告 Test
+
+Interceptor Chrome 側錄 filter 重複執行 排程 搶票
+
+Team Upgrade
+
+## 直接 console call api
+
+隨意一支 api 右鍵 copy fetch 即可再調用
+
+## Visual Studio
+
+Alt Shift 可以達到類似 VSCode 連續選的功能
+
+## .NET Catch
+
+```csharp
+public PageQueryResult<Model.PORTAL_SYSTEM_SERVICES> GetPortalSystemServices(string serviceCode)
+        {
+            var apiUri = base.ITCPORTALAPIUri + "GetPortalSystemServices";
+            var response = new PageQueryResult<Model.PORTAL_SYSTEM_SERVICES>();
+            try
+            {
+                if (_cache.Contains("GetPortalSystemServices"))
+                    return _cache.Get("GetPortalSystemServices") as PageQueryResult<Model.PORTAL_SYSTEM_SERVICES>;
+
+                var jsonResult = RestSharpHelper.PostJson(apiUri, null, JsonConvert.SerializeObject(serviceCode));
+                response = JsonConvert.DeserializeObject<PageQueryResult<Model.PORTAL_SYSTEM_SERVICES>>(jsonResult);
+                _cache.Add("GetPortalSystemServices", response, DateTimeOffset.Now.AddMinutes(10));
+            }
+            catch (Exception ex)
+            {
+                _logger.Error(ex.StackTrace);
+                throw ex;
+            }
+            return response;
+        }
+```
+
+## Csharp CopyPropertiesTo
+
+<https://dev-felix72.blogspot.com/2017/12/be-caution-about-modified-entity-state-after-automapping-when-doing-ef-updating.html>
+
+## Q: AutoMap 後異動 EF 寫不進 DB
+
+參考: <https://dev-felix72.blogspot.com/2017/12/be-caution-about-modified-entity-state-after-automapping-when-doing-ef-updating.html>
+
+A: 經過 AutoMapper 異動後，EntityState 已被移除追蹤， EF 再怎麼儲存異動都沒有任何作用，所以需要重新比對資料
+
+```Csharp
+// _user Mapper 完的 ORM
+var entry = context.Entry(_user);
+if (entry.State == EntityState.Detached)
+{
+  var set = context.Set<User>();
+  User attachedEntity = set.Find(_user.UserId);
+
+  if (attachedEntity != null)
+  {
+    var attachedEntry = context.Entry(attachedEntity);
+    attachedEntry.CurrentValues.SetValues(_user);
+  }
+  else
+  {
+    entry.State = EntityState.Modified;
+  }
+}
+// 經過以上判斷與調整實體狀態後就可以使用 Mapper 後的 ORM
+var User = Entities.USER.FirstOrDefault();
+User = _user
+Entities.SaveChange();
 ```
