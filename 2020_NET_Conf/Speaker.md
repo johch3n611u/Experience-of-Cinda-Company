@@ -1310,6 +1310,128 @@ Azure DevOps Service 應用架構與秘辛
 DevOps 強調在於文化的變革，但變革中如何藉由工具降低開發到佈署流程消耗的成本。而選擇 Azure DevOps Service 就真的一切問題都沒有嗎？
 而在製造業中要將 Azure DevOps Service 作為 DevOps 工具核心，並且能公司內部多元化的開發和佈署環境，如：Web、Windows Service、iOS App、Continer...等，和開發者"創新"的軟體佈署模式，讓 Azure DevOps Service 簡單的 Pipeline 變得不簡單，本場次將公開目前我們設計 Azure DevOps Service 和 Pipeline 的架構與流程，以及 Azure DevOps Service 另類用法。
 
+* Devops Map
+
+監控 + 學習
+
+計畫+追蹤
+
+開發+測試
+
+交付
+
+* 監控在Azure使用Azure Application Insight (APM)
+
+企業應用 內外部系統分佈
+
+80% - 企業內部
+
+20% - Azure Services
+
+* Agent
+
+Build Agent 雲地建置
+
+Agent 5 秒 Pulling Azure Devops Status
+
+Agent 主動通知 Azure Devops Service ( 內部往外呼叫 : 企業安全性考量)
+
+Azure DevOps 會將Request放在 Queue中排隊。
+
+DevOps的流程在執行SQL部署時，建議先產生差異化檔案，再執行Update，避免Data Miss.
+
+* Artifacts Service
+
+元件化打包在 Artifacts ，建置類似Nuget Server。
+
+解耦: 系統拆解 / 降低CI TIME / 元件化
+
+避免企業使用過期元件，設定 Package保留週期
+
+* Agent Pool Practice
+
+Microsoft Agent Pool
+
+Agent Pool -> Agent(可放在VM) -> Host
+
+* 架設理由:
+  * 可以加速Pull Code
+  * Build Container速度
+    * 減少Base Image過大打包慢的問題
+  * 避免 .NET Core/.NET Framework更新問題
+  * 省錢
+  * …
+  
+1803 Windows Container 不能放在 2004 Windows Container
+
+Build版本和Runtime版本要相同，所以要分為不同Pool
+
+Agent 要定期更新，最好能自動更新，
+
+Devops Service找不到Agent大部分是因為Agent過舊
+
+* Pipeline Design Pattern
+
+CI編譯時間越短越好，設計盡量與Agent OS相依性低，隨時可切換Agent Pool。
+
+只要切換Agent ， Task Flow不需要改變。
+
+敏感參數不要放在Flow裡面以避免被盜用。
+
+* Pipeline Design Flow
+
+記得檢視 執行時間，查看哪個流程慢。
+
+* Build .NET CORE
+
+SonarQube: Code Review
+
+.NET CORE Build的順序要從2.2 => 3.0 => 3.1
+
+若從3.1開始會無法執行
+
+先Build Application，再Build Container，可優先察覺問題。
+
+* Build SQL Project
+
+SQL要版控
+
+可以做成SQL Project 導入 Devops SQL Depolyee
+
+Container 部署要使用版本號來管控，以利還原Pipeline
+
+* 自動化平台
+
+所有Build /Release可通知團隊
+
+* 另類應用
+
+EX雲端驅動批次程式
+
+可以善用裡面的整合工具，來查看執行時間、找到錯誤訊息、通知相關人員。
+
+* ISO需求
+
+將雲端Repos Files備份到到地端。
+
+* Trigger CI on Release Stage
+
+Package 強制更新
+
+EX. Data Plateform 是用元件控管DB Connection ,所以一定要更新Package
+
+* SQL Scan
+
+Often Extension
+
+每次發佈自動變更版本號 ( regular Expression )
+
+* Summary
+
+Compiler失敗請確認是不是Pipeline問題
+
+CLI & API可使用隱藏版功能
+
 ---
 
 Bruce Chen
