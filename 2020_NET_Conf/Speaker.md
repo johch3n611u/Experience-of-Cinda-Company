@@ -596,6 +596,101 @@ Azure 上打造日資料量一百 TB 的資料分析系統
 
 分享各個服務在規劃與開發時的踩雷經驗與注意事項。
 
+當你每天有100TB資料時你要先思考
+
+DATA IS GOLD, but how you can be rich?
+
+要付多少錢來做這些資料量
+
+這裡談的是歷史型資料不是即時資料
+
+* 資料的結構常常會變化
+
+資料通常是髒的 , 資料結結構常常在變
+
+策略：Data lake
+
+不希望資料發生變化時資料就無法進入 卡了好幾小時 損失一堆資料
+
+各家產品：
+
+Elastic search, Azure Data lake Gen2, Azure synapse…
+
+資料格式：csv,JSON, Parquet, ORC
+
+選擇重點：看能多容易去處理資料結構改變
+
+* 第零步就是查詢與報表
+
+查詢需求如：
+
+以每5,20分鐘,6小時,一周為單位統計
+
+需要有日期起迄下條件
+
+要可以處理JSON值（欄位內存JSON）
+
+可能有動態的屬性 {"prop1":"a"} {"prop2":"b"}
+
+mv-expand
+
+* Azure Data Explorer
+
+大數據整合平台
+
+可以跨table,跨db做資料處理
+
+很多微軟客戶選擇用這個
+
+* 每個資源的處理平權衡
+  * 資料量到了TB級時很難用單一工具就處理
+  * 集中一個工具時loading就會很重
+  * 所以把其他工具擅長的部分分出去做
+  * 例如前期資料處理用Databricks
+  * 使用設計模式來規劃權責
+    * clam-check pattern
+    * 例圖：客戶資料＆外部資料用DataExplorer
+    * 其他各種資料來源用Databrick
+    * 用事件驅動方式, 丟到event grid,資料放到queue, databrick再去勞撈queue
+    * 處理能力可以到微秒級, 不過通常會批次處理, 大概5-10秒可以處理一批
+    * 然後資料整合在用DataLake撈Explorer&Brick的進來
+* 資料重複怎麼辦
+  * 能忽略是最好
+  * 策略：
+    * ingestion Time Check
+    * Update Policy in AXD
+    * 查詢時過濾
+    * arg_max(eventdatetime)
+  * 要理解基礎建設
+    * 通常Azure資料服務會說明
+    * 至少一次 vs 只會一次
+    * Databricks裡的checkpoint files要注意控制大小, 以免影響效能
+* 效能來自你對產品的理解
+(列了很多Databrick跟Azure Data Explorer可以調整的部分)
+* 小問題會被放大
+雲端環境是隨時會變化的
+
+網路傳輸會有失敗的情況
+
+retry的問題可以加入waiting time在retry之前
+
+硬碟IO控制
+
+LOG 監控不要影響效能
+* 測試
+單元與整合測試不夠了
+
+要系統層級的測試
+
+CICD會變複雜
+
+* 測量你的資料shifting
+schema 相同 , 資料進來的方式可能不同
+* chaos engineering的必要性
+其中一個元件故障時系統會發生什麼＆要如何救援
+
+有一些工具可以利用
+
 ---
 
 Maizie Ku
