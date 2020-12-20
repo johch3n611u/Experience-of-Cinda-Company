@@ -10,6 +10,60 @@
 
 .NET 社群交流答客問
 
+## 我寫的筆記
+
+趨勢：移動式管理
+
+微軟擁抱開源也是在 MVP PDCA
+
+利用雲端化服務 ( IaaS SaaS )
+
+訂閱與使用制賺錢
+
+微服務類似騰訊小服務那套，所以以商業模式跟軟體技術來看大陸算蠻強的
+
+* NET 5 -> 6 願景
+
+將開源 mono 版本整合
+
+更跨平台　更雲　更方便　講廢話．．？
+
+5 只是原來的加上 Core
+
+* 賣？支援週期
+
+雙數　ＬＴＳ
+
+* WCF WEBFORM WF 這幾個５不支援
+
+５．０　單檔應用程式整包　Ｃ＃　９．Ｏ　Ｌｉｎｕｘ　雲相關
+
+整個大概在講　微軟怎麼賺
+
+把社群跟他雲功能綁再一起
+
+容器化整合方案　https://github.com/dotnet/tye
+
+微軟雲開發環境整合　用　ｃｍｄ　開發的神人？？
+
+雲端　ｋ８ｓ
+
+ｄｔｒｃｏｍｐｏｓ？　ｃｏｎｆｉｇ　不同問題
+
+這邊涉及實作　ｄｅｖＯｐｓ　一堆聽不懂
+
+Ｂｌａｚｏｒ
+
+https://devblogs.microsoft.com/aspnet/grpc-performance-improvements-in-net-5/
+
+跨平台整合節省資訊人力資源
+
+支援整合強大，可以更專注在商業需求而不是程式內容
+
+ｗｐｆ－＞ｗｅｂａｐｉ
+
+．ｎｅｔ　ｃｏｒｅ　ｐａｃｋａｇｅ　越多不支援低版本
+
 ---
 
 胡德民 Peter Hu
@@ -57,6 +111,58 @@ Hands-on-Lab：現代化雲端應用程式
 
 Hands-on-Lab：使用 Blazor WebAssembly 和 Visual Studio Code 來建置 Web 應用程式
 
+15:38 ㄩ\ㄔㄥ/ 互動層
+
+15:41 ㄩ\ㄔㄥ/ 沙箱 資安沒問題
+
+15:54 ㄩ\ㄔㄥ/ 喔喔 有兩種方式　
+
+15:54 ㄩ\ㄔㄥ/ 所以還好
+
+15:55 ㄩ\ㄔㄥ/ 部支援 舊版
+
+15:55 ㄩ\ㄔㄥ/ 要 websxxxly 支援的瀏覽器
+
+15:56 ㄩ\ㄔㄥ/ 支援除錯
+
+15:57 ㄩ\ㄔㄥ/ 有 ssr 跟 csr
+
+16:06 ㄩ\ㄔㄥ/ 注入 想寫測試 或抽換元件改版 會非常方便
+
+16:07 ㄩ\ㄔㄥ/ 注入測試資料 io
+
+16:08 ㄩ\ㄔㄥ/ 跟原本 razor 很像
+
+16:16 ㄩ\ㄔㄥ/ 可以 reuse component
+
+16:16 ㄩ\ㄔㄥ/ ex <Count />
+
+16:20 ㄩ\ㄔㄥ/ 混合模式
+
+16:21 ㄩ\ㄔㄥ/ 也有 code behind
+
+16:25 ㄩ\ㄔㄥ/ https://dotblogs.com.tw/alantsai/2014/06/08/software-zoomit
+
+16:48 ㄩ\ㄔㄥ/ 注入生命週期
+
+16:48 ㄩ\ㄔㄥ/ 重點
+
+16:48 ㄩ\ㄔㄥ/ 標籤注入 ?
+
+![alt](/assets/messageImage_1608283000367.jpg)
+
+17:00 ㄩ\ㄔㄥ/ https://skyerp.aks.study4/dev/
+
+17:08 ㄩ\ㄔㄥ/ https://skyerp.aks.study4.dev/
+
+17:11 ㄩ\ㄔㄥ/ tag help
+
+17:11 ㄩ\ㄔㄥ/ html help
+
+17:13 ㄩ\ㄔㄥ/ https://blog.darkthread.net/blog/aspnet-core-tag-helpers/
+
+17:14 ㄩ\ㄔㄥ/ EditForm
+
 ---
 
 黃慧兒
@@ -66,6 +172,46 @@ Hands-on-Lab：使用 Blazor WebAssembly 和 Visual Studio Code 來建置 Web �
 課程主題
 
 Hands-on-Lab：Continuous delivery in Azure DevOps & GitHub
+
+## 我的筆記
+
+---
+
+產品感覺比較需要　ＤｅｖＯｐｓ　需要連功能都　ＭＶＰ　ＱＡＰＤ　化
+
+很猛感覺沒提詞機器但講得很順
+
+很多種　ＤｅｖＯｐｓ　Ｓｏｌｕｔｉｏｎ　不一定適用於接案型公司
+
+Ａｚｕｅｒ　ＤｅｖＯｐｓ　直接上面　ＧＩＴ　ＢＵＩＬＤ
+
+地端代理程式定期呼叫　ＡＺＵＲＥ　ＤｅｖＯｐｓ　看有沒有　ＴＡＳＫ
+
+14:07 ㄩ\ㄔㄥ/ labs
+
+14:09 ㄩ\ㄔㄥ/ pepline 啟動時機
+
+14:10 ㄩ\ㄔㄥ/ comit 就啟動 / 時程 ...
+
+14:23 ㄩ\ㄔㄥ/ 可以綁相關工具 ex 工單 task
+
+14:39 ㄩ\ㄔㄥ/ rollback 版本
+
+14:40 ㄩ\ㄔㄥ/ ms azure deployment slots rollback
+
+14:40 ㄩ\ㄔㄥ/ 兩種返回方式
+
+14:42 ㄩ\ㄔㄥ/ 退版 app serrvice swap
+
+14:42 ㄩ\ㄔㄥ/ dev 跟 pro 交換正是機上的程式
+
+14:44 ㄩ\ㄔㄥ/ devops 流程也可以換版 app service deploy / swap stots
+
+14:52 ㄩ\ㄔㄥ/ https://docs.microsoft.com/zh-tw/learn/modules/microservices-devops-aspnet-core/
+
+15:01 ㄩ\ㄔㄥ/ https://medium.com/nick-%E5%B7%A5%E7%A8%8B%E5%B8%AB%E5%AD%B8%E7%BF%92%E8%A8%98/%E6%95%99%E5%AD%B8-gitlab-ci-%E5%85%A5%E9%96%80%E5%AF%A6%E4%BD%9C-%E8%87%AA%E5%8B%95%E5%8C%96%E9%83%A8%E7%BD%B2%E7%AF%87-ci-cd-%E7%B3%BB%E5%88%97%E5%88%86%E4%BA%AB%E6%96%87-cbb5100a73d4
+
+15:02 ㄩ\ㄔㄥ/ 藉由介面 去控所有程式都要有 IO 然後 CICD untest 就可以解決舜博說的事
 
 ---
 
@@ -486,7 +632,7 @@ safari是現代的IE
 
 * 運作流程
   * demo : github加入實體key
-  
+
 開啟2fa (two factory authentication)
 
 edit security keey
@@ -1218,7 +1364,7 @@ div {
   </span>
 </div>
 div > span{
-  color: red; // ">" 符號沒有加分 
+  color: red; // ">" 符號沒有加分
 }
 div span{
   color: red;
@@ -1276,7 +1422,7 @@ first-of-child
 first-of-type
 想像成一個 p 陣列內的第一個
 .box :first-of-type { // 第一個 div 與 span 都會被選到
-  background-color: #f00; 
+  background-color: #f00;
 }
 
 
@@ -1288,7 +1434,7 @@ first-of-type
     <div>div</div>
     <span>span</span>
     <div>div</div>
-    <span>span</span>a    
+    <span>span</span>a
 </div>
 如果你想要兩欄置中
 .amos .col-4:nth-child(even) {
@@ -1620,7 +1766,7 @@ Agent Pool -> Agent(可放在VM) -> Host
   * 避免 .NET Core/.NET Framework更新問題
   * 省錢
   * …
-  
+
 1803 Windows Container 不能放在 2004 Windows Container
 
 Build版本和Runtime版本要相同，所以要分為不同Pool
