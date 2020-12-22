@@ -1589,6 +1589,105 @@ The Journey of C# Source Generator
 
 Source Generator 是 Roslyn 專案中正在發展中的一個項目，它能夠在編譯過程中根據 meta 產生程式碼，並加入至編譯結果中。本次分享將介紹如何使用 Source Generator，並說明其適用情境及限制。
 
+What’s source generator?
+Roslyn 新項目
+擴增程式
+程式碼 build 出來的結果產生其他程式碼
+
+What can it do?
+Config 自定義資訊
+與 IDE 整合 → 診斷資訊
+
+What can it not do?
+不能修改原本程式碼 → 無法達到 AOP 效果
+可有很多 generator，但彼此不能相互參考
+不能產生 C# 之外的 code (但有 issue 處理中)
+
+Lifecycle
+動態 → 一直掃程式碼 (CPU 較高)
+
+Benefits
+…
+
+partial class
+partial method: 原本 return void → 就是為了 source generator 而生?
+可幫助少寫一點扣
+
+Runtime
+VS 2019: 自動加註 auto-generated
+即時 rebuild 後會有快取問題，要重開 VS 才能解決
+所以用 Rider: rebuild 就可查看新的
+
+Generator 起手式
+.NET Standard 2.0
+
+add packages
+
+CodeAnalysis.SCharp
+CodeAnalysis.Analyzers
+add attributes
+
+
+
+實作 Generator
+Initialize
+GeneratorInitializationContext
+註冊一個 SyntaxReceiver (實作 ISyntaxReceiver)
+有 CancellationToken
+
+Execute
+GeneratorExecutionContext
+取出各種 meta
+依邏輯產生程式碼字串
+有 CancellationToken
+
+AddSource
+將產生的程式碼加入最後 compile 結果
+
+CancellationToken
+提供 IDE 可取消 generator 執行的機制
+
+偵錯
+手動選擇偵錯執行的 IDE 視窗
+要先加一行
+
+System.Diagnostics.Debugger.Launch();
+太手動：未來應該會被改掉
+如何取得 meta
+取得 syntax 資訊
+面對 Roslyn 的 syntax API
+
+比較難寫 (等等介紹其他 tool)
+取得 SyntaxReceiver 資訊
+從 context 取得 SyntaxReceiver 資訊
+
+回報診斷訊息
+用 ReportDiagnostic 向 IDE 回報
+可以用 .Location 找出錯誤的地方
+
+將產生的程式輸出為實體檔案
+要宣告允許、指定輸出路徑
+
+如何打包成 nuget
+太進階，講師跳過
+
+Demo
+開 debugger
+Compilation 裡面有 Syntax Tree?
+VS cache 問題
+展示 generator 重 build 不認得新的 naming
+用 Rider 就沒這問題
+att ribute 由 generator 自動產出
+csv 掛 file
+宣告
+根據 csv 長出 model Cars IEnumerable
+適合用於處理二維結構
+builder
+動態掃 entity 裡面的 property 自動 gen 出方法
+mapper 回報錯誤資訊
+屬性、名稱設定為一定要一樣
+改名：噴錯 (error name 自訂)
+
 ---
 
 Amos
