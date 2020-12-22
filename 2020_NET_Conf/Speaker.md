@@ -229,43 +229,44 @@ Hands-on-Lab：Continuous delivery in Azure DevOps & GitHub
 
 課程主題
 
-Hands-on-Lab：以機器學習與 AI 推動新世代數位轉型
-
 Hands-on-Lab：以機器學習與 AI 推動新世代數位轉型 - 詹欣諭 (台北文創)
-歡迎來到 .NET Conf 2020 Taiwan 共筆 :mega:
-共筆入口：https://hackmd.io/@Study4/dotnetconf-2020
-手機版請點選上方  按鈕展開議程列表。
 
-從這裡開始寫 :pencil:
+## Survey
+* www.menti.com
+    * (1) : 19 67 28 9
+    * (2) : 25 27 87 6
 
-Survey
-www.menti.com
-(1) : 19 67 28 9
-(2) : 25 27 87 6
-Azure Databricks
-Spark config
-spark.hadoop.fs.azure.account.key.<STORAGE_ACCOUNT_NAME>.blob.core.windows.net <ACCESS_KEY>
-Data
-Sample Data
-url : http://bit.ly/2wGAqrl
-rename
-flight_delays_with_airport_codes
-flight_weather_with_airport_code
-airport_code_location_lookup_clean
-Historical
-url : http://bit.ly/2zi4Sqa
-Install ML
-azureml-sdk[databricks]
-Notebook
-https://github.com/microsoft/MCW-Big-data-and-visualization/blob/master/BigDataVis.dbc?raw=true
-Azure Data Factory Integration Runtime
-https://www.microsoft.com/en-us/download/details.aspx?id=39717
-OpenWeather account
-https://openweathermap.org/home/sign_up
-(testing) https://api.openweathermap.org/data/2.5/onecall?lat=37.8267&lon=-122.4233&appid={YOUR API KEY}
-Deploy web app
-https://github.com/Microsoft/MCW-Big-data-and-visualization/blob/master/Hands-on lab/lab-files/BigDataTravel/README.md
-tags: dotnetconf2020
+## Azure Databricks
+* Spark config
+    * spark.hadoop.fs.azure.account.key.<STORAGE_ACCOUNT_NAME>.blob.core.windows.net <ACCESS_KEY>
+
+## Data
+* Sample Data
+    * url : http://bit.ly/2wGAqrl
+    * rename
+        * flight_delays_with_airport_codes
+        * flight_weather_with_airport_code
+        * airport_code_location_lookup_clean
+* Historical
+    * url : http://bit.ly/2zi4Sqa
+
+## Install ML
+* azureml-sdk[databricks]
+
+## Notebook
+* https://github.com/microsoft/MCW-Big-data-and-visualization/blob/master/BigDataVis.dbc?raw=true
+
+
+## Azure Data Factory Integration Runtime
+* https://www.microsoft.com/en-us/download/details.aspx?id=39717
+
+
+## OpenWeather account
+* https://openweathermap.org/home/sign_up
+* (testing) https://api.openweathermap.org/data/2.5/onecall?lat=37.8267&lon=-122.4233&appid={YOUR API KEY}
+
+## Deploy web app
+* https://github.com/Microsoft/MCW-Big-data-and-visualization/blob/master/Hands-on%20lab/lab-files/BigDataTravel/README.md
 
 ---
 
@@ -301,9 +302,8 @@ Hands-on-Lab：Microservices and Azure Red Hat OpenShift with .NET
 不，新大陸才正要開始呢～(攤手)
 這個議程，我們會來討論，未來我們的 AKS 環境，Pod 的資料要怎麼儲存、前面要怎麼路由、怎樣和 DNS 整併、要怎麼進行 GitOps 部署，等等實務上可能會遇到的議題，都會在這個 Session 與大家見面！！！
 
-CNI 使用 Calico 需要注意網段是否已被使用
-
-實務上使用 Azure CNI 效能較好，但每一個 Pod 會佔去一個 IP
+* CNI 使用 Calico 需要注意網段是否已被使用
+* 實務上使用 Azure CNI 效能較好，但每一個 Pod 會佔去一個 IP
 
 ---
 
@@ -573,7 +573,107 @@ David Tung
 
 其實已經忘記第一次幫團隊建立開發框架和架構是什麼時候的事情了。但我覺得自己很幸運，在職涯中有不只一次的機會，能幫公司或團隊建立開發框架，這些經驗對我的幫助很大。前陣子知道自己早年建立的某個開發框架在十多年後的今天還在運行，這種成就感(以及惶恐)外人很難想像。這個場次，我想將這些經驗跟大家分享。但想說的話很多，能用的時間有限，讓我們一切隨緣。
 
-#只限老友 #生人勿近 #framework #core #win #web
+-只限老友 #生人勿近 #framework #core #win #web
+
+講師筆記與問卷:
+https://hackmd.io/@twdeveloper/rkZosei3D
+
+* 題目由來
+吸引人
+
+基本上(題目這件事)這不可能
+
+* 什麼是框架
+  * 一種引導 限制
+  * 誘導你往設計者要的方向走
+  * 實現某種價值
+
+EX.框架來實踐 High Ability,可測試性, …
+
+大部分的框架告訴你不該做甚麼，不是你該做甚麼
+
+* Demo : EIP client
+開發階段可以獨立執行，執行階段可以直接嵌入，是一件很方便的事。
+
+模組化開發、自動部署、動態載入
+
+* DEMO : Easy Cloud
+  * XAML(MVVM)& NPAPI
+  * 網頁上執行很像視窗環境的程式
+  * RPC
+  * WCF RIA
+
+Application Loader <=> Application Store
+
+* demo: page method
+  * event driven like
+  * 開發直覺
+
+* office 365
+  * 利用OAuth統一登入資訊 使用者可以在不同應用程式(不同網域)之間切換 (SSO)
+  * OAuth: Line,Facebook,Azure …
+
+* 框架就是一個坑
+  * 框架幫你挖洞，讓你填坑(程式碼)
+    * controller > 寫code
+    * Model > 寫code
+    * View > 寫code
+  * 決定了應用程式的執行方式與順序
+  * Event Driven Application
+    * 不同的Source Event，用Receiver去訂閱相關的服務
+
+* 框架的特性
+  * .NET Core DI (Dependency Injection) 設計模式來導入可測試性、可延展性、可維護性
+
+  * 高可用性:透過failover能力來實現
+
+  * 可延展性:應用程式因為外部需求或流量來改變
+
+  * App Service 透過Scaling撰寫腳本來控制系統
+
+  * 若不透過雲端服務本身的HA特性，如何設計?
+
+    * Queue-based load leveling
+
+  ![alt](/assets/x4Ep0cg.png)
+
+  * 程式碼的好壞關鍵在於他有多容易被修改
+
+  * 可維護性:與加入新功能的時間成反比
+
+  * 可測試性如何透過DI實踐 Idempotency
+
+* AOP Aspect-oriented programing
+  * Log
+
+  * Exception Handling
+
+  * Telemetry
+
+  * Permission
+
+    * > 可透過 Filter & Attribute橫跨各模組
+
+  * Cloud Architecture Design
+    * 微服務、DevOps
+    * Containerize
+
+DevOps > CI/CD 透明度 & 自動化
+
+![alt](/assets/UbKlCPg.png)
+
+開發的每個系統都是在對需求某種程度的自動化
+
+* Linux 對 MS的意義
+  * many application stacks are optimized for Linux
+  * the forefront of innovations in nano and microservice architectur
+  * New and upcoming frameworks are built for Linux first then Windows.
+    * .Net Core
+    * visual studio code
+    * Azure container & AKS
+
+講師筆記與問卷:
+https://hackmd.io/@twdeveloper/rkZosei3D
 
 ---
 
@@ -591,6 +691,28 @@ Alan Tsai
 以前，要解決統一技術只能夠使用 NodeJS，現在 .NET 透過 Blazor 也有完整的 Full Stack Solution。
 這節來介紹一下 Blazor，看看如何用本來就會的 .NET 知識進行開發整合，不止可以用 Blazor 做到 SPA 的網站以及和 Azure 整合，未來想用它來建立跨平台可以跑的軟體，甚至可以打包成為 APP也不是不行。
 來看看怎麼成為 Full Stack .NET 開發者吧。
+
+* Blazor server
+
+* 優點
+啟動速度
+
+完整 .net framework
+
+* 缺點
+無法離線使用
+
+* Blazor Webassembly
+* 優點
+可離線使用
+
+速度快，接近原生
+* 缺點
+計算資源使用使用者電腦資源，performance受使用者電腦效能影響
+
+啟動速度慢 - 下載檔案
+
+需要 Web Assembly (IE 表示…)
 
 ---
 
@@ -709,6 +831,58 @@ RMDBS 與 noSQL 有各自的優點以及其適合的情境。混合兩種不同�
 而 noSQL 的 Schemaless 特性以及其彈性的延展性，讓開發人員在一開始接觸的時候，要以不同於以往設計關聯式資料庫的角度來出發。
 這個 Session 分享從 MariaDB 移轉到 MongoDB 的經驗，並且討論在 Azure CosmosDB 上的應用。
 
+RDBMS 跟nosql 並非互相取代
+
+Event Bus 是甚麼? 專案很小不等於微服務
+
+Microsoft eShopOnContainers 微服務專案參考 https://github.com/dotnet-architecture/eShopOnContainers
+
+* 適合用Redis的場合
+  * 變動頻繁 又不需要永久儲存特性的資訊
+    * ex: user app叫車 叫不到就放棄
+    * FB Messanger聊天的Signal R 連線資訊
+    * 具時效性
+* 適合用Mongo DB的場合
+  * 主體的關聯資料大，(RDBMS)Join時會消耗大量效能
+    * ex. 一輛車一天產生2000筆GPS資訊，5000台車跑Uber，一天就有1000萬筆。
+    * FB的文章案讚、Line聊天室等等也適合使用
+* 為何使用微服務框架
+  * 需求變動是常態
+  * 隨時間商業發展原本架構開始複雜
+  * Spaghetti code出現在商業邏輯間的依賴，需求變動要改很多。
+    * 以叫車案例說明
+  * 元件間解耦可以用IoC, DI (Autofac)
+  * 商務邏輯間解耦？
+    * DDD 領域驅動設計 找出領域分界
+    * Event Bus 傳遞更新訊息到不同服務
+  * Service 框架
+    * Basket
+    * Catalog
+    * Identity
+    * Location
+    * Marketing
+    * Ordering
+    * Payment
+
+* 使用微服務替商業邏輯解耦
+  * (延續叫車案例)
+  * 將每個服務透過Event Bus / Subscription Channel 串連
+    * 各個服務訂閱跟自己有關的訊息
+      * demo: 一個傳送gps訊號的服務,傳送完後發送事件去eventbus
+      * 一個專門接收gps位置改變事件的服務,收到事件時去改變車子資訊
+    * 部分服務停止不會影響其他服務
+      * demo:一個不斷傳送GpS的服務,一個接受訊號的服務,砍掉MongoDb資料表,不影響gps訊號傳遞
+  * 新的需求，只要新增Event Model，串聯至Event Bus即可。
+    * 兩個Event模組間不用互相知道對方怎麼做的
+  * 要在K8s擴展要先解決驗證問題
+    * 如果是用輪尋分配流量,背後的AP會不固定
+    * 可以設定cookie加密內容(沒看清楚)
+  * 後續挑戰
+    * 微服務的交易機制
+* Q&A
+  * 既有系統在做切出來做DDD時有沒有做法或心得
+    * DDD中會將既有系統跟領域隔離,逐步轉移
+
 ---
 
 Kyle Shen
@@ -720,6 +894,8 @@ Kyle Shen
 課程大綱
 
 聊天機器人這幾年蓬勃發展，如果要將本身平台行動化，Chatbot 是一個除了 Native App 以外的選擇之一，本議程會以 .NET Conf 2020 為例，藉由活動機器人的功能，來介紹如何用 Line SDK 來實現，介紹目前 Line 機器人可以玩到哪些功能。
+
+https://developers.line.biz/flex-simulator/
 
 ---
 
@@ -753,6 +929,133 @@ Blazor Component 開發實戰
 課程大綱
 
 跟隨著 .NET 5.0 的版本號， EF Core 也來到了 5.0，延續了 EF Core 3.0 以效能、延展性、實務為主的改進，加入了例如 TVF、TPT、Split Query、Query/Update Mapping、Filtered Include 等功能。值得注意的是這些改動不僅來自 Microsoft，同時也包含了來自社群的建議及貢獻，讓 EF Core 5.0 由傳統的 ORM 蛻變為兼具效能、實務與易用性的現代 ORM。
+
+> 從這裡開始寫 :pencil:
+
+- [Sample Code](https://qrgo.page.link/eD6DE)
+
+### EF Core 演進史
+
+比較穩定的版本：EF Core 3.0
+
+- 查詢式對應成物件：來自 Dapper
+
+### EF Core開始的改變
+
+- 大量接受PR
+- 貼近真實需求
+- 表示走向實務導向
+- 跨資料庫已經變成隱性需求
+    - 因為一旦你用到該資料庫專有 API ,就很難轉移了
+
+### ORM vs Micro ORM
+- 效能 Dapper > EFCore
+    - 因為 Dapper 不會做 tracking & relations
+- Dapper vs EF Core 5.0 效能已相近
+    - StackOverFlow 有把EFCore跟dapper一起用
+
+###  What's DbContext?
+- 需要 dispose
+- 維持短暫生命週期、不要共用: 用 `using`
+
+###  Object Tracking
+- 所有已取出的 entities 都由 DbContext 管理
+    - Context-Aware
+    - 逐筆比對: 如果有 1000 筆資料就一一掃
+- 5.0 可以用 `ChangeTracker`
+    - 但是也會清除一些其他的東西  所以還是盡量保持context短暫使用
+    ```
+    ctx.SaveChanges();
+    ctx.ChangeTracker.Clear(); // 清掉已存取的 entities
+    ```
+
+###  Change Proxy
+- Object-Aware
+    - 優點:直接告訴context哪些資料變動,不用逐筆掃
+    - 缺點:寫model有點麻煩
+
+###  Simple Logging
+- `LogTo(delegate handle)`
+
+###  Savepoint
+- 主要用於 transaction 中包含多個 SaveChanges 時
+- 目的：可回溯某個 savepoint? 避免巢狀式 transaction (耗損多)?
+- 依賴於 SQL Server
+
+###  DbContextFactory
+- 用來建立短暫的context, 當需要建立第二條連線時可用
+- 問題：雙層相依
+
+### Query Type
+- EF2.0出現,3.0移除,5.0加回
+- 把query映射成Object
+    -  `Entity<Type>().ToSqlQuery("SQL Command")`
+    - 情境：sql command (可能已包含 where) 如何加上 where?
+        - 把 sql command 包成 sub-query
+
+### Update / Query Mapping
+- 映射 view / DB
+
+### Compute Column
+- 資料庫的計算欄位
+- 資料表要先設定
+
+### Global Filter
+- 全域性的過濾條件
+- 適合用於軟刪除
+    - 例如開刪除狀態欄位,且查詢時只查未刪除的
+    - 全域設定預設只查此欄位是未刪除的
+    - 刪除使用`Remove()`也會從delete改成update
+    ```C#
+    modelBuilder.Entity<Product>().HasQueryFilter(p => EF.Property<bool>(p, "Discontinued") == false);
+    ```
+
+### Property bag
+- 可以傳字典進去做新增
+- 可以傳字典當查詢條件
+    - 所以可以簡單做到**動態查詢式**
+
+### Split query
+- Cartesian Explosion 問題
+    - 用 join 的時候會出現重複 rows & 重複的欄位名稱 (造成 server 負擔)
+
+### Filter Include
+- 下Include時可以加上Where條件
+
+### 簡化多對多映射
+- (好像不用在Collection上面寫FK attr了)
+- 直接長出多個表
+
+### Inheritance
+- Table-Per-Hierarchy (TPH): ? EF Core 1-3 支援
+```
+ modelBuilder.Entity<Contract>()
+            .HasDiscriminator<string>("ContractType");
+```
+- Table-Per-Type (TPT): 每個繼承體會有各自資料表
+
+### User Function Mapping
+- 映射使用者定義函式
+- 呼叫時背後是下 sql command
+
+### Table Value Function
+- 映射 TVF 至 entities
+- 把資料庫獨有的東西給你
+    - 好：可直接對資料庫操作?
+    - 壞：無法跨資料庫
+
+### SaveChanges Interceptor
+- SavingChanges
+- SavedChanges
+- 委派掛載
+
+### Performance Tips
+- DbContext is cheap
+- 少用 Where 多用 Find
+- Query & Update DbContext 一開始就要分開
+- AsNoTracking?
+
+###### tags: `dotnetconf2020`
 
 ---
 
@@ -808,11 +1111,11 @@ James Fu
 
 對許多開發人員，會認為只要知道怎麼來下 SELECT 就可以開發資料庫應用程式，此次分享過程中將整理十個開發人員常忽略的問題和影響，讓開發人員在資料庫開發上更能得心應手。
 
-資料庫參數
+* 資料庫參數
 
 自動關閉：會把該次交易的資料從記憶體釋放，造成每次交易都重新do, redo -> 可能會影響到效能.(若不在意記憶體 , 不建議開啟此設定)
 
-平行處理
+* 平行處理
 
 平行處理原則的成本臨界值：越低會越容易讓SQL Server使用平行處理（建議設定電腦核心數一半）
 
@@ -997,6 +1300,34 @@ AKS 好朋友
 Azure Dev Spaces 可減少在 AKS 叢集的環境中開發、測試和反覆運算 Kubernetes 應用程式的工作。這項縮減可讓開發人員專注于其應用程式的商務邏輯，而不會將其服務設定為在 Kubernetes 中執行。
 Container Insights 讓您瞭解 Kubernetes 叢集以及容器工作負載的效能和健康情況。
 
+### Bridges to Kubernetes
+- 開發方式比較
+    - 本機vs遠端vs混和
+    - 本機部署方便 偵錯方便 不能測scale
+    - 遠端部署要比較花功夫 偵錯不方便 可以測scale out
+    - 混和則可以取兩者優點
+- 在vs2019 or vscode安裝完擴充套件,設定好Azure訂閱後就可以在debug時選擇bridge to k8s當目標偵錯環境
+    - 第一次會跳提示允許本機對外通訊的授權
+- 可以在開發container服務時同時有本機開發體驗與遠端AKS環境
+- 上一代叫DevSpace, 不過2023年要收掉
+- 目前只支援AKS,不過未來會增加支援其他k8s環境
+
+### Azure monitor for Container
+- 支援：AKS, Azure Container instance, Azure RedHat openshift...等
+- 可以在一個監控平台統一監控雲端地端的k8s服務
+- 在portal上的介面類似app insights
+- log 查詢語法是kusto
+- 可以監控的Insights:
+    - App : AP層
+    - VM
+    - Storage
+    - Container：監控每個node上的status, CPU usage, 上面跑的服務一覽等
+    - Networks
+- Monitoring
+    - Metrics可以看到各種數字監控值
+    - Log可以下kusto語法
+    - Workbook是可以把一些寫好的查詢語法整合一個頁面
+
 ---
 
 Owen
@@ -1030,99 +1361,79 @@ Azure 上打造日資料量一百 TB 的資料分析系統
 分享各個服務在規劃與開發時的踩雷經驗與注意事項。
 
 當你每天有100TB資料時你要先思考
-
-DATA IS GOLD, but how you can be rich?
-
-要付多少錢來做這些資料量
-
+- DATA IS GOLD, but how you can be rich?
+- 要付多少錢來做這些資料量
+-
+:::warning
 這裡談的是歷史型資料不是即時資料
+:::
 
-* 資料的結構常常會變化
+# 資料的結構常常會變化
+- 資料通常是髒的 , 資料結結構常常在變
+- 策略：Data lake
+    - 不希望資料發生變化時資料就無法進入 卡了好幾小時 損失一堆資料
+- 各家產品：
+    - Elastic search, Azure Data lake Gen2, Azure synapse...
+- 資料格式：csv,JSON, Parquet, ORC
+- 選擇重點：看能多容易去處理資料結構改變
 
-資料通常是髒的 , 資料結結構常常在變
+# 第零步就是查詢與報表
+- 查詢需求如：
+    - 以每5,20分鐘,6小時,一周為單位統計
+    - 需要有日期起迄下條件
+    - 要可以處理JSON值（欄位內存JSON）
+        - 可能有動態的屬性 `{"prop1":"a"}` `{"prop2":"b"}`
+        - `mv-expand`
+# Azure Data Explorer
+- 大數據整合平台
+- 可以跨table,跨db做資料處理
+- 很多微軟客戶選擇用這個
+# 每個資源的處理平權衡
+- 資料量到了TB級時很難用單一工具就處理
+- 集中一個工具時loading就會很重
+- 所以把其他工具擅長的部分分出去做
+    - 例如前期資料處理用Databricks
+- 使用設計模式來規劃權責
+    - clam-check pattern
+    - 例圖：客戶資料＆外部資料用DataExplorer
+    - 其他各種資料來源用Databrick
+    - 用事件驅動方式, 丟到event grid,資料放到queue, databrick再去勞撈queue
+    - 處理能力可以到微秒級, 不過通常會批次處理, 大概5-10秒可以處理一批
+    - 然後資料整合在用DataLake撈Explorer&Brick的進來
 
-策略：Data lake
+# 資料重複怎麼辦
+- 能忽略是最好
+- 策略：
+    - ingestion Time Check
+        - Update Policy in AXD
+    - 查詢時過濾
+        - arg_max(eventdatetime)
+- 要理解基礎建設
+    - 通常Azure資料服務會說明
+    - 至少一次 vs 只會一次
+    - Databricks裡的checkpoint files要注意控制大小, 以免影響效能
 
-不希望資料發生變化時資料就無法進入 卡了好幾小時 損失一堆資料
+# 效能來自你對產品的理解
+- (列了很多Databrick跟Azure Data Explorer可以調整的部分)
 
-各家產品：
+# 小問題會被放大
+- 雲端環境是隨時會變化的
+- 網路傳輸會有失敗的情況
+    - retry的問題可以加入waiting time在retry之前
+- 硬碟IO控制
+- LOG 監控不要影響效能
 
-Elastic search, Azure Data lake Gen2, Azure synapse…
+# 測試
+- 單元與整合測試不夠了
+- 要系統層級的測試
+- CICD會變複雜
 
-資料格式：csv,JSON, Parquet, ORC
+# 測量你的資料shifting
+- schema 相同 , 資料進來的方式可能不同
 
-選擇重點：看能多容易去處理資料結構改變
-
-* 第零步就是查詢與報表
-
-查詢需求如：
-
-以每5,20分鐘,6小時,一周為單位統計
-
-需要有日期起迄下條件
-
-要可以處理JSON值（欄位內存JSON）
-
-可能有動態的屬性 {"prop1":"a"} {"prop2":"b"}
-
-mv-expand
-
-* Azure Data Explorer
-
-大數據整合平台
-
-可以跨table,跨db做資料處理
-
-很多微軟客戶選擇用這個
-
-* 每個資源的處理平權衡
-  * 資料量到了TB級時很難用單一工具就處理
-  * 集中一個工具時loading就會很重
-  * 所以把其他工具擅長的部分分出去做
-  * 例如前期資料處理用Databricks
-  * 使用設計模式來規劃權責
-    * clam-check pattern
-    * 例圖：客戶資料＆外部資料用DataExplorer
-    * 其他各種資料來源用Databrick
-    * 用事件驅動方式, 丟到event grid,資料放到queue, databrick再去勞撈queue
-    * 處理能力可以到微秒級, 不過通常會批次處理, 大概5-10秒可以處理一批
-    * 然後資料整合在用DataLake撈Explorer&Brick的進來
-* 資料重複怎麼辦
-  * 能忽略是最好
-  * 策略：
-    * ingestion Time Check
-    * Update Policy in AXD
-    * 查詢時過濾
-    * arg_max(eventdatetime)
-  * 要理解基礎建設
-    * 通常Azure資料服務會說明
-    * 至少一次 vs 只會一次
-    * Databricks裡的checkpoint files要注意控制大小, 以免影響效能
-* 效能來自你對產品的理解
-(列了很多Databrick跟Azure Data Explorer可以調整的部分)
-* 小問題會被放大
-雲端環境是隨時會變化的
-
-網路傳輸會有失敗的情況
-
-retry的問題可以加入waiting time在retry之前
-
-硬碟IO控制
-
-LOG 監控不要影響效能
-* 測試
-單元與整合測試不夠了
-
-要系統層級的測試
-
-CICD會變複雜
-
-* 測量你的資料shifting
-schema 相同 , 資料進來的方式可能不同
-* chaos engineering的必要性
-其中一個元件故障時系統會發生什麼＆要如何救援
-
-有一些工具可以利用
+# chaos engineering的必要性
+- 其中一個元件故障時系統會發生什麼＆要如何救援
+- 有一些工具可以利用
 
 ---
 
@@ -1416,6 +1727,108 @@ ML.NET 在遷移式學習的應用與挑戰
 
 遷移式學習可以用少量的資料做出高準確度，是現今做 AI 專案的主流技術。本次主題將探討遷移式學習在實務上的應用方式，以及和 ML.NET 的整合的做法，和其不足的地方。
 
+### 關於講者
+
+講者柯克(KO KO, 科科)，微軟MVP，常在台中。曾在 COSCUP，MOPCON 等大型年會擔任講者。
+
+### 遷移式學習 Transfer Learning
+
+1. 簡單來說就是把已經訓練好的模型，轉移到新的模型上面，以解決不同的問題。
+2. 就像已經學會一個語言的工程師，去學另一個語言一樣。
+3. 先學Python再學C#很難。
+4. 和Style transfer是不一樣的事情。
+5. 今天講的內容以影像辨識為主。
+
+
+### 優勢
+
+1. 需要相對少的資料。
+2. 訓練時間更快，吃的資源更少（想想重新訓練 BERT要花多少時間）
+3. 準確度可以更高
+
+### Transfer Learning 的技巧
+
+#### Pre-trained models
+
+1. 就是直接拿別人train好的model來用，不更改後面的分類器
+2. 沒什麼用處，因為不會剛好就是貓跟狗的分類
+3. 不覺得這是transfer learning，但是很多人都說這是
+
+
+#### Feature extractor
+
+1. 只保留了 Base model ，把其他層 Freeze 起來
+2. 換掉前後
+
+#### Fine-tuning
+
+1. 顧名思義可以調整更細
+2. 可以只Freeze幾層，其他幾層重新反向傳播或是加自己要的層。
+3. 很讚的手法
+
+### Tensorflow Hub
+
+1. 像是github一樣，這是放AI模型
+2. 存放了大量的pre-trained model
+3. 不是每個模型都可以 fine-tune
+4. 要用 tensorflow js 也有模型
+5. 可以直接下載來使用
+
+### ML.NET
+
+1. 微軟開源的、跨平台、AI開發框架。
+2. 可以使用 C# F# 來做開發。
+3. 很多內建好的算法讓你快速做出成果。
+4. 李宏毅老師：拿到資料先硬train一波。
+5. 效能比 scikit-learn還要好。
+6. freeze 層在ML.NET裡稱為 bottleneck 。
+7. 內建四種模型可以做 transfer learning。
+8. 無法 fine-tuning 。
+9. 需要快速概念驗證時可以用。
+10. 要和 .net 應用程式整合時好用。
+11. 不懂AI但是要做出有AI功能時好用。
+
+#### 用ML.NET做病害的demo
+
+1. 病害的100張就能做到79%的準確度。
+2. 用resnet 101
+
+
+### Tensorflow Lite
+
+1. 可以做出很小很輕量的模型。
+2. 能在樹莓派和手機上面跑。
+3. ML.NET不支援，但是可以用在XAMARIN就能在手機上了。
+
+### Azure Custom Vision
+
+1. 不懂AI也可以做AI的Azure服務。
+2. 可以上傳影像就好了
+3. 有免費的額度
+4. 盡可以選你問題的影像做transfer learning
+5. 可以下載tensorflow model
+
+### Model Builder
+
+1. 全新的AI開發工具。
+2. 能夠自動產生模型。
+3. 用了很多 AutoML 和 transfer learning 來幫你生模型。
+4. 不用寫code，還會自動幫你產生code。
+
+#### 用Model Builder做病害的demo
+
+1. 病害的100張就能做到71%的準確度。
+2. 用resnet 50
+
+
+### 做AI的其他心得
+
+1. 溝通很重要說三次
+2. 資料很重要說三次
+3. 急著成功 === 立刻失敗
+4. 急著要求成功的話，不如先用今天介紹的工具做初步給老闆看
+5. 初期用地端設備來train比較省錢，後期再用雲端開超大的機器快速train模型。
+
 ---
 
 Kuro
@@ -1588,6 +2001,8 @@ The Journey of C# Source Generator
 課程大綱
 
 Source Generator 是 Roslyn 專案中正在發展中的一個項目，它能夠在編譯過程中根據 meta 產生程式碼，並加入至編譯結果中。本次分享將介紹如何使用 Source Generator，並說明其適用情境及限制。
+
+https://github.com/robersonliou
 
 * What s source generator?
 Roslyn 新項目
@@ -1856,33 +2271,46 @@ DevOps 教戰手冊：三步工作法
 DevOps（Development 和 Operations 的組合），是一種重視軟體開發人員和 IT 運維技術人員之間溝通合作的文化、運動或慣例。在 DevOps 經過 10 年的市場洗禮之後，讓我們重新回來審視當年盡力在推廣開發作業 Dev 與維運作業 Ops 相結合的軟體界先驅們的思維過程「三步工作法」，這個議程希望你在聽完後能夠有「Aha, 原來如此！」的頓悟。
 
 第一步：從左到右快速流動(Flow)
+
 第二步：從右到左快速回饋(Fast Feedback)
+
 第三步：在整個過程中持續學習與實驗(Continual Learning & Experimentation)
 
 Three Step 不要一步一步來，垂直思考
+
 第三步最重要 Fail Fast
 
 專案開始之初，首重看見全貌(退後一步，有時要退後很多步)
 
 ![alt](/assets/g4Lzqg8.png)
 
-工程師要如何面對DevOps
-看見全貌
-找自己在哪裡，看自己離目標多遠
-跟誰有關(開發團隊、業務團隊、技術主管…)
-能有什麼影響 (Impact Mapping、User Story Mapping…)
+* 工程師要如何面對DevOps
+  * 看見全貌
+    * 找自己在哪裡，看自己離目標多遠
+    * 跟誰有關(開發團隊、業務團隊、技術主管…)
+    * 能有什麼影響 (Impact Mapping、User Story Mapping…)
+
 前置處理	行動學習	後置學習
+
 布置規劃先行	小增量	落實回顧 學習
+
 建置開發環境	多迭代	打破假設勇於嘗試
+
 前置測試規劃	尋求回顧	持續改善
+
 影響地圖	用戶故事地圖
+
 測試，不是單元測試，是穿刺?
 
-學習什麼？
+* 學習什麼？
 學習團隊對你的期望的東西!
+
 學習老闆對你的期望的東西!
+
 強化領導力，最好的方法是增加影響力，
+
 最好增加影響力的方法就是加強程式能力，
+
 影響團隊的人。
 
 ![alt](/assets/lEgyNJO.png)
@@ -2252,9 +2680,8 @@ Universal Data / Service Platform
 而對於成長型團隊來說，開發技術與風格模式經常隨著時間而不斷推進，為了提升開發速度，套件與平台開始大量使用，為了維持團隊開發風格，各種程式碼風格管理工具開始出現，過程中因此出現一個大難點：如何確保開發人員遵循架構進行開發？
 這場議程將介紹，透過採用 Universal Data / Service Platform 架構，來推動開發人員遵循架構開發。
 
-這一切都是為了 團隊開發 而做的 架構設計；
-
-這一切都是為了 快點開發 而做的 速成設計。
+* 這一切都是為了 團隊開發 而做的 架構設計；
+* 這一切都是為了 快點開發 而做的 速成設計。
 
 ---
 
@@ -2271,6 +2698,39 @@ Azure IoT Hub 在 IND 4.0 的應用策略
 課程大綱
 
 IoT（Internet of Things）物聯網將各式各樣有連網能力的裝置資料放上雲端，期待運用雲的龐大計算能力加以分析、應用，試圖找出潛在的知識。而工業 4.0 可視為 IoT 領域的一個子集合，主要專注於製造業自動化生產、製程資訊等運用，但面對這些多樣化的機台資料、不一致的資料格式、龐大的資料量以及網路安全通訊等議題，本文試著運用 Azure 技術解決這些難題，並分享在過程中摸索出的一些 Azure IoT Hub 應用心得，並提供一些開發的策略方向給有興趣的朋友參考。
+
+Challenges
+多樣化的資料來源
+不一樣的資料格式
+網路通訊: 網路安全…
+龐大資料量
+IoT Hub
+Basic
+- Device-to-cloud
+Standard
+- Device-to-cloud
+- Cloud-to-Device
+- Device twins
+
+Telemetry
+僅為Cache(1~7 days)
+Transimission(Multiple In/Out)
+Unstructed Format(using JSON)
+Consumer Group
+Pulling data
+Max 20 consumer groups per IoT Hub
+5 concurrent readers per group
+File Upload
+Save message to blob
+名稱相同會覆蓋
+Uploading using Key
+10 concurrent keys in queue
+
+Query Explorer
+Only in standard tier
+用來查詢 device twins/information，並非用來查telemetry
+ppt:
+https://github.com/carlyang920/NetConfTaiwan2020
 
 ---
 
