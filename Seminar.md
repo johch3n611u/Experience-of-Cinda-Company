@@ -1184,4 +1184,10 @@ Method m += (a ,b) => a + b;
 
 DBContent.Database.Log = s => System.Diagnostics.Debug.WriteLine(s)
 
+## oracle developer 垃圾 聚合鍵 bug
+
+必須先停用才能刪除才能新增
+
+
+
 
