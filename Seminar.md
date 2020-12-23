@@ -1182,4 +1182,6 @@ Method m += (a ,b) => a + b;
 
 <https://www.google.com/search?q=EF+%E5%8D%B0+SQL&rlz=1C1CHBF_zh-TWTW905TW905&oq=EF+%E5%8D%B0+SQL&aqs=chrome..69i57.3183j0j7&sourceid=chrome&ie=UTF-8>
 
+DBContent.Database.Log = s => System.Diagnostics.Debug.WriteLine(s)
+
 
