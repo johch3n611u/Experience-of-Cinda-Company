@@ -1177,3 +1177,9 @@ Console.WriteLine(m(2, 3));
 
 Method m += (a ,b) => a + b;
 ```
+
+## EF => 印出自動生成的 SQL
+
+<https://www.google.com/search?q=EF+%E5%8D%B0+SQL&rlz=1C1CHBF_zh-TWTW905TW905&oq=EF+%E5%8D%B0+SQL&aqs=chrome..69i57.3183j0j7&sourceid=chrome&ie=UTF-8>
+
+
