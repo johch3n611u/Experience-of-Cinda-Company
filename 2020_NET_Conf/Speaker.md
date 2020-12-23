@@ -2004,6 +2004,8 @@ Source Generator 是 Roslyn 專案中正在發展中的一個項目，它能夠�
 
 https://github.com/robersonliou
 
+https://github.com/dotnet/roslyn
+
 * What s source generator?
 Roslyn 新項目
 
