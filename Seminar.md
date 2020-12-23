@@ -1188,6 +1188,6 @@ DBContent.Database.Log = s => System.Diagnostics.Debug.WriteLine(s)
 
 必須先停用才能刪除才能新增
 
-
+![alt](/assets/oracledeveloper.png)
 
 
