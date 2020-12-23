@@ -1157,3 +1157,21 @@ var User = Entities.USER.FirstOrDefault();
 User = _user
 Entities.SaveChange();
 ```
+
+## CSharp => Lambda 表示式
+
+```CSharp
+delegate int Method(int a, int b);
+
+int Add(int a, int b)
+{
+   return a + b;
+}
+
+Method m += Add;
+Console.WriteLine(m(2, 3));
+
+---
+
+Method m += (a ,b) => a + b;
+```
