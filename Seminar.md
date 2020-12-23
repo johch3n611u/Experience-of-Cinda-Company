@@ -1160,6 +1160,8 @@ Entities.SaveChange();
 
 ## CSharp => Lambda 表示式
 
+<https://zhidao.baidu.com/question/283430770.html#:~:text=1%E3%80%81c%23%E4%B8%AD%EF%BC%88%3D%3E,%E4%BE%A7%E7%9A%84lambda%20%E4%BD%93%E5%88%86%E7%A6%BB%E3%80%82>
+
 ```CSharp
 delegate int Method(int a, int b);
 
