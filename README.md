@@ -43,6 +43,8 @@ OMS：Order Management System
 
 CDP：Customer Data Platform
 
+DMP：Data Management Platform
+
 </details>
 
 # 系統整合網站工程師
@@ -73,10 +75,10 @@ CDP：Customer Data Platform
 #### 專案開發
 
 
-##### 上市櫃大公司管理平台專案
+##### 上市公司管理平台專案
 
 * 從規劃到相關開發階段到正式上線為期 1 年半，五人團隊
 * 使用技術 : C# / .NET API ( Autofac / AutoMap / Dapper ) / Angular8+ ( i18n / PrimeNG ) ...
-  * 需求: 根據上市櫃大公司 SRS 規格書提供應用並配合 DEV、UAT、QAS、PRD 開發階段進行測試與調試。
+  * 需求: 根據上市公司 SRS 規格書提供應用並配合 DEV、UAT、QAS、PRD 開發階段進行測試與調試。
     * [實作包含]
     * `疫情關係遠端協作 Google雲端應用 ( Meet / Sheet / Word ...)、Citrix 遠端測試與調試...`
