@@ -1,14 +1,12 @@
 # Speaker
 
-https://www.one-tab.com/page/qlLk-xhhQcGViqs4XNUNzA
+<https://dotnetconf2020.study4.tw/>
 
-https://www.one-tab.com/page/v8qKepYeRa6wdxLuc0fJBg
+<https://github.com/Study4>
 
-> https://github.com/Study4
+<https://github.com/build-school>
 
-> https://github.com/build-school
-
-> [Hackmd](https://hackmd.io/@Study4/dotnetconf-2020/https%3A%2F%2Fdotnetconf2020.study4.tw%2F)
+[Hackmd](https://hackmd.io/@Study4/dotnetconf-2020/https%3A%2F%2Fdotnetconf2020.study4.tw%2F)
 
 潘正磊 Julia Liuson
 

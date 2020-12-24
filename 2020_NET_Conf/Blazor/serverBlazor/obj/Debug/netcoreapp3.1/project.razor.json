@@ -1,5 +1,5 @@
 {
-  "FilePath": "c:\\Users\\rognp\\Desktop\\delete\\serverBlazor\\serverBlazor.csproj",
+  "FilePath": "c:\\Users\\rognp\\Desktop\\delete\\Experience-of-Cinda-Company\\2020_NET_Conf\\Blazor\\serverBlazor\\serverBlazor.csproj",
   "Configuration": {
     "ConfigurationName": "MVC-3.0",
     "LanguageVersion": "3.0",
@@ -11,6 +11,39 @@
   },
   "ProjectWorkspaceState": {
     "TagHelpers": [
+      {
+        "HashCode": 936557434,
+        "Kind": "Components.Component",
+        "Name": "serverBlazor.App",
+        "AssemblyName": "serverBlazor",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "App"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "serverBlazor.App"
+        }
+      },
+      {
+        "HashCode": 1226307608,
+        "Kind": "Components.Component",
+        "Name": "serverBlazor.App",
+        "AssemblyName": "serverBlazor",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "serverBlazor.App"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "serverBlazor.App",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
       {
         "HashCode": 890562446,
         "Kind": "Components.Component",
@@ -140,39 +173,6 @@
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
           "Common.TypeName": "serverBlazor.Pages.Index",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "HashCode": 936557434,
-        "Kind": "Components.Component",
-        "Name": "serverBlazor.App",
-        "AssemblyName": "serverBlazor",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "App"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "serverBlazor.App"
-        }
-      },
-      {
-        "HashCode": 1226307608,
-        "Kind": "Components.Component",
-        "Name": "serverBlazor.App",
-        "AssemblyName": "serverBlazor",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "serverBlazor.App"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "serverBlazor.App",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -14739,52 +14739,52 @@
   "RootNamespace": "serverBlazor",
   "Documents": [
     {
-      "FilePath": "c:\\Users\\rognp\\Desktop\\delete\\serverBlazor\\Pages\\FetchData.razor",
-      "TargetPath": "Pages\\FetchData.razor",
-      "FileKind": "component"
-    },
-    {
-      "FilePath": "c:\\Users\\rognp\\Desktop\\delete\\serverBlazor\\Shared\\NavMenu.razor",
-      "TargetPath": "Shared\\NavMenu.razor",
-      "FileKind": "component"
-    },
-    {
-      "FilePath": "c:\\Users\\rognp\\Desktop\\delete\\serverBlazor\\Shared\\SurveyPrompt.razor",
-      "TargetPath": "Shared\\SurveyPrompt.razor",
-      "FileKind": "component"
-    },
-    {
-      "FilePath": "c:\\Users\\rognp\\Desktop\\delete\\serverBlazor\\Pages\\Index.razor",
-      "TargetPath": "Pages\\Index.razor",
-      "FileKind": "component"
-    },
-    {
-      "FilePath": "c:\\Users\\rognp\\Desktop\\delete\\serverBlazor\\Shared\\MainLayout.razor",
-      "TargetPath": "Shared\\MainLayout.razor",
-      "FileKind": "component"
-    },
-    {
-      "FilePath": "c:\\Users\\rognp\\Desktop\\delete\\serverBlazor\\Pages\\Error.razor",
+      "FilePath": "c:\\Users\\rognp\\Desktop\\delete\\Experience-of-Cinda-Company\\2020_NET_Conf\\Blazor\\serverBlazor\\Pages\\Error.razor",
       "TargetPath": "Pages\\Error.razor",
       "FileKind": "component"
     },
     {
-      "FilePath": "c:\\Users\\rognp\\Desktop\\delete\\serverBlazor\\Pages\\Counter.razor",
+      "FilePath": "c:\\Users\\rognp\\Desktop\\delete\\Experience-of-Cinda-Company\\2020_NET_Conf\\Blazor\\serverBlazor\\Pages\\Index.razor",
+      "TargetPath": "Pages\\Index.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "c:\\Users\\rognp\\Desktop\\delete\\Experience-of-Cinda-Company\\2020_NET_Conf\\Blazor\\serverBlazor\\Shared\\NavMenu.razor",
+      "TargetPath": "Shared\\NavMenu.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "c:\\Users\\rognp\\Desktop\\delete\\Experience-of-Cinda-Company\\2020_NET_Conf\\Blazor\\serverBlazor\\Shared\\SurveyPrompt.razor",
+      "TargetPath": "Shared\\SurveyPrompt.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "c:\\Users\\rognp\\Desktop\\delete\\Experience-of-Cinda-Company\\2020_NET_Conf\\Blazor\\serverBlazor\\Pages\\Counter.razor",
       "TargetPath": "Pages\\Counter.razor",
       "FileKind": "component"
     },
     {
-      "FilePath": "c:\\Users\\rognp\\Desktop\\delete\\serverBlazor\\_Imports.razor",
-      "TargetPath": "_Imports.razor",
-      "FileKind": "componentImport"
+      "FilePath": "c:\\Users\\rognp\\Desktop\\delete\\Experience-of-Cinda-Company\\2020_NET_Conf\\Blazor\\serverBlazor\\Shared\\MainLayout.razor",
+      "TargetPath": "Shared\\MainLayout.razor",
+      "FileKind": "component"
     },
     {
-      "FilePath": "c:\\Users\\rognp\\Desktop\\delete\\serverBlazor\\App.razor",
+      "FilePath": "c:\\Users\\rognp\\Desktop\\delete\\Experience-of-Cinda-Company\\2020_NET_Conf\\Blazor\\serverBlazor\\Pages\\FetchData.razor",
+      "TargetPath": "Pages\\FetchData.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "c:\\Users\\rognp\\Desktop\\delete\\Experience-of-Cinda-Company\\2020_NET_Conf\\Blazor\\serverBlazor\\App.razor",
       "TargetPath": "App.razor",
       "FileKind": "component"
     },
     {
-      "FilePath": "c:\\Users\\rognp\\Desktop\\delete\\serverBlazor\\Pages\\_Host.cshtml",
+      "FilePath": "c:\\Users\\rognp\\Desktop\\delete\\Experience-of-Cinda-Company\\2020_NET_Conf\\Blazor\\serverBlazor\\_Imports.razor",
+      "TargetPath": "_Imports.razor",
+      "FileKind": "componentImport"
+    },
+    {
+      "FilePath": "c:\\Users\\rognp\\Desktop\\delete\\Experience-of-Cinda-Company\\2020_NET_Conf\\Blazor\\serverBlazor\\Pages\\_Host.cshtml",
       "TargetPath": "Pages\\_Host.cshtml",
       "FileKind": "mvc"
     }
