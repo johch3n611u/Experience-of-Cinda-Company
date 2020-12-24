@@ -37,13 +37,19 @@ BI：Business Intelligence
 
 eCOM：支援購物車、整合線上金流，可成立訂單，服務消費者做線上銷售的品牌官網。
 
-app：
+App：Application
 
 OMS：Order Management System
 
 CDP：Customer Data Platform
 
 DMP：Data Management Platform
+
+UTR：Unit Test Report
+
+SITR：System Integrated Test Report
+
+SDD：Software design document
 
 </details>
 
