@@ -1190,4 +1190,14 @@ DBContent.Database.Log = s => System.Diagnostics.Debug.WriteLine(s)
 
 ![alt](/assets/oracledeveloper.png)
 
+## BOM window.onbeforeunload
 
+<https://blog.darkthread.net/blog/onbeforeunload-custom-message/>
+
+        // window.onbeforeunload = function (event) {
+        //     var event = event || window.event;
+        //     if (event) {
+        //         event.returnValue = '確定?';
+        //     }
+        //     return '確定?';
+        // }
