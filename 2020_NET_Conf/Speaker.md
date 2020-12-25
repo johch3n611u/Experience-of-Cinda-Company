@@ -1,5 +1,9 @@
 # Speaker
 
+![alt](/assets/netcorf2020-1.png)
+![alt](/assets/netcorf2020-2.png)
+![alt](/assets/netcorf2020-3.png)
+
 <https://dotnetconf2020.study4.tw/>
 
 <https://github.com/Study4>
