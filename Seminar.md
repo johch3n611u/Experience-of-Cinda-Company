@@ -1201,3 +1201,7 @@ DBContent.Database.Log = s => System.Diagnostics.Debug.WriteLine(s)
         //     }
         //     return '確定?';
         // }
+
+## VS CodeMap 視覺化程式碼之間的相依性
+
+<https://docs.microsoft.com/zh-tw/visualstudio/modeling/map-dependencies-across-your-solutions?view=vs-2019>
