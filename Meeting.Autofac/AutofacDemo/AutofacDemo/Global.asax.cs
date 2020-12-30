@@ -1,5 +1,5 @@
 using Autofac;
-using Autofac.Integration.Mvc;
+using Autofac.Integration.Mvc; // MVC ¾ã¦X®w
 using AutofacDemo.Controllers;
 using System.Diagnostics;
 using System.Web.Mvc;
