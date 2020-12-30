@@ -1205,3 +1205,11 @@ DBContent.Database.Log = s => System.Diagnostics.Debug.WriteLine(s)
 ## VS CodeMap 視覺化程式碼之間的相依性
 
 <https://docs.microsoft.com/zh-tw/visualstudio/modeling/map-dependencies-across-your-solutions?view=vs-2019>
+
+## DbEntityValidationException
+
+<https://edwardkuo.imas.tw/paper/2016/08/26/Net/2016/2016-08-27/>
+
+<https://dotblogs.com.tw/wasichris/2015/01/24/148255>
+
+<https://stackoverflow.com/questions/34456001/i-cannot-find-system-data-entity-validation-in-entityframework-5>
