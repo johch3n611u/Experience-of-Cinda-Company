@@ -51,6 +51,8 @@ SITR：System Integrated Test Report
 
 SDD：Software design document
 
+RAD：Rapid Application Development
+
 </details>
 
 # 系統整合網站工程師
