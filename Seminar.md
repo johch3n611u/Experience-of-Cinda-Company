@@ -1213,3 +1213,29 @@ DBContent.Database.Log = s => System.Diagnostics.Debug.WriteLine(s)
 <https://dotblogs.com.tw/wasichris/2015/01/24/148255>
 
 <https://stackoverflow.com/questions/34456001/i-cannot-find-system-data-entity-validation-in-entityframework-5>
+
+## Blazor
+
+16:49 ㄩ\ㄔㄥ/ 架構圖
+
+16:50 ㄩ\ㄔㄥ/ Webaxxx 與 js 比較
+
+16:58 ㄩ\ㄔㄥ/ Webaxxx Spa
+
+16:58 ㄩ\ㄔㄥ/ 優點
+
+16:59 ㄩ\ㄔㄥ/ App 會有問題
+
+16:59 ㄩ\ㄔㄥ/ 部署 後的 bin 可以知道到底是啥黑科技
+
+17:04 ㄩ\ㄔㄥ/ 跟 mvc razor viewcomponent 之類的比較
+
+17:06 ㄩ\ㄔㄥ/ 同時跟 js 庫使用？？區塊有分
+
+17:09 ㄩ\ㄔㄥ/ 發佈後會有個沙盒。低階跑不動？？
+
+## Autofac
+
+<https://docs.google.com/presentation/d/e/2PACX-1vQmd3DIboFhjpUrlmpx3tW3QVG5qGh7CDIEVY0PaewAgBs2mr5NWyYK2NF1_a4vQnOXrO5AdBoHHGkF/pub?start=false&loop=false&delayms=3000>
+
+<https://docs.google.com/document/d/1NHeQj-NoBNPtTMOdkeX1FcT8oN48JY__sRpqT5rpxTw/edit>
