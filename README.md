@@ -67,9 +67,9 @@ PVT: Production Verification Test(生產驗證測試階段)
 
 ### 職責劃分
 
-> 1.**根據專案 SRS 規格，組長與組員討論架構與使用框架與工具庫等其餘工具並完成** </br>
-> 2.**協同小組四人完成從 SRS、USE Case檢討、測試需求、教育訓練等工作** </br>
-> 3.**團隊利用 Google Meet 與其餘 Google 雲端軟體遠端協作、任務管理、Git Sourcetree 版本控制** </br>
+> 1.**根據專案 SRS 規格，設計階段由組長與組員討論(架構/方法)與使用(框架/工具庫)於執行階段指派任務完成** </br>
+> 2.**協同小組四人完成從 SRS、Use case 檢討、測試需求、教育訓練等工作** </br>
+> 3.**團隊利用 Google Meet 與其餘 Google 雲端軟體遠端協作、看板管理指派任務、Git Sourcetree 版本控制** </br>
 > 4.**工程師團隊從前端、後端至資料庫與架站、排程皆有參與並依照 SRS 與各種工作流程檢討並改進** </br>
 > 5.**依照 Redmine / SharePoint Issue 與客戶溝通並完成維護** </br>
 > 6.**公司(小組/兩禮拜)分享站立研討會內容如連結 [Seminar.md](https://github.com/johch3n611u/Experience-of-Cinda-Company/blob/master/Seminar.md)** </br>
