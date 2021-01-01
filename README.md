@@ -3,8 +3,6 @@
 
 SRS:軟體需求說明 Software requirements specification
 
-poc：系統
-
 eip：系統
 
 ICMS：內容管理平台系統
@@ -13,9 +11,9 @@ MSA：量測系統
 
 SAM：軟體資產管理
 
-PAM：
+PAM：權限管理系統 
 
-PORTAL：
+PORTAL：門戶網站
 
 IDES：Internet Demonstration and Evaluation System 交互式演示与评估系统
 
@@ -52,6 +50,16 @@ SITR：System Integrated Test Report
 SDD：Software design document
 
 RAD：Rapid Application Development
+
+---
+
+POC：proof of concept 概念性驗證
+
+EVT : Engineering Verification Test (工程驗證測試階段)
+
+DVT: Design Verification Test (設計驗證測試階段)
+
+PVT: Production Verification Test(生產驗證測試階段)
 
 </details>
 
