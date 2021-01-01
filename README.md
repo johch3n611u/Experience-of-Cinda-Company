@@ -64,6 +64,7 @@ RAD：Rapid Application Development
 > **團隊利用 Google Meet 與其餘 Google 雲端軟體遠端協作、任務管理、Git Sourcetree 版本控制** </br>
 > **工程師團隊從前端、後端至資料庫與架站、排程皆有參與並依照 SRS 與各種工作流程檢討並改進** </br>
 > **依照 Redmine / SharePoint Issue 與客戶溝通並完成維護** </br>
+> **公司(小組/兩禮拜)分享站立研討會內容如連結 [Seminar.md]** </br>
 
 ### 工作技能
 
