@@ -84,7 +84,7 @@ PVT: Production Verification Test(生產驗證測試階段)
 > 3.**團隊利用 Google Meet 與其餘 Google 雲端軟體遠端協作、看板管理指派任務、Git Sourcetree 版本控制** </br>
 > 4.**工程師團隊從前端、後端至資料庫與架站、排程皆有參與並依照 SRS 與各種工作流程檢討並改進** </br>
 > 5.**依照 Redmine / SharePoint Issue 與客戶溝通並完成開發與維護** </br>
-> 6.**公司(小組/兩禮拜)分享站立研討會內容如連結 [Seminar.md](https://github.com/johch3n611u/Experience-of-Cinda-Company/blob/master/Seminar.md)** </br>
+> 6.**公司 ( 小組 / 兩禮拜 ) 分享站立研討會內容如連結 [Seminar.md](https://github.com/johch3n611u/Experience-of-Cinda-Company/blob/master/Seminar.md)** </br>
 
 ### 工作技能
 
@@ -112,4 +112,4 @@ PVT: Production Verification Test(生產驗證測試階段)
     * [實作包含]
     * `疫情關係遠端協作 Google雲端應用 ( Meet / Sheet / Word ...)、Citrix 遠端測試與調試...`
     * `前端 Angular、後端 WebAPI 功能開發`
-    * `結案文件 UTR SITR SDD 撰寫`
+    * `[結案文件 UTR SITR SAD SDD 撰寫](https://ithelp.ithome.com.tw/questions/10025079)`
