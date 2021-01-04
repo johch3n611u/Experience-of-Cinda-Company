@@ -1073,7 +1073,7 @@ public static T Clone<T>(this T obj)
 
 <https://docs.microsoft.com/zh-tw/dotnet/api/system.web.mail.mailmessage.priority?view=netframework-4.8>
 
-## AG AOT BUG
+## AG AOT Error predefined keyword "import"
 
 不能用 import 來取名組件，資料夾會變成跟 src 類似的權重的感覺，網路上查不到資料
 
