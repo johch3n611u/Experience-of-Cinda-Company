@@ -63,6 +63,8 @@ SDD：Software design document
 
 RAD：Rapid Application Development
 
+Technology transfer documents
+
 ---
 
 POC：proof of concept 概念性驗證
@@ -112,4 +114,4 @@ PVT: Production Verification Test(生產驗證測試階段)
     * [實作包含]
     * `疫情關係遠端協作 Google雲端應用 ( Meet / Sheet / Word ...)、Citrix 遠端測試與調試...`
     * `前端 Angular、後端 WebAPI 功能開發`
-    * [結案文件 UTR SITR SAD SDD 撰寫](https://ithelp.ithome.com.tw/questions/10025079)
+    * [結案文件 UTR SITR SAD SDD 技術移轉文件 撰寫](https://ithelp.ithome.com.tw/questions/10025079)
