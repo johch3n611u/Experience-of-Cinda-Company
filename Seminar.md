@@ -1004,6 +1004,8 @@ IM下的点对点传输，多用户下的关系指数增长。。。。。。
 
 ## Active Directory: LDAP Syntax Filters
 
+> (&(cn=*0)(givenName=J*))
+
 <https://social.technet.microsoft.com/wiki/contents/articles/5392.active-directory-ldap-syntax-filters.aspx>
 
 ## JQ 選擇器返回物件 n.fn.init [0]
