@@ -1241,3 +1241,17 @@ DBContent.Database.Log = s => System.Diagnostics.Debug.WriteLine(s)
 <https://docs.google.com/presentation/d/e/2PACX-1vQmd3DIboFhjpUrlmpx3tW3QVG5qGh7CDIEVY0PaewAgBs2mr5NWyYK2NF1_a4vQnOXrO5AdBoHHGkF/pub?start=false&loop=false&delayms=3000>
 
 <https://docs.google.com/document/d/1NHeQj-NoBNPtTMOdkeX1FcT8oN48JY__sRpqT5rpxTw/edit>
+
+## JS ... 淺拷貝深拷貝
+
+
+物件裡面有物件無法使用 ...
+
+可用以下解決方法但只適用純資料，若遇 Function、Set、Map..等型態，失效。
+
+```JS
+let a = {o:{v:1}}
+let b = JSON.parse(JSON.stringify(a));
+```
+
+來自 <https://kanboo.github.io/2018/01/27/JS-ShallowCopy-DeepCopy/> 
