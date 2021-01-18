@@ -1255,3 +1255,34 @@ let b = JSON.parse(JSON.stringify(a));
 ```
 
 來自 <https://kanboo.github.io/2018/01/27/JS-ShallowCopy-DeepCopy/> 
+
+## 錯誤處理 ( 待完善 )
+
+```c#
+	    var response = new PageQueryResult<string>();
+
+            try
+            {
+                PAMapplyFormService Service = new PAMapplyFormService();
+                response = Service.UCPAM113(UCPAM113_List);
+
+            }
+            catch (DbException dbex)
+            {
+                _logger.Error("⭐⭐⭐PAM113⭐⭐⭐");
+                throwException(dbex);
+                response.StatusCode = (long)EnumStatusCode.Exception;
+                _logger.Error(dbex.Message);
+                _logger.Error(dbex.StackTrace);
+                response.Message = dbex.Message + dbex.StackTrace;
+            }
+            catch (Exception ex)
+            {
+                _logger.Error("⭐⭐⭐PAM113⭐⭐⭐");
+                throwException(ex);
+                response.StatusCode = (long)EnumStatusCode.Exception;
+                _logger.Error(ex.Message);
+                _logger.Error(ex.StackTrace);
+                response.Message = ex.Message + ex.StackTrace;
+            }
+```
