@@ -108,10 +108,14 @@ PVT: Production Verification Test(生產驗證測試階段)
 
 ##### 上市公司管理平台專案
 
-* 從規劃到相關開發階段到正式上線為期 1 年半，五人團隊
+* 從規劃到相關開發階段到正式上線為期 2 年，五人團隊
 * 使用技術 : C# / .NET WebAPI ( Autofac / AutoMap / Dapper ) / Angular8+ ( i18n / PrimeNG ) ...
   * 需求: 根據上市公司 SRS 規格書提供應用並配合 DEV、UAT、QAS、PRD 開發階段進行測試與調試。
     * [實作包含]
     * `疫情關係遠端協作 Google雲端應用 ( Meet / Sheet / Word ...)、Citrix 遠端測試與調試...`
     * `前端 Angular、後端 WebAPI 功能開發`
     * [結案文件 UTR SITR SAD SDD 技術移轉文件 撰寫](https://ithelp.ithome.com.tw/questions/10025079)
+
+##### 建案公司
+
+* 
