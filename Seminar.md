@@ -1317,3 +1317,205 @@ let b = JSON.parse(JSON.stringify(a));
                 response.Message = ex.Message + ex.StackTrace;
             }
 ```
+
+## System.IO
+
+1. 判斷資料夾是否存在，並新增資料夾
+
+```c#
+if (System.IO.Directory.Exists(資料夾路徑))
+{
+    //資料夾存在
+}
+else
+{
+    //新增資料夾
+    System.IO.Directory.CreateDirectory(@"D:\temp\");
+}
+```
+
+2. 判斷檔案是否存在
+
+```c#
+if (System.IO.File.Exists(檔案路徑))
+{
+    //檔案存在
+}
+```
+
+3. 建立壓縮檔案
+
+```c#
+    /// <summary>
+    /// 參考 https://dotblogs.com.tw/gelis/2016/09/04/161341
+    /// </summary>
+    public class ZipHelper
+    {
+        /// <summary>
+        /// 壓縮包
+        /// </summary>
+        public class ZipOptions
+        {
+            /// <summary>
+            /// 新壓縮檔路徑
+            /// </summary>
+            public string NewZipPath { get; set; } = "";
+            /// <summary>
+            /// 新壓縮檔名
+            /// </summary>
+            public string NewFileName { get; set; } = "";
+            public List<string> FilePath { get; set; }
+        }
+
+        private static Logger _Logger = LogManager.GetCurrentClassLogger();
+        /// <summary>
+        /// ZipArchive 成功回傳路徑壓縮檔案 / 失敗壓 log 回傳 "Fail" / 
+        /// <para>如 ZipOptions NewZipPath、NewFileName 為空則預設第一筆壓縮位置與檔名寫入</para>
+        /// </summary>
+        /// <param name="_ZipOptions"></param>
+        /// <returns></returns>
+        public string CreateZipArchiveByFilePath(ZipOptions _ZipOptions)
+        {
+            string distinationFile = "Fail";
+
+            try
+            {
+                string workPath = _ZipOptions.NewZipPath == "" ? Path.GetDirectoryName(_ZipOptions.FilePath[0]): _ZipOptions.NewZipPath; // 待壓縮檔案目錄
+                Console.WriteLine("workPath：" + workPath);
+                _Logger.Debug("workPath：" + workPath);
+                string targetZipFileName = _ZipOptions.NewFileName == "" ? string.Format("{0}{1}", Path.GetFileNameWithoutExtension(_ZipOptions.FilePath[0]), ".zip") : _ZipOptions.NewFileName + ".zip"; // 新壓縮檔案名稱
+                Console.WriteLine("targetZipFileName：" + targetZipFileName);
+                _Logger.Debug("targetZipFileName：" + targetZipFileName);
+                distinationFile = Path.Combine(workPath, targetZipFileName); // 新壓縮檔案路徑
+                Console.WriteLine("distinationFile：" + distinationFile);
+                _Logger.Debug("distinationFile：" + distinationFile);
+
+                // 壓縮用 Stream
+                using (var fileStream = new FileStream(distinationFile, FileMode.CreateNew))
+                {
+                    // 設定 zip archive
+                    using (var archive = new System.IO.Compression.ZipArchive(fileStream, System.IO.Compression.ZipArchiveMode.Create, true))
+                    {
+                        // 壓縮幾個檔案就必須做幾次底下的重複動作
+                        foreach (var FilePath in _ZipOptions.FilePath)
+                        {
+                            // Read 檔案 Stream
+                            FileStream f = new FileStream(FilePath, FileMode.Open, FileAccess.Read);
+
+                            try
+                            {
+                                // Stream 轉為 Bytes
+                                byte[] ItemBytes = BinaryReadToEnd(f);
+
+                                string createEntryFileName = Path.GetFileName(FilePath); // 新壓縮檔案內容名稱 ( 打開 zip 能看到的檔案 )
+                                Console.WriteLine("createEntryFileName：" + createEntryFileName);
+                                _Logger.Debug("createEntryFileName：" + createEntryFileName);
+
+                                // 建立 zip archive ( 打開 zip 能看到的檔案 )
+                                var zipArchiveEntry = archive.CreateEntry(createEntryFileName, System.IO.Compression.CompressionLevel.Fastest);
+                                BinaryReader bs = new BinaryReader(f);
+
+                                // 開啟 zip Stream
+                                using (var zipStream = zipArchiveEntry.Open())
+                                {
+                                    // 寫入 Bytes
+                                    zipStream.Write(ItemBytes, 0, ItemBytes.Length);
+                                }
+                            }
+                            catch (Exception ex)
+                            {
+                                Console.Write("Inner ZipHelper Error");
+                                Console.Write(ex.Message);
+                                Console.Write(ex.StackTrace);
+                                distinationFile = "Fail";
+                                _Logger.Error("Inner ZipHelper Error");
+                                _Logger.Error(ex);
+                                _Logger.Error(ex.Message);
+                                _Logger.Error(ex.StackTrace);
+                            }
+                            finally
+                            {
+                                f.Close();
+                                Console.Write("Inner FileStream Close");
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.Write("ZipHelper Error");
+                Console.Write(ex.Message);
+                Console.Write(ex.StackTrace);
+                distinationFile = "Fail";
+                _Logger.Error("ZipHelper Error");
+                _Logger.Error(ex);
+                _Logger.Error(ex.Message);
+                _Logger.Error(ex.StackTrace);
+            }
+            finally
+            {
+                Console.Write("FileStream Close");
+            }
+
+            return distinationFile;
+        }
+
+        /// <summary>
+        /// Stream 轉為 Bytes
+        /// </summary>
+        /// <param name="stream"></param>
+        /// <returns></returns>
+        public byte[] BinaryReadToEnd(Stream stream)
+        {
+            long originalPosition = 0;
+
+            if (stream.CanSeek)
+            {
+                originalPosition = stream.Position;
+                stream.Position = 0;
+            }
+
+            try
+            {
+                byte[] readBuffer = new byte[4096];
+
+                int totalBytesRead = 0;
+                int bytesRead;
+
+                while ((bytesRead = stream.Read(readBuffer, totalBytesRead, readBuffer.Length - totalBytesRead)) > 0)
+                {
+                    totalBytesRead += bytesRead;
+
+                    if (totalBytesRead == readBuffer.Length)
+                    {
+                        int nextByte = stream.ReadByte();
+                        if (nextByte != -1)
+                        {
+                            byte[] temp = new byte[readBuffer.Length * 2];
+                            Buffer.BlockCopy(readBuffer, 0, temp, 0, readBuffer.Length);
+                            Buffer.SetByte(temp, totalBytesRead, (byte)nextByte);
+                            readBuffer = temp;
+                            totalBytesRead++;
+                        }
+                    }
+                }
+
+                byte[] buffer = readBuffer;
+                if (readBuffer.Length != totalBytesRead)
+                {
+                    buffer = new byte[totalBytesRead];
+                    Buffer.BlockCopy(readBuffer, 0, buffer, 0, totalBytesRead);
+                }
+                return buffer;
+            }
+            finally
+            {
+                if (stream.CanSeek)
+                {
+                    stream.Position = originalPosition;
+                }
+            }
+        }
+    }
+```
