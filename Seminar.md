@@ -1519,3 +1519,7 @@ if (System.IO.File.Exists(檔案路徑))
         }
     }
 ```
+
+### 複製檔案 c3
+ 
+<https://docs.microsoft.com/zh-tw/dotnet/csharp/programming-guide/file-system/how-to-copy-delete-and-move-files-and-folders>
