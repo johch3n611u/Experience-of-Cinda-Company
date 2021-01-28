@@ -1526,10 +1526,10 @@ if (System.IO.File.Exists(檔案路徑))
 
 ## MVVM
 
-如果用mapping替换controller，那你就得到了MVVM, model-view-view-model。
+如果用 mapping 替换 controller，那你就得到了 MVVM , model-view-view-model。
 
-但MVVM之所以可以普及，是因为先进的框架和方法论以及计算性能的提高提供了标准化的映射管线，再加上目前99%的app无论是web还是原生应用程序都只是个调用后台REST API的外壳，说穿了就是请求增删改查，那么标准化的mapping就可以满足需要，自然可以踢开controller。
+但 MVVM 之所以可以普及，是因为先进的框架和方法论以及计算性能的提高提供了标准化的映射管线，再加上目前 99% 的 app 无论是 web 还是原生应用程序都只是个调用后台 REST API 的外壳，说穿了就是请求增删改查，那么标准化的 mapping 就可以满足需要，自然可以踢开 controller。
 
-但那些需要在本地执行复杂逻辑的app就不是这么回事了，你做个游戏现在还是得MVC. 实际上，经典的本地胖客户端催生了MVC，因为那时候所有的业务逻辑都是跑在本地的，仅仅有model-view的同步和映射远远不够，逻辑必须放在controller里面。
+但那些需要在本地执行复杂逻辑的 app 就不是这么回事了，你做个游戏现在还是得 MVC. 实际上，经典的本地胖客户端催生了 MVC，因为那时候所有的业务逻辑都是跑在本地的，仅仅有 model-view 的同步和映射远远不够，逻辑必须放在 controller 里面。
 
-那么现在呢？前端就是MVVM，而后端都微服务化了，而且也鼓励无状态化所以也不用建model来描述状态了，基本上可以看作一个简单输入输出的函数，所以从某种意义上讲model和view放在了前端，controller给放到后端了。
+那么现在呢？前端就是 MVVM，而后端都微服务化了，而且也鼓励无状态化所以也不用建 model 来描述状态了，基本上可以看作一个简单输入输出的函数，所以从某种意义上讲 model 和 view 放在了前端，controller 给放到后端了。
