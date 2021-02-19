@@ -1533,3 +1533,11 @@ if (System.IO.File.Exists(檔案路徑))
 但那些需要在本地执行复杂逻辑的 app 就不是这么回事了，你做个游戏现在还是得 MVC. 实际上，经典的本地胖客户端催生了 MVC，因为那时候所有的业务逻辑都是跑在本地的，仅仅有 model-view 的同步和映射远远不够，逻辑必须放在 controller 里面。
 
 那么现在呢？前端就是 MVVM，而后端都微服务化了，而且也鼓励无状态化所以也不用建 model 来描述状态了，基本上可以看作一个简单输入输出的函数，所以从某种意义上讲 model 和 view 放在了前端，controller 给放到后端了。
+
+## Class Format JSON Log
+
+```C#
+WaitFormatClass Data = new WaitFormatClass();
+var JsonLog = JsonConvert.SerializeObject(WaitFormatClass, Formatting.Indented);
+_Logger.Debug(JsonLog);
+```
