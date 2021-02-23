@@ -1544,4 +1544,4 @@ _Logger.Debug(JsonLog);
 
 ## operation not permitted, rename
 
-關閉 vscode setting 內的 Editor Rename : Enable Preview
+真的不能改名，關閉 vscode setting 內的 Editor Rename : Enable Preview
