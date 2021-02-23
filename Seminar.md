@@ -1541,3 +1541,7 @@ WaitFormatClass Data = new WaitFormatClass();
 var JsonLog = JsonConvert.SerializeObject(WaitFormatClass, Formatting.Indented);
 _Logger.Debug(JsonLog);
 ```
+
+## operation not permitted, rename
+
+關閉 vscode setting 內的 Editor Rename : Enable Preview
