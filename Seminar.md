@@ -1553,4 +1553,4 @@ _Logger.Debug(JsonLog);
 3. 相關元件應用
 4. 測試用假資料製作
 
-[相關程式碼參考](assets\self-account-check)
+[相關程式碼參考](https://github.com/johch3n611u/Experience-of-Cinda-Company/tree/master/assets/self-account-check)
