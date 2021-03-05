@@ -1545,3 +1545,9 @@ _Logger.Debug(JsonLog);
 ## operation not permitted, rename
 
 真的不能改名，關閉 vscode setting 內的 Editor Rename : Enable Preview
+
+## PrimeNG 開發相關紀錄
+
+1. Router 開發模式
+2. Router ( 無 / 有 ) 參數路由
+3. 相關元件應用
