@@ -1552,3 +1552,5 @@ _Logger.Debug(JsonLog);
 2. Router ( 無 / 有 ) 參數路由
 3. 相關元件應用
 4. 測試用假資料製作
+
+[相關程式碼參考](assets\self-account-check)
