@@ -143,6 +143,7 @@ export class SelfAccountCheckComponent implements OnInit {
 
     CallPAM604() {
         this._SelfAccountCheckService.CallPAM604().subscribe(res => {
+
             if (res.StatusCode === ErrorCode.Success) {
                 // console.log('CallPAM604 Success');
                 this._BaseHelper.ShowSuccessMsg(this._BaseHelper.GetTranslateValue('Form.Success'));
@@ -151,7 +152,9 @@ export class SelfAccountCheckComponent implements OnInit {
                 // console.log('CallPAM604 Error');
                 this._BaseHelper.ShowErrorMsg(this._BaseHelper.GetTranslateValue('Form.Fail'));
             }
-        })
+        });
+        this._BaseHelper.ShowSuccessMsg('進行非同步全刪全建，建置完成後將以 Email 通知');
+        this._Router.navigate(['/']);
     }
 
     GetSelfAccountCheck() {

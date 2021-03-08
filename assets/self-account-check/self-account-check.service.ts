@@ -9,10 +9,10 @@ import { SELF_ACCOUNT_CHECK } from './self-account-check.component';
 })
 export class SelfAccountCheckService extends ServiceBase {
 
-    private baseUrl = `${this.apiBaseUrl}/BatchService`;
+    private baseUrl = `${this.apiBaseUrl}/SelfAccountCheckService`;
 
     CallPAM604(): Observable<PageQueryResult<string>> {
-        const url = `${this.baseUrl}/PAM604`;
+        const url = `${this.baseUrl}/CallPAM604`;
         const data = {};
         let body = JSON.stringify(data);
         return this.http.
