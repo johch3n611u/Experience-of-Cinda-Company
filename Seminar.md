@@ -1554,3 +1554,11 @@ _Logger.Debug(JsonLog);
 4. 測試用假資料製作
 
 [相關程式碼參考](https://github.com/johch3n611u/Experience-of-Cinda-Company/tree/master/assets/self-account-check)
+
+## EF 坑
+
+撈出來有 PK 的資料不可以直接 = New 要拆包一項項 = 不然會複製到類似 PK 的索引的感覺，Add 或 Save 會報錯
+
+## Csharp task 應用
+
+[DemoCode]()
