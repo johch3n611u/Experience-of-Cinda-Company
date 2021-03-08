@@ -1558,3 +1558,7 @@ _Logger.Debug(JsonLog);
 ## EF 坑
 
 撈出來有 PK 的資料不可以直接 = New 要拆包一項項 = 不然會複製到類似 PK 的索引的感覺，Add 或 Save 會報錯
+
+## Csharp task 應用
+
+[DemoCode]()
