@@ -1566,3 +1566,5 @@ _Logger.Debug(JsonLog);
 ## SQL SERVER 設計模式預設欄位增加描述![image](https://user-images.githubusercontent.com/46659635/111424297-86836180-872c-11eb-975e-52f49c599019.png)
 
 ## Nginx 反向代理防卡 IP 
+
+https://github.com/johch3n611u/Experience-of-Cinda-Company/blob/master/assets/%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86config.txt
