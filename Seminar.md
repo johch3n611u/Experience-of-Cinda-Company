@@ -1563,7 +1563,9 @@ _Logger.Debug(JsonLog);
 
 [DemoCode](https://github.com/johch3n611u/Experience-of-Cinda-Company/tree/master/assets/self-account-check)
 
-## SQL SERVER 設計模式預設欄位增加描述![image](https://user-images.githubusercontent.com/46659635/111424297-86836180-872c-11eb-975e-52f49c599019.png)
+## SQL SERVER 設計模式預設欄位增加描述
+
+http://adolph.com.tw/archives/62/sql-server-management-studio-table%E8%A8%AD%E8%A8%88%E6%99%82%E4%B8%80%E4%BD%B5%E9%A1%AF%E7%A4%BA%E6%8F%8F%E8%BF%B0%E6%AC%84%E4%BD%8D/
 
 ## Nginx 反向代理防卡 IP 
 
