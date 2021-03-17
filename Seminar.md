@@ -1562,3 +1562,7 @@ _Logger.Debug(JsonLog);
 ## Csharp task 應用 & 前端
 
 [DemoCode](https://github.com/johch3n611u/Experience-of-Cinda-Company/tree/master/assets/self-account-check)
+
+## SQL SERVER 設計模式預設欄位增加描述![image](https://user-images.githubusercontent.com/46659635/111424297-86836180-872c-11eb-975e-52f49c599019.png)
+
+## Nginx 反向代理防卡 IP 
