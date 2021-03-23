@@ -1570,3 +1570,22 @@ http://adolph.com.tw/archives/62/sql-server-management-studio-table%E8%A8%AD%E8%
 ## Nginx 反向代理防卡 IP 
 
 https://github.com/johch3n611u/Experience-of-Cinda-Company/blob/master/assets/%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86config.txt
+
+## AG 要引入外部 url 要用 DomSanitizer 类
+
+https://blog.csdn.net/xjtarzan/article/details/103635010
+
+1.在需要使用外部url链接的ts文件中，引入DomSanitizer类
+import { DomSanitizer } from '@angular/platform-browser'; 
+ 
+export class safeHtml {  
+  safeUrl: any;
+  constructor(private sanitizer: DomSanitizer) {}
+
+  //2.在需要使用转换后的url地方加上
+  getSafeUrl(url){
+      this.safeUrl = this.sanitizer.bypassSecurityTrustResourceUrl(url); 
+  }
+
+2. html页面中 (这里以iframe标签为例)
+<iframe [src]="safeUrl" style="width: 100%; height: 100%; border: none"></iframe>
