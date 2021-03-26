@@ -1589,3 +1589,12 @@ export class safeHtml {
 
 2. html页面中 (这里以iframe标签为例)
 <iframe [src]="safeUrl" style="width: 100%; height: 100%; border: none"></iframe>
+
+## Jenkins 文件
+
+1.Jenkins 安裝 https://www.mdeditor.tw/pl/pXrV/zh-tw
+2. 授予 Jenkins 訪問權限 https://docs.gitlab.com/ee/integration/jenkins.html
+3. Access API Token https://stackoverflow.com/questions/59804972/client-error-http-302-found-jenkins-connect-to-gitlab
+
+4. SSH 方式 https://web.devdon.com/archives/10
+4. GitLab 產生 SSH 密鑰 https://jaminzhang.github.io/git/config-and-add-SSH-key-in-GitLab/
