@@ -1592,9 +1592,7 @@ export class safeHtml {
 
 ## Jenkins 文件
 
-1.Jenkins 安裝 https://www.mdeditor.tw/pl/pXrV/zh-tw
-2. 授予 Jenkins 訪問權限 https://docs.gitlab.com/ee/integration/jenkins.html
-3. Access API Token https://stackoverflow.com/questions/59804972/client-error-http-302-found-jenkins-connect-to-gitlab
-4. bug https://blog.csdn.net/weixin_43141746/article/details/109175721
-5. SSH 方式 https://web.devdon.com/archives/10
-6. GitLab 產生 SSH 密鑰 https://jaminzhang.github.io/git/config-and-add-SSH-key-in-GitLab/
+1. https://web.devdon.com/archives/10
+2. https://www.jianshu.com/p/629fefe5468a
+3. https://zeckli.github.io/zh/2017/10/01/resolve-gitlab-permission-denied-zh.html
+
