@@ -1595,4 +1595,4 @@ export class safeHtml {
 1. https://web.devdon.com/archives/10
 2. https://www.jianshu.com/p/629fefe5468a
 3. https://zeckli.github.io/zh/2017/10/01/resolve-gitlab-permission-denied-zh.html
-
+4. 需要用 SSH 手動拉下來的專案才有辦法吃到 openSSH ... ?
