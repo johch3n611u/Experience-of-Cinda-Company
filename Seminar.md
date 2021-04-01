@@ -1596,3 +1596,52 @@ export class safeHtml {
 2. https://www.jianshu.com/p/629fefe5468a
 3. https://zeckli.github.io/zh/2017/10/01/resolve-gitlab-permission-denied-zh.html
 4. 需要用 SSH 手動拉下來的專案才有辦法吃到 openSSH ... ?
+
+## FineReport
+
+### v10.0
+
+#### 移機設定
+
+1. X-Frame-Options' to 'sameorigin' 錯誤
+   打開報表數據平台介面，列表 `管理系統 > 安全管理 > 安全防護 > 關閉 Security Headers`
+
+#### 資料串接
+
+##### 數據庫連結
+
+[文檔參考](https://help.fanruan.com/finereport/doc-view-2880.html)
+
+`伺服器 > 定義資料連結 > 新增`
+
+##### 資料集
+
+資料集類似 View 表，分為報表專用的 "區域" 範本資料集與 "全域" 共用的伺服器資料集，新增方式只要從 FR 設計器的左下角新增即可。
+
+#### 報表搬移
+
+本地 FR 設計器左上角選定檔案後，可點選上方檢視位置，將 cpt、frm 報表複製至伺服器的相同位置，並確定伺服器上的 FR 設計器，列表 `伺服器 > 定義資料連結 > DB` 的暱稱是否相同於本地端，否則須修改報表內資料集撈取的 SQL。
+
+也有如 [串接遠程設計](https://help.finereport.com/finereport8.0/doc-view-133.html) 的方法
+
+#### 報表設計
+
+[詳細報表功能](https://www.finereport.com/tw/knowledge/finereport/3-report-forms.html)
+
+報表以副檔名分為 frm、cpt，以格式與功能分為 [普通報表] [聚合報表] [決策報表]，詳細請看上述網址。
+
+#### 單點訪問
+
+[原理](https://www.codenong.com/cs107068327/)
+
+官方免费版具有全部系统功能，但是只有2个并发，也就是2个以内用户可以访问，第三个用户访问就会提示未注册,无法访问，实现原理就是在服务器上做特殊处理，让所有访问该服务器的用户都从图中A点访问，仅仅是对服务器进行部署，并非修改了FR或者BI软件本身，所以在FR服务器看来只是一个用户在访问，永远不会提示超出并发数
+
+[Nginx 安裝](https://www.cnblogs.com/taiyonghai/p/9402734.html)
+
+[Nginx 設定](https://linuxize.com/post/nginx-reverse-proxy/)
+
+proxy_set_header X-Forwarded-For 127.0.0.1;
+
+##### 台灣區費用
+
+個人 IP 買斷 9 萬，軟體買斷 200 萬
