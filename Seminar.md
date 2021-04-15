@@ -1649,3 +1649,5 @@ proxy_set_header X-Forwarded-For 127.0.0.1;
 ## Csharp 抓離自己最近獲最遠時間最快方法
 
 1. 排序後撈第一筆...
+
+## .net core 吃 js 傳值 可能會被 js 偷偷轉型導致後端撈不到須注意
