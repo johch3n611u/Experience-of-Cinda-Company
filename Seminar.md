@@ -1652,6 +1652,8 @@ proxy_set_header X-Forwarded-For 127.0.0.1;
 
 ## .net core 吃 js 傳值 可能會被 js 偷偷轉型導致後端撈不到須注意
 
+只要基底用物件包住內容參數大小寫一樣就能抓到
+
 ## 小技巧 angular 當 radio 需要 number 時 value 補中括弧即可
 
 ```js
