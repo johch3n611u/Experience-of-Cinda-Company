@@ -1664,3 +1664,14 @@ proxy_set_header X-Forwarded-For 127.0.0.1;
 <input [value]="2" type="radio" id="cShape2" name="cShape" [(ngModel)]="activity.cShape">
 <label for="cShape2">方形</label>
 ```
+
+## .net core ef 坑
+
+//第一次需先安裝SDK // bug 需要指定版本 --version 5.0.5 
+
+dotnet tool install --global dotnet-ef --version 5.0.5
+
+//需要進到專案資料夾而不是方案
+
+dotnet ef dbcontext scaffold "Server=104.42.40.253;Database=dbPXMart;Trusted_Connection=False;user id=id;password=pp;" Microsoft.EntityFrameworkCore.SqlServer --output-dir EF/path -f -v
+
