@@ -1675,3 +1675,47 @@ dotnet tool install --global dotnet-ef --version 5.0.5
 
 dotnet ef dbcontext scaffold "Server=104.42.40.253;Database=dbPXMart;Trusted_Connection=False;user id=id;password=pp;" Microsoft.EntityFrameworkCore.SqlServer --output-dir EF/path -f -v
 
+## csharp 上傳檔案
+
+https://blog.johnwu.cc/article/ironman-day23-asp-net-core-upload-download-files.html
+
+```c#
+   /// <summary>
+        /// 上傳檔案
+        /// </summary>
+        /// <param name="configPath"></param>
+        /// <param name="isShowFolder"></param>
+        /// <returns></returns>
+        //public List<string> uploadFile(string configPath, bool isShowFolder)
+        //{
+        //    var result = new List<string>();
+
+        //    var basePath = System.Web.HttpContext.Current.Server.MapPath("~/" + configPath);
+        //    var files = HttpContext.Current.Request.Files;
+
+        //    if (files.Count > 0)
+        //    {
+        //        if (!System.IO.Directory.Exists(basePath)) { System.IO.Directory.CreateDirectory(basePath); }
+
+        //        foreach (string fileName in files.AllKeys)
+        //        {
+        //            var file = files[fileName];
+        //            var filePath = basePath + file.FileName;
+        //            var newFileName = file.FileName;
+
+        //            newFileName = string.Format("{0}_{1}", DateTime.Now.ToString("yyyyMMddHHmmss"), file.FileName);
+        //            filePath = basePath + newFileName;
+
+        //            file.SaveAs(filePath);
+        //            if (isShowFolder)
+        //                result.Add(configPath + newFileName);
+        //            else
+        //                result.Add(newFileName);
+        //        }
+        //    }
+
+        //    return result;
+        //}
+	
+	
+```
