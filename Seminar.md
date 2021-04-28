@@ -1719,3 +1719,5 @@ https://blog.johnwu.cc/article/ironman-day23-asp-net-core-upload-download-files.
 	
 	
 ```
+
+## iis 圖片上傳也必須要設定虛擬目錄才能讓外部讀的到上傳檔案的資料夾
