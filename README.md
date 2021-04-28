@@ -25,6 +25,8 @@ SAM：軟體資產管理
 
 PAM：帳號資產管理系統 
 
+PAMAI: 帳號資產管理系統自動化整合其他系統包含 AD Novell Notes Crtix ...
+
 PORTAL：門戶網站
 
 IDES：Internet Demonstration and Evaluation System 交互式演示与评估系统
