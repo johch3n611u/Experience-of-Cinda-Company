@@ -1725,3 +1725,18 @@ https://blog.johnwu.cc/article/ironman-day23-asp-net-core-upload-download-files.
 ## NLOG 分資料夾要注意參數
 
 <https://ithelp.ithome.com.tw/articles/10206339>
+
+## Ediot Line Number 純 CSS 解決方法
+
+<https://jsfiddle.net/vaakash/5TF5h/>
+
+```
+textarea{
+    background: url(http://i.imgur.com/2cOaJ.png);
+background-attachment: local;
+background-repeat: no-repeat;
+padding-left: 35px;
+padding-top: 10px;
+    border-color:#ccc;
+}
+```
