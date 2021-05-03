@@ -1740,3 +1740,5 @@ padding-top: 10px;
     border-color:#ccc;
 }
 ```
+
+## .net core 如果上傳查詢，可能部分欄位會 null ，導致整包不吃所以最好裡面宣告時要多個 ?
